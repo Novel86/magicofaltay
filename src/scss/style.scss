@@ -93,10 +93,11 @@ $bg-card: #BAE7DD;
 ._text {
 	font-family: 'Montserrat';
 	font-size: 24px;
-	@media ( max-width: 1280px) {
-		font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1280 - 320)));
-	}
 	line-height: 125%;
+	@media ( max-width: 1280px) {
+		font-size: calc(19px + (24 - 19) * ((100vw - 768px) / (1280 - 768)));
+		line-height: calc(120% + (125 - 120) * ((100vw - 768px) / (1280 - 768)));
+	}
 	letter-spacing: 0.02em;
 	color: $main;
 }
@@ -425,6 +426,9 @@ p._text {
 			margin-top: calc(75px + (150 - 75) * ((100vw - 768px) / (1280 - 768)));
 			margin-bottom: calc(75px + (150 - 75) * ((100vw - 768px) / (1280 - 768)));
 		}
+		@media ( max-width: 767px) {
+			margin: 50px 0px;
+		}
 
 }
 .lirics {
@@ -453,132 +457,153 @@ p._text {
 .page {
 
 	&__best {
-		padding-top: 150px;
-		padding-bottom: 150px;
+		padding: 150px 0px;
 		@media ( max-width: 1280px) {
-			padding-top: calc(75px + (150 - 75) * ((100vw - 768px) / (1280 - 768)));
-			padding-bottom: calc(75px + (150 - 75) * ((100vw - 768px) / (1280 - 768)));
+			padding: calc(75px + (150 - 75) * ((100vw - 768px) / (1280 - 768))) 0;
 		}
-		background: url('/img/best/best-clouds.png');
-		background-size: auto 100%;
-		background-position: center;
+		@media ( max-width: 767px) {
+			padding: 50px 0px;
+		}
+
 	}
 }
 .best {
 
-	&__body {
-		padding-right: 100px;
+	&__one-page {
+		@media ( min-width: 767px) {
+			display: flex;
+		}
+	}
+}
+.one-page {
+
+	&__content {
+		flex: 0 0 100%;
+		@media ( max-width: 767px) {
+			margin-bottom: 20px;
+		}
 	}
 
 	&__container {
+		background: grey;
 	}
-
-	&__raw {
-		position: relative;
-		display: flex;
-		margin-bottom: 50px;
-		margin-top: -250px;
-	}
-
-	
-	&__image {
-		img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-	}
-}
-
-.body {
-	flex: 1 1 50%;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	max-width: 730px;
-	
-	&__title {
-		position: relative;
-		z-index: 10;
-		margin: 150px 0px;
-		white-space: nowrap;
-		@media ( max-width: 660px) {
-			white-space: normal;
-		}
-	}
-	
-	&__subtitle {
-		flex: 1 1 auto;
-		margin-bottom: 20px;
-		padding-top: 200px;
-	}
-
-}
-.best__raw--2 {
-	margin-top: 0;
-
-
-	.best__image {
-		margin-right: 100px;
-		img {
-			max-width: 642px;
-
-		}
-	}
-	.best__body {
-		justify-content: flex-start;
-		padding-top: 100px;
-	}
-}
-
-.best {
-
-	&__raw--3 {
-		
-	}
-}
-.raw--3 {
 
 	&__body {
-		margin-bottom: 50px;
+		@media ( min-width: 767px) {
+			width: 50%;
+		}
+		padding: 150px 100px 0 0;
+		@media (min-width: 767px) and ( max-width: 1280px) {
+			padding: calc(75px + (150 - 75) * ((100vw - 768px) / (1280 - 768))) calc(50px + (100 - 50) * ((100vw - 768px) / (1280 - 768))) 0 0;
+		}
+		@media ( max-width: 767px) {
+			padding: 0;
+		}
+	}
+	
+	&__title {
+		position: relative;
+		z-index: 100;
+		white-space: nowrap;
+		margin-bottom: 100px;
+		@media ( max-width: 1280px) {
+			margin-bottom: calc(50px + (100 - 50) * ((100vw - 768px) / (1280 - 768)));
+		}
+
 	}
 
-	&__title {
+	&__subtitle {
 	}
+
+	&__image {
+		@media ( min-width: 767px) {
+			position: relative;
+			flex: 0 0 50%;
+			transform: translate(-100%, 0px);
+		}
+	}
+	&__img {
+		@media ( min-width: 767px) {
+
+		max-width: 100%;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		object-fit: cover;
+		}
+	}
+
+}
+
+.raw--3 {
 
 	&__gallary {
 	}
 }
-
 .gallary {
-	
+
 	&__items {
-		display: grid;
-		gap: 30px;
-		grid-template-columns: repeat(auto-fit, minmax(355px, 1fr));
 	}
 
 	&__item {
-		position: relative;
-		padding: 0px 0px 85% 0px;
-		&:nth-child(odd) {
-			margin-top: 100px;
-		}
-		img {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			left: 0;
-			top: 0;
-			object-fit: cover;
-		}
 
 		&_big {
-			grid-column: span 2;
-			grid-row: span 2;
 		}
 	}
 }
+
+
+
+// .best {
+
+// 	&__raw--3 {
+		
+// 	}
+// }
+// .raw--3 {
+
+// 	&__body {
+// 		margin-bottom: 50px;
+// 	}
+
+// 	&__title {
+// 	}
+
+// 	&__gallary {
+// 	}
+// }
+
+// .gallary {
+	
+// 	&__items {
+// 		display: grid;
+// 		gap: 30px;
+// 		grid-template-columns: repeat(auto-fit, minmax(355px, 1fr));
+// 	}
+
+// 	&__item {
+// 		position: relative;
+// 		padding: 0px 0px 85% 0px;
+// 		&:nth-child(odd) {
+// 			margin-top: 100px;
+// 		}
+// 		img {
+// 			position: absolute;
+// 			width: 100%;
+// 			height: 100%;
+// 			left: 0;
+// 			top: 0;
+// 			object-fit: cover;
+// 		}
+
+// 		&_big {
+// 			grid-column: span 2;
+// 			grid-row: span 2;
+// 		}
+// 	}
+// }
 
 
 
