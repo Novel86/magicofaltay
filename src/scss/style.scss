@@ -65,6 +65,10 @@ $bg-card: #BAE7DD;
 	font-weight: 400;
 	font-size: 24px;
 	line-height: 120.8%;
+	@media ( max-width: 1280px) {
+		font-size: calc(18px + (24 - 18) * ((100vw - 375px) / (1280 - 375)));
+		line-height: calc(110% + (120.8 - 110) * ((100vw - 375px) / (1280 - 375)));
+	}	
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
 	color: $main;
@@ -115,9 +119,7 @@ p._text {
 	font-family: 'Noto Serif', serif;
 	font-weight: 600;
 	font-size: 24px;
-	@media ( max-width: 1360px) {
-		font-size: calc(20px + (24 - 19) * ((100vw - 1024px) / (1360 - 1024)));
-	}
+	font-size: calc(17px + (24 - 17) * ((100vw - 375px) / (1400 - 375)));
 	line-height: 137.5%;
 	text-transform: capitalize;
 	color: $main;
@@ -204,74 +206,137 @@ p._text {
 
 .header {
 	position: absolute;
+	z-index: 5;
 	width: 100%;
-	left: 0;
-	top: 0;
-	z-index: 50;
+	height: 100px;
 	&__container {
 	}
 
 	&__menu {
-		// margin: 50px 0px;
-		margin-top: calc(25px + (50 - 25) * ((100vw - 768px) / (1400 - 768)));
-		margin-bottom: calc(25px + (50 - 25) * ((100vw - 768px) / (1400 - 768)));
+		@media ( max-width: 1100px) {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			max-width: 800px;
+			margin: calc(30px + (50 - 30) * ((100vw - 375px) / (1400 - 375))) auto calc(30px + (50 - 30) * ((100vw - 375px) / (1400 - 375)));
+		}
+		margin: calc(30px + (50 - 30) * ((100vw - 375px) / (1400 - 375))) 0;
+		ul {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
 	}
 }
 
 .menu {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
+	
+	&__icon {
+		display: none;
+		@media ( max-width: 1100px) {
+			display: block;
+			position: relative;
+			width: 40px;
+			height: 30px;
+			cursor: pointer;
+			&::before, &::after, span {
+				position: absolute;
+				overflow: hidden;
+				width: 100%;
+				height: 10%;
+				left: 0;
+				border-radius: 3px;
+				background: $main;
+			}
+			&::before, &::after {
+				content: '';
+			}
+			&::before {
+				top: 0;
+			}
+			&::after {
+				bottom: 0;
+			}
+			span {
+				top: 50%;
+				transform: scale(1) translate(0, -50%);
+			}
+		}
+	}
+	
+	&__body {
+		@media ( min-width: 1100px) {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+		}
 
-	&__nav {
+		* {
+			white-space: nowrap;
+		}
 	}
 
 	&__list {
-		display: flex;
+		order: 1;
+		@media ( max-width: 1100px) {
+			display: none !important;
+		}
+
+		&_2 {
+			order: 3;
+		}
 	}
 
 	&__item {
 		&:not(:last-child) {
-		margin-right: 40px;
+			padding: 0 calc(20px + (40 - 20) * ((100vw - 982px) / (1400 - 982))) 0 0;
 		}
 	}
 
 	&__link {
-		white-space: nowrap;
 	}
 
+	&__contacts {
+		order: 2;
+	}
 }
 .contacts {
 
 	&__list {
-		display: flex;
-		align-items: center;
-		margin: 0px 40px;
-		min-height: 100%;
 	}
 
 	&__item {
 
 		&:not(:last-child) {
-		margin-right: 20px;
-		}
-		transition: 0.5s;
-		&:hover{
-			transform: scale(1.15, 1.15) translateY(5px);
+			padding: 0 calc(20px + (30 - 20) * ((100vw - 375px) / (1400 - 375))) 0 0;
 		}
 	}
 
 	&__link {
-		img {
-		width: 40px;
-		@media ( max-width: 1360px) {
-			width: calc(35px + (40 - 35) * ((100vw - 1024px) / (1360 - 1040)));
+		&_phone {
+			i {
+				font-size: calc(30px + (44 - 32) * ((100vw - 375px) / (1400 - 375))) !important;
+				transform: translate(4px, 0);
+				&:hover {
+					transform: translate(4px, 0) scale(1.1, 1.1) !important;
+				}
+			}
 		}
-		height: 40px;
-	}
+		i {
+			font-size: calc(32px + (46 - 32) * ((100vw - 375px) / (1400 - 375)));
+			color: $main;
+			vertical-align: middle;
+			transition: 0.5s ease-in-out;
+
+			&:hover {
+				color: $link;
+				transform: scale(1.1, 1.1);
+			}
+		}
 	}
 }
+
 
 //====================main-block==================
 
@@ -280,7 +345,7 @@ p._text {
 	&__first {
 		padding: 190px 0px 100px 0px;
 		@media ( max-width: 1280px) {
-			padding-top: calc(120px + (190 - 120) * ((100vw - 768px) / (1280 - 768)));
+			padding-top: calc(120px + (190 - 120) * ((100vw - 375px) / (1280 - 375)));
 			padding-bottom: calc(70px + (100 - 70) * ((100vw - 768px) / (1280 - 768)));
 		}
 		position: relative;
@@ -291,8 +356,6 @@ p._text {
 
 	
 	&__body {
-		// position: relative;
-		// z-index: 2;
 		
 	}
 
@@ -300,7 +363,7 @@ p._text {
 		position: relative;
 		z-index: 5;
 		display: flex;
-		@media ( max-width: 767px) {
+		@media ( max-width: 768px) {
 			flex-wrap: wrap;
 		}
 		justify-content: center;
@@ -312,13 +375,18 @@ p._text {
 	
 	&__logo {
 		min-width: 365px;
-		padding: 0px 20px;
+		margin: 0px 20px;
 		@media ( max-width: 1280px) {
-			min-width: calc(265px + (365 - 265) * ((100vw - 768px) / (1280 - 768)));
+			min-width: calc(255px + (365 - 255) * ((100vw - 375px) / (1280 - 375)));
+			margin: 0 0 20px 0;
 		}
-		@media ( max-width: 767px) {
-			margin-bottom: 20px;
+		@media ( max-width: 580px) {
+			max-width: 300px;
 		}
+		@media ( max-width: 424px) {
+			max-width: 285px;
+		}
+
 		img {
 			width: 100%;
 			height: 100%;
@@ -371,7 +439,7 @@ p._text {
 		z-index: 100;
 		a{
 			position: relative;
-			padding: 27px 80px 27px 43px;
+			padding: 27px 43px 27px 43px;
 			background: rgba(255, 255, 255, 0.4);
 			border: 4px solid #FFFFFF;
 			box-sizing: border-box;
@@ -379,22 +447,23 @@ p._text {
 			border-radius: 3px;
 			color: $main;
 			transition: 0.5s ease-in-out;
-			&::after{
-				content: '';
-				background: url(/img/first/arrow_forward.svg) no-repeat;
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				right: 1;
-				top: 50%;
-				transform: translateY(-12px) translateX(10px);
-
+			span {
+				font-size: 32px;
+				vertical-align: middle;
+				transform: translate(0, -2px);
+				padding: 0px 0px 0px 10px;
+				color: $main;
+				transition: 0.5s ease-in-out;
 			}
 			&:hover{
 				color: $bg;
 				border: 4px solid $link;
 				background: $link;
 				transform: translateY(5px);
+				span {
+					color: $bg;
+					transform: translate(5px, -2px);
+				}
 			}
 
 		}
@@ -764,6 +833,7 @@ p._text {
 .swiper-wrapper {
 }
 .swiper-slide {
+	cursor: pointer;
 }
 
 
@@ -777,8 +847,12 @@ p._text {
 
 .slick-list {
 	overflow: hidden;
-	max-width: 60%;
+	width: 70%;
+	max-width: 1000px;
 	margin: 0 auto;
+	@media ( max-width: 768px) {
+		width: 85%;
+	}
 }
 
 // слайдер главный экран
@@ -793,32 +867,41 @@ p._text {
 	z-index: 10;
 	width: 71px;
 	height: 60px;
-	opacity: 0.9;
+	@media ( max-width: 1280px) {
+		width: calc(40px + (71 - 40) * ((100vw - 768px) / (1400 - 768)));
+		height: calc(40px + (71 - 40) * ((100vw - 768px) / (1400 - 768)));
+	}
+	opacity: 0.8;
+	@media ( max-width: 768px) {
+		display: none;
+	}
 	}
 
 	.slick-arrow.slick-prev {
+		cursor: pointer;
 		left: 100px;
 		@media ( max-width: 1400px) {
 			left: calc(50px + (100 - 50) * ((100vw - 768px) / (1400 - 768)));
 		}
 		background: url(/img/first/Union.svg) 0 0 / 100% no-repeat;
 		transform: translateY(-50%);
-		transition: 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+		transition: left 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 		&:hover{
-			left: -10px;
+			left: calc((50px + (100 - 50) * ((100vw - 768px) / (1400 - 768))) - 17px);
 		}
 	}
 	
 	.slick-arrow.slick-next {
+		cursor: pointer;
 		right: 110px;
 		@media ( max-width: 1400px) {
 			right: calc(50px + (100 - 50) * ((100vw - 768px) / (1400 - 768)));
 		}
 			background: url(/img/first/Union.svg) 0 0 / 100% no-repeat;
 			transform: scale(-1, 1) translateY(-50%);
-			transition: 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+			transition: right 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 		&:hover{
-			right: -10px;
+			right: calc((50px + (100 - 50) * ((100vw - 768px) / (1400 - 768))) - 17px);
 		}
 	}	
 
@@ -856,3 +939,8 @@ p._text {
 
 
 //====================footer======================
+
+
+
+//==========================================
+@import "_tours";

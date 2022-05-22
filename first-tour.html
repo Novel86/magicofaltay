@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- подключаем шрифт латиница- после начертаний вставить текст &display=swap (для оптимизации)-->
+	<!-- подключаем шрифт кирилица- после начертаний вставить текст &display=swap&subset=cyrillic-ext (для оптимизации и подключения кирилицы)-->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:regular,500,700&display=swap&subset=cyrillic-ext" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Noto+Serif:regular,600&display=swap&subset=cyrillic-ext" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Noto+Serif+Display:regular,700,700italic&display=swap&subset=cyrillic-ext" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="css/style.css">
+	<title>Altai magic</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header header-tours">
+			<div class="header__clouds-tours"></div>
+			<div class="header__container header__container-tours _container">
+				<div class="header__menu menu">
+					<div class="menu__icon">
+						<span></span>
+					</div>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a data-goto="" class="menu__link _text-nav" href="/index.html">Главная</a></li>
+							<li class="menu__item"><a data-goto=".page__best" class="menu__link _text-nav" href="#">Захватывающий Алтай</a></li>
+						</ul>
+						<ul class="menu__list menu__list_2">
+							<li class="menu__item"><a data-goto=".gallary-slider" class="menu__link _text-nav" href="#">Фотоотчеты</a></li>
+							<li class="menu__item"><a data-goto="" class="menu__link _text-nav " href="#">Задать вопрос</a></li>
+						</ul>
+						<address class="menu__contacts contacts">
+							<ul class="contacts__list">
+								<li class="contacts__item"><a class="contacts__link contacts__link_phone" href="#"><i class="fas fa-phone-alt"></i></a></li>
+								<li class="contacts__item"><a class="contacts__link" href="#"><i class="fab fa-telegram-plane"></i></a></li>
+								<li class="contacts__item"><a class="contacts__link" href="#"><i class="fab fa-odnoklassniki"></i></li>
+								<li class="contacts__item"><a class="contacts__link" href="#"><i class="fab fa-whatsapp"></i></a></li>
+							</ul>
+						</address>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<main class="page page__tours tours">
+			<div class="tours__head head">
+				<div class="head__container _container">
+					<a class="head__logo" href="/index.html"><img class="head__img" src="/img/tours/logo-cut.png" alt="логотип магия алтая"></a>
+					<div class="head__title _h3">“Знакомство с Алтаем”</div>
+					<div class="head__subtitle _h4">Чуйский тракт до границы с Монголией</div>
+				</div>
+			</div>
+			<div class="tours__spec spec">
+				<div class="spec__container _container">
+					<div class="spec__body">
+						<div class="spec__column">
+							<ul class="spec__list">
+								<li class="spec__item">
+									<div class="spec__icon"><img src="/img/tours/tours-icons/hiking-spec-.svg" alt="магия алтая физическая нагрузка" class="spec__img"></div>
+									<div class="spec__parametr _text">Физическая нагрузка</div>
+									<div class="spec__value _text-bold">полный релакс</div>
+								</li>
+								<li class="spec__item">
+									<div class="spec__icon"><img src="/img/tours/tours-icons/edit_road-spec-.svg" alt="магия алтая протяженность маршрута" class="spec__img"></div>
+									<div class="spec__parametr _text">Протяженность</div>
+									<div class="spec__value _text-bold">863 км</div>
+								</li>
+								<li class="spec__item">
+									<div class="spec__icon"><img src="/img/tours/tours-icons/timer-spec-.svg" alt="магия алтая продолжительность путешествия" class="spec__img"></div>
+									<div class="spec__parametr _text">Продолжительность</div>
+									<div class="spec__value _text-bold">4 дня</div>
+								</li>
+							</ul>
+						</div>
+						<div class="spec__column">
+							<ul class="cpec__list">
+								<li class="spec__item">
+									<div class="spec__icon"><img src="/img/tours/tours-icons/menu-spec-.svg" alt="магия алтая питание" class="spec__img"></div>
+									<div class="spec__parametr _text">Питание</div>
+									<div class="spec__value _text-bold">завтрак/ужин</div>
+								</li>
+								<li class="spec__item">
+									<div class="spec__icon"><img src="/img/tours/tours-icons/group_add-spec-.svg" alt="магия алтая человек в группе" class="spec__img"></div>
+									<div class="spec__parametr _text">Группы</div>
+									<div class="spec__value _text-bold">2-8 человек</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tours__description description">
+						<div class="description__title _h5">Описание</div>
+						<p class="description__text _text">Незабываемое путешествие. Если вы хотите почувствовать настоящую романтику Алтая, ночной костер на берегу горной реки, попробовать мясо и овощи, приготовленные на расскалённом диком камне, воочию увидеть фантастику звездного неба высокогорья - это к нам.</p>
+					</div>
+				</div>
+			</div>
+			<div class="tours__gallary">
+				<div class="tours-gallary gallary swiper">
+					<div class="tours-gallary__wrapper swiper-wrapper">
+						<div class="tours-gallary__slide swiper-slide">
+							<img src="/img/tours/tour1/vstretchi-v-stepi-tour1-.png" alt="магия алтая" class="gallary-slider__img gallary-slider__img_tours">
+							<p>Встречи в Чуйской степи, дорога на старый Бельтир</p>
+						</div>
+						<div class="tours-gallary__slide swiper-slide">
+							<img src="/img/tours/tour1/katun-ilgumen-tour1-.png" alt="магия алтая" class="gallary-slider__img gallary-slider__img_tours">
+							<p>Катунь в районе Ильгуменьского порога</p>
+						</div>
+						<div class="tours-gallary__slide swiper-slide">
+							<img src="/img/tours/tour1/severo-chujskij-tour1-.png" alt="магия алтая" class="gallary-slider__img gallary-slider__img_tours">
+							<p>Вид на Северо чуйский хребет</p>
+						</div>
+						<div class="tours-gallary__slide swiper-slide">
+							<img src="/img/tours/tour1/petroglifi-olen-kamen-tour1-.png" alt="магия алтая" class="gallary-slider__img gallary-slider__img_tours">
+							<p>Петроглифы на скальнике у Чуйского оленного камня</p>
+						</div>
+					</div>
+				</div>
+				<div dir="RTL" class="tours-gallary gallary-revers swiper">
+					<div class="tours-gallary__wrapper swiper-wrapper">
+						<div class="tours-gallary__slide swiper-slide">
+							<img src="/img/tours/tour1/vstretchi-v-stepi-tour1-.png" alt="магия алтая" class="gallary-slider__img gallary-slider__img_tours">
+							<p>Встречи в Чуйской степи, дорога на старый Бельтир</p>
+						</div>
+						<div class="tours-gallary__slide swiper-slide">
+							<img src="/img/tours/tour1/katun-ilgumen-tour1-.png" alt="магия алтая" class="gallary-slider__img gallary-slider__img_tours">
+							<p>Катунь в районе Ильгуменьского порога</p>
+						</div>
+						<div class="tours-gallary__slide swiper-slide">
+							<img src="/img/tours/tour1/severo-chujskij-tour1-.png" alt="магия алтая" class="gallary-slider__img gallary-slider__img_tours">
+							<p>Вид на Северо чуйский хребет</p>
+						</div>
+						<div class="tours-gallary__slide swiper-slide">
+							<img src="/img/tours/tour1/petroglifi-olen-kamen-tour1-.png" alt="магия алтая" class="gallary-slider__img gallary-slider__img_tours">
+							<p>Петроглифы на скальнике у Чуйского оленного камня</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tours__description description _container">
+				<div class="description__title _h5">Проживание</div>
+				<p class="description__text _text"><span class="_text-bold">Теплый период (июнь, июль, август)</span>- туристические палатки (новое туристическое оборудование, кемпинговая мебель, походный душ, баня). Опытные инструкторы установят лагерь, подготовят спальные места, приготовят для вас вкусный ужин и завтрак.</p>
+				<p class="description__text _text"><span class="_text-bold">В холодное время года проживание на базах по пути следования.</span></p>
+				<p class="description__text _text">Возможны комбинированные варианты.</p>
+			</div>
+			<div class="tours__description description _container">
+				<div class="description__title _h5">Что включено</div>
+				<ul class="description__list">
+					<li class="description__item _text">встреча в аэропорту Горно Алтайска (трансфер из Барнаула оговаривается отдельно);</li>
+					<li class="description__item _text">проживание;</li>
+					<li class="description__item _text">питание (завтрак, ужин);</li>
+					<li class="description__item _text">экскурсионная программа;</li>
+					<li class="description__item _text">фото и видеосъёмка.</li>
+				</ul>
+			</div>
+			<div class="tours__description description _container">
+				<div class="description__title _h5">Программа маршрута</div>
+				<p class="description__text _text">День1</p>
+				<p class="description__text _text">День2</p>
+				<p class="description__text _text">День3</p>
+				<p class="description__text _text">День4</p>
+				<p class="description__text _text">День5</p>
+			</div>
+			<div class="tours__description description tours__description_shto-brat _container">
+				<div class="description__title _h5">Что взять с собой</div>
+				<p class="description__text _text">Так как отдых у нас активный, а погода в горах изменчива, советуем вам взять с собой следующее:</p>
+				<ul class="description__list">
+					<li class="description__item _text">теплая куртка, головной убор от солнца, теплая шапка, перчатки;</li>
+					<li class="description__item _text">небольшой рюкзак, так чтобы поместилась запасная одежда, бутылка воды, мелкие личные вещи, предметы гигиены;</li>
+					<li class="description__item _text">обувь - трекинговые ботинки или кроссовки, обувь должна быть достаточно комфортна и удобна, желательно иметь запасную пару;</li>
+					<li class="description__item _text">личные вещи: солнцезащитные очки, солнцезащитный крем, гигиеническая губная помада, купальные принадлежности, сланцы, дождевик, предметы личной гигиены, небольшую сумму наличными деньгами;</li>
+					<li class="description__item _text">документы: паспорт, полис обязательного медецинского страхования, страховой полис от укуса клеща.</li>
+				</ul>
+				<p class="description__text _text">И, конечно, отличное настроение!</p>
+			</div>
+			<div class="tours__description description tours__description_price _container">
+				<div class="first__button tours__button">
+					<a class="_text-btn" href="#">Забронировать тур<span class="material-symbols-outlined"> arrow_forward </span></a>
+				</div>
+				<p class="description__text _text">Цена <span class="_text-bold">50 000 ₽/чел</span></p>
+				<p class="description__text _text">Фото и видеосъемка на протяжении всего тура, весь отснятый материал предоставляется.</p>
+			</div>
+		</main>
+		<footer class=" tour-footer footer">
+			<div class="tour-footer__body _container">
+				<div class="tour-footer__nav"><span class="material-symbols-outlined"> arrow_circle_up </span>
+				</div>
+				<address class="tour-footer__contacts menu__contacts contacts">
+					<ul class="contacts__list">
+						<li class="contacts__item"><a class="contacts__link contacts__link_phone" href="#"><i class="fas fa-phone-alt"></i></a></li>
+						<li class="contacts__item"><a class="contacts__link" href="#"><i class="fab fa-telegram-plane"></i></a></li>
+						<li class="contacts__item"><a class="contacts__link" href="#"><i class="fab fa-odnoklassniki"></i></li>
+						<li class="contacts__item"><a class="contacts__link" href="#"><i class="fab fa-whatsapp"></i></a></li>
+					</ul>
+				</address>
+			</div>
+			<div class="tour-footer__image"><img src="/img/footer/footer-bg.png" alt="магия алтая футер"></div>
+		</footer>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="/script/slick.min.js"></script>
+	<script src="https://kit.fontawesome.com/ed24aaf06b.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+	<script src="/script/script.js"></script>
+</body>
+
+</html>
