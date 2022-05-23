@@ -27,6 +27,17 @@ if (menuLinks.length > 0) {
 	}
 }
 
+// Меню бургер
+const iconMenu = document.querySelector('.menu__icon');
+const menuBody = document.querySelector('.menu-small');
+if (iconMenu) {
+	iconMenu.addEventListener("click", function (e) {
+		document.body.classList.toggle('_lock');
+		iconMenu.classList.toggle('_active');
+		menuBody.classList.toggle('_active');
+	});
+}
+
 $(document).ready(function () {
 	$('.first__utp-slider').slick({
 		dots: true,
@@ -112,3 +123,16 @@ new Swiper('.gallary-revers', {
 	speed: 6000,
 	loop: true,
 })
+
+// слайдер аккордеон день
+
+$(document).ready(function () {
+	$('.day__title').click(function (event) {
+		// Аккордион
+		// if ($('.description').hasClass('one')) {
+		// 	$('.day__title').not($(this)).removeClass('active');
+		// 	$('.day__content').not($(this).next()).slideUp(500);
+		// }
+		$(this).toggleClass('active').next().slideToggle(500);
+	});
+});

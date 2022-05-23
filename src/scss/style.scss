@@ -236,6 +236,7 @@ p._text {
 		@media ( max-width: 1100px) {
 			display: block;
 			position: relative;
+			z-index: 5;
 			width: 40px;
 			height: 30px;
 			cursor: pointer;
@@ -247,12 +248,27 @@ p._text {
 				left: 0;
 				border-radius: 3px;
 				background: $main;
+				transition: all 0.5s;
 			}
+			&._active::before, &._active::after {
+				background: $bg;
+			}
+
+			&._active span {
+				opacity: 0;
+			}
+
 			&::before, &::after {
 				content: '';
 			}
 			&::before {
 				top: 0;
+			}
+			&._active::before {
+				transform: rotate(45deg);
+			}
+			&._active::after {
+				transform: rotate(-45deg);
 			}
 			&::after {
 				bottom: 0;
@@ -337,6 +353,62 @@ p._text {
 	}
 }
 
+.menu-small {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	width: 60vw;
+	height: 100vh;
+	left: 0;
+	top: 0;
+	background: $main;
+	opacity: 0.98;
+	transform: translate(-100%, 0);
+	transition: 0.5s;
+	&._active {
+		transform: translate(0, 0);
+	}
+	
+
+	&__logo {
+		max-width: 120px;
+		margin-bottom: 30px;
+		img {
+			max-width: 100%;
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		li {
+			padding: 30px 0px;
+			border-bottom: 1px solid $bg;
+		}
+	}
+	
+	&__item {
+		a {
+			display: block;
+			width: 45vw;
+
+		}
+	}
+}
+.menu {
+
+	&__link {
+
+		&_small {
+			color: $bg;
+			font-weight: 400;
+		}
+	}
+}
+
+
 
 //====================main-block==================
 
@@ -361,7 +433,7 @@ p._text {
 
 	&__title {
 		position: relative;
-		z-index: 5;
+		z-index: 2;
 		display: flex;
 		@media ( max-width: 768px) {
 			flex-wrap: wrap;
