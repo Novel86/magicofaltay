@@ -8,7 +8,7 @@
 }
 
 .header__clouds-tours {
-	background: url(/img/tours/clouds-tours.png) 0 0 / 100% calc(50% + (100 - 50) * ((100vw - 375px) / (1400 - 375)))  no-repeat;
+	background: url(../img/tours/clouds-tours.png) 0 0 / 100% calc(50% + (100 - 50) * ((100vw - 375px) / (1400 - 375)))  no-repeat;
 	position: absolute;
 	width: 100%;
 	height: 650px;
@@ -179,7 +179,7 @@
 
 	&__slide {
 		position: relative;
-		
+
 		img {
 			filter: sepia(0.3) saturate(0.6) hue-rotate(20deg);
 			transition: 0.5s;
@@ -290,7 +290,7 @@
 	pointer-events: none;
 
 	&__day {
-		background: url(/img/tours/day-mountains-clouds.png) 0 100% / 100% 95% no-repeat;
+		background: url(../img/tours/day-mountains-clouds.png) 0 100% / 100% 95% no-repeat;
 		z-index: 3;
 	}
 }
@@ -330,7 +330,7 @@
 		display: none;
 		margin-top: 50px;
 		padding: 0px calc(20px + (60 - 20) * ((100vw - 375px) / (1400 - 375)));
-		background: url(/img/tours/day-mountains-1-.png) 50% 100% / auto calc(700px + (700 - 700) * ((100vw - 375px) / (1400 - 375))) no-repeat;
+		background: url(../img/tours/day-mountains-1-.png) 50% 100% / auto calc(700px + (700 - 700) * ((100vw - 375px) / (1400 - 375))) no-repeat;
 		@media ( max-width: 512px) {
 			padding: 0;
 		}

@@ -555,7 +555,7 @@ p._text {
 }
 
 .clouds {
-	background: url(/img/first/clouds-main.png) 50% 0/cover no-repeat;
+	background: url(../img/first/clouds-main.png) 50% 0/cover no-repeat;
 	pointer-events: none;
 	
 	&__first {
@@ -627,9 +627,9 @@ p._text {
 }
 .one-page {
 	&__clouds {
-		background: url(/img/best/best-clouds.png) 50% 1%/contain no-repeat;
+		background: url(../img/best/best-clouds.png) 50% 1%/contain no-repeat;
 		@media ( max-width: 940px) {
-			background: url(/img/best/best-clouds.png) -130% 50%/contain no-repeat;
+			background: url(../img/best/best-clouds.png) -130% 50%/contain no-repeat;
 		}
 	}
 	&__row-1 {
@@ -762,7 +762,7 @@ p._text {
 .two-page {
 
 	&__clouds {
-		background: url(/img/best/best-clouds.png) -10% 40%/70% auto no-repeat;
+		background: url(../img/best/best-clouds.png) -10% 40%/70% auto no-repeat;
 	}
 
 	&__row1 {
@@ -819,7 +819,7 @@ p._text {
 
 
 	&__row2 {
-		background: url(/img/best/best-clouds.png) 50% 0/100% auto no-repeat;
+		background: url(../img/best/best-clouds.png) 50% 0/100% auto no-repeat;
 		margin: 0 0 20px 0;
 	}
 
@@ -958,7 +958,7 @@ p._text {
 		@media ( max-width: 1400px) {
 			left: calc(50px + (100 - 50) * ((100vw - 768px) / (1400 - 768)));
 		}
-		background: url(/img/first/Union.svg) 0 0 / 100% no-repeat;
+		background: url(../img/first/Union.svg) 0 0 / 100% no-repeat;
 		transform: translateY(-50%);
 		transition: left 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 		&:hover{
@@ -972,7 +972,7 @@ p._text {
 		@media ( max-width: 1400px) {
 			right: calc(50px + (100 - 50) * ((100vw - 768px) / (1400 - 768)));
 		}
-			background: url(/img/first/Union.svg) 0 0 / 100% no-repeat;
+			background: url(../img/first/Union.svg) 0 0 / 100% no-repeat;
 			transform: scale(-1, 1) translateY(-50%);
 			transition: right 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 		&:hover{

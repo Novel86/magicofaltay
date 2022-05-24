@@ -707,7 +707,7 @@ p._text:not(:last-child) {
 }
 
 .clouds {
-  background: url(/img/first/clouds-main.png) 50% 0/cover no-repeat;
+  background: url(../img/first/clouds-main.png) 50% 0/cover no-repeat;
   pointer-events: none;
 }
 
@@ -783,12 +783,12 @@ p._text:not(:last-child) {
 }
 
 .one-page__clouds {
-  background: url(/img/best/best-clouds.png) 50% 1%/contain no-repeat;
+  background: url(../img/best/best-clouds.png) 50% 1%/contain no-repeat;
 }
 
 @media (max-width: 940px) {
   .one-page__clouds {
-    background: url(/img/best/best-clouds.png) -130% 50%/contain no-repeat;
+    background: url(../img/best/best-clouds.png) -130% 50%/contain no-repeat;
   }
 }
 
@@ -955,7 +955,7 @@ p._text:not(:last-child) {
 }
 
 .two-page__clouds {
-  background: url(/img/best/best-clouds.png) -10% 40%/70% auto no-repeat;
+  background: url(../img/best/best-clouds.png) -10% 40%/70% auto no-repeat;
 }
 
 @media (min-width: 767px) {
@@ -1029,7 +1029,7 @@ p._text:not(:last-child) {
 }
 
 .two-page__row2 {
-  background: url(/img/best/best-clouds.png) 50% 0/100% auto no-repeat;
+  background: url(../img/best/best-clouds.png) 50% 0/100% auto no-repeat;
   margin: 0 0 20px 0;
 }
 
@@ -1174,7 +1174,7 @@ p._text:not(:last-child) {
 .first__utp-slider .slick-arrow.slick-prev {
   cursor: pointer;
   left: 100px;
-  background: url(/img/first/Union.svg) 0 0/100% no-repeat;
+  background: url(../img/first/Union.svg) 0 0/100% no-repeat;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   -webkit-transition: left 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
@@ -1194,7 +1194,7 @@ p._text:not(:last-child) {
 .first__utp-slider .slick-arrow.slick-next {
   cursor: pointer;
   right: 110px;
-  background: url(/img/first/Union.svg) 0 0/100% no-repeat;
+  background: url(../img/first/Union.svg) 0 0/100% no-repeat;
   -webkit-transform: scale(-1, 1) translateY(-50%);
           transform: scale(-1, 1) translateY(-50%);
   -webkit-transition: right 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
@@ -1248,7 +1248,7 @@ p._text:not(:last-child) {
 }
 
 .header__clouds-tours {
-  background: url(/img/tours/clouds-tours.png) 0 0/100% calc(50% + (100 - 50) * ((100vw - 375px) / (1400 - 375))) no-repeat;
+  background: url(../img/tours/clouds-tours.png) 0 0/100% calc(50% + (100 - 50) * ((100vw - 375px) / (1400 - 375))) no-repeat;
   position: absolute;
   width: 100%;
   height: 650px;
@@ -1498,7 +1498,7 @@ p._text:not(:last-child) {
 }
 
 .image-box__day {
-  background: url(/img/tours/day-mountains-clouds.png) 0 100%/100% 95% no-repeat;
+  background: url(../img/tours/day-mountains-clouds.png) 0 100%/100% 95% no-repeat;
   z-index: 3;
 }
 
@@ -1532,7 +1532,7 @@ p._text:not(:last-child) {
   display: none;
   margin-top: 50px;
   padding: 0px calc(20px + (60 - 20) * ((100vw - 375px) / (1400 - 375)));
-  background: url(/img/tours/day-mountains-1-.png) 50% 100%/auto calc(700px + (700 - 700) * ((100vw - 375px) / (1400 - 375))) no-repeat;
+  background: url(../img/tours/day-mountains-1-.png) 50% 100%/auto calc(700px + (700 - 700) * ((100vw - 375px) / (1400 - 375))) no-repeat;
 }
 
 @media (max-width: 512px) {
