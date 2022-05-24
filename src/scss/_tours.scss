@@ -8,10 +8,10 @@
 }
 
 .header__clouds-tours {
-	background: url(/img/tours/clouds-tours.png) 0 0 / contain  no-repeat;
+	background: url(/img/tours/clouds-tours.png) 0 0 / 100% calc(50% + (100 - 50) * ((100vw - 375px) / (1400 - 375)))  no-repeat;
 	position: absolute;
 	width: 100%;
-	height: 465px;
+	height: 650px;
 	top: 0;
 	left: 0;
 	pointer-events: none;
@@ -70,8 +70,7 @@
 			justify-content: space-between;
 			align-items: flex-end;
 		}
-		margin-bottom: 80px;
-	}
+			}
 
 	&__column {
 		li {
@@ -91,6 +90,9 @@
 
 	&__icon {
 		margin: 0px 20px 0px 0px !important;
+		@media ( max-width: 425px) {
+			margin: 0px 10px 0px 0px !important;
+		}
 	}
 
 	&__img {
@@ -98,6 +100,9 @@
 
 	&__parametr {
 		margin: 0px 20px 0px 0px !important;
+		@media ( max-width: 425px) {
+			margin: 0px 10px 0px 0px !important;
+		}
 		flex: 0 0 auto;
 	}
 
@@ -174,6 +179,11 @@
 
 	&__slide {
 		position: relative;
+		
+		img {
+			filter: sepia(0.3) saturate(0.6) hue-rotate(20deg);
+			transition: 0.5s;
+		}
 		p {
 			position: absolute;
 			width: 58.75%;
@@ -198,17 +208,10 @@
 			p {
 				opacity: 0;
 				pointer-events: none;
-
 			}
-		}
-	}
-}
-
-.gallary-slider {
-
-	&__img {
-
-		&_tours {
+			img {
+				filter: sepia(0) saturate(1) hue-rotate(0deg);
+			}
 		}
 	}
 }
@@ -278,19 +281,37 @@
 	}
 }
 
+.image-box {
+	position: absolute;
+	width: 100%;
+	height: 350px;
+	left: 0;
+	bottom: 0;
+	pointer-events: none;
+
+	&__day {
+		background: url(/img/tours/day-mountains-clouds.png) 0 100% / 100% 95% no-repeat;
+		z-index: 3;
+	}
+}
+
+
 //====================day======================
 
 .discription {
 
 	&__day {
-		padding: 45px 50px 45px 50px;
+		position: relative;
+		z-index: 2;
+		padding: calc(15px + (45 - 15) * ((100vw - 375px) / (1400 - 374))) calc(20px + (50 - 20) * ((100vw - 375px) / (1400 - 374)));
 		background: white;
+		
 		border: 1px solid $main;
 		border-radius: 3px;
 		box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.08);
 		overflow: hidden;
 		&:not(:last-child) {
-			margin-bottom: 40px;
+			margin-bottom: calc(20px + (40 - 20) * ((100vw - 375px) / (1400 - 375)));
 		}
 	}
 }
@@ -308,45 +329,65 @@
 	&__content {
 		display: none;
 		margin-top: 50px;
-		padding: 0px 60px;
+		padding: 0px calc(20px + (60 - 20) * ((100vw - 375px) / (1400 - 375)));
+		background: url(/img/tours/day-mountains-1-.png) 50% 100% / auto calc(700px + (700 - 700) * ((100vw - 375px) / (1400 - 375))) no-repeat;
+		@media ( max-width: 512px) {
+			padding: 0;
+		}
 	}
 
 	&__spec {
+		margin-bottom: 80px;
+
 	}
 
-	&__menu {
-	}
-}
-
-
-.description {
-
-	&__title {
+	&__map {
+		margin-top: 20px;
+		span {
+			padding: 0px 10px;
+			display: inline-block;	
+		}
 	}
 
-	&__list {
-	}
-
-	&__item {
-	}
-
-	&__text {
+	&__dishes {
+		margin-bottom: 20px;
 	}
 }
-.menu {
+
+.dishes {
 
 	&__title {
+		
 	}
 
 	&__body {
+		@media ( min-width: 797px) {
+		display: flex;
+		justify-content: center;
+		}
+
 	}
 
 	&__column {
+		margin: 0px 15px;
+		@media ( max-width: 797px) {
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
 	}
 
 	&__subtitle {
+		text-align: left;
 	}
 
 	&__table {
+		padding: 20px 80px;
+		@media ( max-width: 1400px) {
+			padding: calc(10px + (20 - 10) * ((100vw - 375px) / (1400 - 375))) calc(30px + (80 - 30) * ((100vw - 375px) / (1400 - 375)));
+		}	
+		background: linear-gradient(180deg, rgba(186, 231, 221, 0.7) 49.27%, rgba(186, 231, 221, 0) 100%);
+		border-radius: 3px;
+		backdrop-filter: blur(1.2px);
 	}
 }
