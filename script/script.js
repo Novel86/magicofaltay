@@ -93,6 +93,26 @@ new Swiper('.gallary', {
 
 });
 
+new Swiper('.catalog__block', {
+	navigation: {
+		nextEl: '.catalog__next',
+		prevEl: '.catalog__prev'
+	},
+	pagination: {
+		el: '.catalog__bullets',
+		clickable: true,
+		// dynamicBullets: true
+	},
+	autoplay: {
+		delay: 5000,
+		disableOnInteraction: false,
+		pauseOnMouseEnter: true
+	},
+	speed: 3000,
+	loop: true,
+
+});
+
 new Swiper('.gallary-revers', {
 	slidesPerView: 2.2,
 	spaceBetween: 30,
@@ -124,7 +144,7 @@ new Swiper('.gallary-revers', {
 	loop: true,
 })
 
-// слайдер аккордеон день
+// слайдер аккордеон день#
 
 $(document).ready(function () {
 	$('.day__title').click(function (event) {
