@@ -103,11 +103,6 @@ new Swiper('.catalog__block', {
 		clickable: true,
 		// dynamicBullets: true
 	},
-	autoplay: {
-		delay: 5000,
-		disableOnInteraction: false,
-		pauseOnMouseEnter: true
-	},
 	speed: 3000,
 	loop: true,
 

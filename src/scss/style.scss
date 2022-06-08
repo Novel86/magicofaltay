@@ -52,7 +52,7 @@ $bg-card: #BAE7DD;
 	line-height: 135.4%;
 	@media ( max-width: 1280px) {
 		font-size: calc(28px + (48 - 28) * ((100vw - 375px) / (1280 - 375)));
-		line-height: calc(120% + (135.4 - 120) * ((100vw - 768px) / (1280 - 768)));
+		line-height: calc(120% + (135.4 - 120) * ((100vw - 375px) / (1280 - 375)));
 	}
 	text-transform: capitalize;
 	color: $main;
@@ -915,15 +915,17 @@ p._text {
 		margin-bottom: 100px;
 		h2 {
 		display: inline-block;
-		position: relative;
-			&::after {
-				content: '';
-				position: absolute;
-				width: 100%;
-				height: 2px;
-				left: 107%;
-				top: 50%;
-				background: $main;
+			@media ( min-width: 768px) {
+				position: relative;
+				&::after {
+					content: '';
+					position: absolute;
+					width: 100%;
+					height: 2px;
+					left: 107%;
+					top: 50%;
+					background: $main;
+				}
 			}
 		}
 	}
@@ -933,16 +935,26 @@ p._text {
 	}
 }
 
+.cataloge-header__container {
+	@media ( min-width: 992px) {
+		display: flex;
+	}
+	margin-bottom: 40px;
+}
+
 .catalog {
 
 	&__navigation {
-		position: absolute;
-		z-index: 5;
+		flex: 0 1 40%;
 		display: flex;
 		justify-content: end;
 		align-items: center;
-		padding: 0 80px;
-		width: 50%;
+		padding: 0 80px 0 0;
+		@media ( max-width: 992px) {
+			justify-content: center;
+			padding: 0;
+		}
+
 		span {
 			font-size: 54px;
 			font-weight: 300;
@@ -991,14 +1003,18 @@ p._text {
 	}
 }
 
-
-.cataloge-header {
-	margin-bottom: 40px;
-	text-align: right;
+.cataloge-header__content {
+	flex: 1 0 50%;
 }
+
 .catalog-header {
+	text-align: center;
+	@media ( min-width: 992px) {
+		text-align: right;
+	}
 
 	&__title {
+		
 	}
 
 	&__subtitle {
@@ -1007,34 +1023,46 @@ p._text {
 .cataloge {
 
 	&__content {
-		display: flex;
+		@media ( min-width: 992px) {
+			display: flex;
+		}
 	}
 	
 	&__image {
 		flex: 0 0 50%;
+		@media ( max-width: 992px) {
+			margin-bottom: 20px;
+		}
 		img {
 			width: 100%;
-			max-height: 680px;
+			height: 100%;
 			object-fit: cover;
 		}
 	}
 	
 	&__subject {
-		flex: 0 0 100%;
-		transform: translate(-50%, 0);
+		@media ( min-width: 992px) {
+			flex: 0 0 100%;
+			transform: translate(-50%, 0);
+		}
 	}
 }
 .subject {
 
 	&__body {
-		max-width: 50%;
-		margin-left: auto;
-		padding: 0 0 150px 50px;
+		@media ( min-width: 992px) {
+			max-width: 50%;
+			margin-left: auto;
+			padding: 0 0 150px 50px;
+		}
 	}
 
 	&__more {
 		display: inline-block;
 		margin-bottom: 80px;
+		@media ( max-width: 1360px) {
+			margin-bottom: calc(30px + (80 - 30) * ((100vw - 375px) / (1400 - 375)));
+		}
 		transition: 0.5s;
 		border-bottom: 2px #007a8800 solid;
 		&:hover {
@@ -1044,7 +1072,9 @@ p._text {
 	}
 
 	&__items {
-		margin-bottom: 20px;
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
 		@media ( max-width: 1360px) {
 			&:not(:last-child) {
 				margin-bottom: calc(5px + (20 - 5) * ((100vw - 375px) / (1400 - 375)));
@@ -1057,16 +1087,29 @@ p._text {
 	
 	&__button {
 		margin-bottom: 40px;
+		@media ( max-width: 1360px) {
+			margin-bottom: calc(20px + (40 - 20) * ((100vw - 375px) / (1400 - 375)));
+		}
 	}
 }
 
 .subject-list {
 	margin-bottom: 80px;
+	@media ( max-width: 1360px) {
+		margin-bottom: calc(30px + (80 - 30) * ((100vw - 375px) / (1400 - 375)));
+	}
 }
 .button-2 {
 	a {
 		display: inline-block;
 		padding: 28px 45px;
+		@media ( max-width: 1360px) {
+			padding: calc(15px + (28 - 15) * ((100vw - 375px) / (1400 - 375))) calc(25px + (45 - 25) * ((100vw - 375px) / (1400 - 375)));
+		}
+		@media ( max-width: 440px) {
+			width: 100%;
+			text-align: center;
+		}
 		background: $link;
 		border-radius: 3px;
 		border: 2px $link solid;
