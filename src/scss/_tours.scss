@@ -125,10 +125,13 @@
 			p {
 			text-align: center;
 			}
+			h5 {
+				text-align: center;
+			}
 		}
 	}
 	&__button {
-		margin-bottom: 40px;
+		margin-top: 40px;
 	}
 }
 .description {
@@ -156,7 +159,7 @@
 			height: 4px;
 			border-radius: 50%;
 			left: 0;
-			top: 50%;
+			top: 0.6em;
 			background: $main;
 		}
 	}

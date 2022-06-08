@@ -167,6 +167,10 @@ p._text {
 	color: $link;
 }
 
+.material-symbols-outlined {
+	padding-left: 10px;
+}
+
 //====================служебные классы======================
 
 .wrapper{
@@ -328,7 +332,7 @@ p._text {
 	&__item {
 
 		&:not(:last-child) {
-			padding: 0 calc(20px + (30 - 20) * ((100vw - 375px) / (1400 - 375))) 0 0;
+			padding: 0 calc(15px + (25 - 15) * ((100vw - 375px) / (1400 - 375))) 0 0;
 		}
 	}
 
@@ -346,7 +350,7 @@ p._text {
 			font-size: calc(32px + (46 - 32) * ((100vw - 375px) / (1400 - 375)));
 			color: $main;
 			vertical-align: middle;
-			transition: 0.5s ease-in-out;
+			transition: 0.5s;
 
 			&:hover {
 				color: $link;
@@ -368,7 +372,7 @@ p._text {
 	top: 0;
 	background: $main;
 	opacity: 0.98;
-	transform: translate(-100%, 0);
+	transform: translate(-150%, 0);
 	transition: 0.5s;
 	&._active {
 		transform: translate(0, 0);
@@ -1136,12 +1140,159 @@ p._text {
 	}
 	
 }
-.material-symbols-outlined {
-	padding-left: 10px;
-}
+
 .subject-price {
 	span {
 		padding-left: 10px;
+	}
+}
+
+//====================форма отправки на главной======================
+
+.form {
+	display: flex;
+	align-items: center;
+
+	&__content {
+		position: relative;
+		&::after {
+			content: '';
+			position: absolute;
+			width: 2px;
+			height: 100%;
+			right: 0;
+			top: 0;
+			background: $main;
+		}
+	}
+
+	&__title {
+		position: relative;
+		padding: 80px 30px 20px 0px;
+		margin-bottom: 50px;
+		p {
+			text-align: left !important;
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			width: 95%;
+			height: 2px;
+			left: 0;
+			bottom: 0;
+			background: $main;
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			width: 14px;
+			height: 14px;
+			left: 95%;
+			bottom: 0;
+			border-top: $main 2px solid;
+			border-right: $main 2px solid;
+			transform: translate(-106%, 40%) rotate(45deg);
+		}
+	}
+
+	&__contacts {
+
+	}
+
+	&__body {
+		flex: 0 0 60%;
+		margin: 0px 0px 40px 30px;
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__label {
+	}
+
+	&__input {
+		width: 100%;
+		height: 50px;
+		background: $bg;
+		border-bottom: $main 2px solid;
+		padding-left: 15px;
+	}
+
+	&__button {
+		
+			display: inline-block;
+			padding: 28px 45px;
+			min-width: 440px;
+			margin: 0 auto;
+			@media ( max-width: 1360px) {
+				padding: calc(15px + (28 - 15) * ((100vw - 375px) / (1400 - 375))) calc(25px + (45 - 25) * ((100vw - 375px) / (1400 - 375)));
+			}
+			@media ( max-width: 440px) {
+				width: 100%;
+			}
+			background: $link;
+			color: $bg;
+			border-radius: 3px;
+			border: 2px $link solid;
+			transition: 0.5s;
+			&:hover {
+				background: $bg;
+				border: 2px $main solid;
+				color: $main;
+				span {
+					color: $main;
+				}
+			}
+		
+		* {
+			color: $bg;
+			vertical-align: middle;
+			line-height: 100%;
+		}
+		span {
+			transform: translate(0, -2px);
+			font-size: 30px;
+			transition: 0.5s;
+		}
+	}
+}
+
+textarea.form__input {
+	resize: vertical;
+}
+
+.contacts {
+
+	&__text {
+		margin-bottom: 20px;
+	}
+
+	&__list {
+	}
+
+	&__item_bright {
+		i {
+		color: $link;
+		transition: 0.5s;
+		&:hover {
+			color: $main;
+		}
+		}
+	}
+
+	&__link {
+
+		&_phone {
+		}
+	}
+}
+
+.checkbox {
+
+	&__input {
 	}
 }
 

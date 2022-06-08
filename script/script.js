@@ -103,7 +103,7 @@ new Swiper('.catalog__block', {
 		clickable: true,
 		// dynamicBullets: true
 	},
-	speed: 3000,
+	speed: 2000,
 	loop: true,
 
 });

@@ -257,6 +257,10 @@ p._text:not(:last-child) {
   }
 }
 
+.material-symbols-outlined {
+  padding-left: 10px;
+}
+
 .wrapper {
   position: relative;
   min-height: 100%;
@@ -438,7 +442,7 @@ p._text:not(:last-child) {
 }
 
 .contacts__item:not(:last-child) {
-  padding: 0 calc(20px + (30 - 20) * ((100vw - 375px) / (1400 - 375))) 0 0;
+  padding: 0 calc(15px + (25 - 15) * ((100vw - 375px) / (1400 - 375))) 0 0;
 }
 
 .contacts__link_phone i {
@@ -456,8 +460,8 @@ p._text:not(:last-child) {
   font-size: calc(32px + (46 - 32) * ((100vw - 375px) / (1400 - 375)));
   color: #33333C;
   vertical-align: middle;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .contacts__link i:hover {
@@ -487,8 +491,8 @@ p._text:not(:last-child) {
   top: 0;
   background: #33333C;
   opacity: 0.98;
-  -webkit-transform: translate(-100%, 0);
-          transform: translate(-100%, 0);
+  -webkit-transform: translate(-150%, 0);
+          transform: translate(-150%, 0);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -1400,12 +1404,150 @@ p._text:not(:last-child) {
   transition: 0.5s;
 }
 
-.material-symbols-outlined {
+.subject-price span {
   padding-left: 10px;
 }
 
-.subject-price span {
-  padding-left: 10px;
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form__content {
+  position: relative;
+}
+
+.form__content::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background: #33333C;
+}
+
+.form__title {
+  position: relative;
+  padding: 80px 30px 20px 0px;
+  margin-bottom: 50px;
+}
+
+.form__title p {
+  text-align: left !important;
+}
+
+.form__title::after {
+  content: '';
+  position: absolute;
+  width: 95%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background: #33333C;
+}
+
+.form__title::before {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: 95%;
+  bottom: 0;
+  border-top: #33333C 2px solid;
+  border-right: #33333C 2px solid;
+  -webkit-transform: translate(-106%, 40%) rotate(45deg);
+          transform: translate(-106%, 40%) rotate(45deg);
+}
+
+.form__body {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
+  margin: 0px 0px 40px 30px;
+}
+
+.form__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.form__input {
+  width: 100%;
+  height: 50px;
+  background: #F1F1F1;
+  border-bottom: #33333C 2px solid;
+  padding-left: 15px;
+}
+
+.form__button {
+  display: inline-block;
+  padding: 28px 45px;
+  min-width: 440px;
+  margin: 0 auto;
+  background: #007B88;
+  color: #F1F1F1;
+  border-radius: 3px;
+  border: 2px #007B88 solid;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media (max-width: 1360px) {
+  .form__button {
+    padding: calc(15px + (28 - 15) * ((100vw - 375px) / (1400 - 375))) calc(25px + (45 - 25) * ((100vw - 375px) / (1400 - 375)));
+  }
+}
+
+@media (max-width: 440px) {
+  .form__button {
+    width: 100%;
+  }
+}
+
+.form__button:hover {
+  background: #F1F1F1;
+  border: 2px #33333C solid;
+  color: #33333C;
+}
+
+.form__button:hover span {
+  color: #33333C;
+}
+
+.form__button * {
+  color: #F1F1F1;
+  vertical-align: middle;
+  line-height: 100%;
+}
+
+.form__button span {
+  -webkit-transform: translate(0, -2px);
+          transform: translate(0, -2px);
+  font-size: 30px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+textarea.form__input {
+  resize: vertical;
+}
+
+.contacts__text {
+  margin-bottom: 20px;
+}
+
+.contacts__item_bright i {
+  color: #007B88;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.contacts__item_bright i:hover {
+  color: #33333C;
 }
 
 .slick-track {
@@ -1634,8 +1776,12 @@ p._text:not(:last-child) {
   text-align: center;
 }
 
+.tours__description_price h5 {
+  text-align: center;
+}
+
 .tours__button {
-  margin-bottom: 40px;
+  margin-top: 40px;
 }
 
 .description__title {
@@ -1660,7 +1806,7 @@ p._text:not(:last-child) {
   height: 4px;
   border-radius: 50%;
   left: 0;
-  top: 50%;
+  top: 0.6em;
   background: #33333C;
 }
 
