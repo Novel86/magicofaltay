@@ -73,6 +73,7 @@
 			}
 
 	&__column {
+		flex: 0 0 50%;
 		li {
 			margin-bottom: 10px !important;
 		}
@@ -135,6 +136,11 @@
 	}
 }
 .description {
+	ul {
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
 
 	&__container {
 	}
