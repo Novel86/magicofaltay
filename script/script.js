@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Прокрутка при клике
-const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
+const menuLinks = document.querySelectorAll('a[data-goto]');
 if (menuLinks.length > 0) {
 	menuLinks.forEach(menuLink => {
 		menuLink.addEventListener("click", onMenuLinkClick);
@@ -87,12 +87,6 @@ if (menuLinks.length > 0) {
 			const gotoBlock = document.querySelector(menuLink.dataset.goto);
 			const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY - document.querySelector('header').offsetHeight;
 
-			// if (iconMenu.classList.contains('_active')) {
-			// 	document.body.classList.remove('_lock');
-			// 	iconMenu.classList.remove('_active');
-			// 	menuBody.classList.remove('_active');
-			// }
-
 			window.scrollTo({
 				top: gotoBlockValue,
 				behavior: "smooth"
@@ -103,8 +97,8 @@ if (menuLinks.length > 0) {
 }
 
 // Меню бургер
-const iconMenu = document.querySelector('.menu__icon');
-const menuBody = document.querySelector('.menu-small');
+const iconMenu = document.querySelector('.header__burger');
+const menuBody = document.querySelector('.header-small');
 if (iconMenu) {
 	iconMenu.addEventListener("click", function (e) {
 		document.body.classList.toggle('_lock');
@@ -113,6 +107,7 @@ if (iconMenu) {
 	});
 };
 
+// слайдер slick
 $(document).ready(function () {
 	$('.first__utp-slider').slick({
 		dots: true,
@@ -128,24 +123,6 @@ $(document).ready(function () {
 new Swiper('.gallary', {
 	slidesPerView: 2.2,
 	spaceBetween: 30,
-	// Responsive breakpoints
-	breakpoints: {
-		// when window width is >= 320px
-		320: {
-			slidesPerView: 1.2,
-			spaceBetween: 20
-		},
-		// when window width is >= 480px
-		// 480: {
-		// 	slidesPerView: 3,
-		// 	spaceBetween: 30
-		// },
-		// when window width is >= 640px
-		767: {
-			slidesPerView: 2.2,
-			spaceBetween: 30
-		}
-	},
 	autoplay: {
 		delay: 0,
 		disableOnInteraction: false,
@@ -153,8 +130,46 @@ new Swiper('.gallary', {
 	},
 	speed: 6000,
 	loop: true,
+	// Responsive breakpoints
+	breakpoints: {
+		// when window width is >= 320px
+		320: {
+			slidesPerView: 1.2,
+			spaceBetween: 10,
+			autoplay: false
+		},
+		767: {
+			slidesPerView: 2.2,
+			spaceBetween: 30,
+		}
+	},
+
 
 });
+
+new Swiper('.gallary-revers', {
+	autoplay: {
+		delay: 0,
+		disableOnInteraction: false,
+		pauseOnMouseEnter: true,
+	},
+	speed: 6000,
+	loop: true,
+	slidesPerView: 2.2,
+	spaceBetween: 30,
+	breakpoints: {
+		320: {
+			slidesPerView: 1.2,
+			spaceBetween: 30,
+			autoplay: false
+		},
+		// when window width is >= 640px
+		767: {
+			slidesPerView: 2.2,
+			spaceBetween: 30
+		}
+	},
+})
 
 new Swiper('.catalog__block', {
 	navigation: {
@@ -164,43 +179,15 @@ new Swiper('.catalog__block', {
 	pagination: {
 		el: '.catalog__bullets',
 		clickable: true,
-		// dynamicBullets: true
 	},
 	speed: 2000,
 	loop: true,
+	effect: 'flip',
+	flipEffect: {
+		slideShadows: false,
+	},
 
 });
-
-new Swiper('.gallary-revers', {
-	slidesPerView: 2.2,
-	spaceBetween: 30,
-	// Responsive breakpoints
-	breakpoints: {
-		// when window width is >= 320px
-		320: {
-			slidesPerView: 1.2,
-			spaceBetween: 20
-		},
-		// when window width is >= 480px
-		// 480: {
-		// 	slidesPerView: 3,
-		// 	spaceBetween: 30
-		// },
-		// when window width is >= 640px
-		767: {
-			slidesPerView: 2.2,
-			spaceBetween: 30
-		}
-	},
-	autoplay: {
-		delay: 0,
-		disableOnInteraction: false,
-		pauseOnMouseEnter: true,
-		// reverseDirection: true
-	},
-	speed: 6000,
-	loop: true,
-})
 
 // слайдер аккордеон день#
 $(document).ready(function () {

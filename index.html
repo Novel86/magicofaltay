@@ -19,41 +19,45 @@
 
 <body>
 	<div class="wrapper">
-		<header class="header">
+		<header class="header__index header">
 			<div class="header__container _container">
-				<div class="header__menu menu">
-					<div class="menu__icon">
+				<div class="header__menu">
+					<div class="header__burger">
 						<span></span>
 					</div>
-					<nav class="menu__body">
-						<ul class="menu__list">
-							<li class="menu__item"><a data-goto=".catalog" class="menu__link _text-nav" href="/first-tour.html">Маршруты</a></li>
-							<li class="menu__item"><a data-goto=".page__best" class="menu__link _text-nav" href="javascript://">Захватывающий Алтай</a></li>
+					<nav class="header__body">
+						<ul class="header__list">
+							<li class="header__item"><a data-goto=".catalog" class="_text-nav" href="javascript://">Маршруты</a></li>
+							<li class="header__item"><a data-goto=".page__best" class="_text-nav" href="javascript://">Захватывающий Алтай</a></li>
 						</ul>
-						<ul class="menu__list menu__list_2">
-							<li class="menu__item"><a data-goto=".gallary-slider" class="menu__link _text-nav" href="javascript://">Фотоотчеты</a></li>
-							<li class="menu__item"><a data-goto=".form" class="menu__link _text-nav " href="javascript://">Задать вопрос</a></li>
-						</ul>
-						<address class="menu__contacts contacts">
+						<address class="header__contacts contacts">
 							<ul class="contacts__list">
-								<li class="contacts__item"><a class="contacts__link contacts__link_phone" href="javascript://"><i class="fas fa-phone-alt"></i></a></li>
-								<li class="contacts__item"><a class="contacts__link" href="javascript://"><i class="fab fa-telegram-plane"></i></a></li>
-								<li class="contacts__item"><a class="contacts__link" href="javascript://"><i class="fab fa-whatsapp"></i></a></li>
-								<li class="contacts__item"><a class="contacts__link" href="javascript://"><i class="fab fa-odnoklassniki"></i></li>
-								<li class="contacts__item"><a class="contacts__link" href="javascript://"><i class="fas fa-envelope"></i></li>
+								<li class="contacts__item"><a class="" href="https://t.me/roman_krets" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
+								<li class="contacts__item"><a class="" href="tel:+79831029180" target="_blank"><i class="fas fa-phone-alt"></i></a></li>
+								<li class="contacts__item"><a class="" href="https://wa.me/+79831029180" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+								<li class="contacts__item"><a class="" href="https://ok.ru/roman.krets" target="_blank"><i class="fab fa-odnoklassniki"></i></a></li>
+								<li class="contacts__item"><a class="" href="mailto:example@mail.ru" target="_blank"><i class="fas fa-envelope"></i></a></li>
 							</ul>
 						</address>
-						<div class="menu-small">
-							<div class="menu-small__logo">
-								<img src="../img/first/Ресурс 7 1magic-of-altay-logo.png" alt="магия алтая логотип">
+						<ul class="header__list">
+							<li class="header__item"><a data-goto=".gallary-slider" class="_text-nav" href="javascript://">Фотоотчеты</a></li>
+							<li class="header__item header__item_atention"><a data-goto=".form" class="_text-nav " href="javascript://">Задать вопрос</a></li>
+						</ul>
+						<nav class="header-small">
+							<div class="header-small__logo">
+								<img src="../img/first/Ресурс 7 1magic-of-altay-logo.png" alt="Магия Алтая- логотип">
 							</div>
-							<ul class="menu-small__list">
-								<li class="menu-small__item"><a data-goto="" class="menu__link_small _text-nav" href="/first-tour.html">Маршруты</a></li>
-								<li class="menu-small__item"><a data-goto="" class="menu__link_small _text-nav" href="/first-tour.html">Маршруты</a></li>
-								<li class="menu-small__item"><a data-goto="" class="menu__link_small _text-nav" href="/first-tour.html">Маршруты</a></li>
-								<li class="menu-small__item"><a data-goto="" class="menu__link_small _text-nav" href="/first-tour.html">Маршруты</a></li>
+							<ul class="header-small__list">
+								<li class="header__item header-small__item"><a data-goto=".catalog" class="_text-nav" href="javascript://">Маршруты</a></li>
+								<li class="header__item header-small__item"><a data-goto=".page__best" class="_text-nav" href="javascript://">Захватывающий Алтай</a></li>
+								<li class="header__item header-small__item"><a data-goto=".gallary-slider" class="_text-nav" href="javascript://">Фотоотчеты</a></li>
+								<li class="header__item header-small__item header-small__item_atention"><a data-goto=".form" class="_text-nav " href="javascript://">Задать вопрос</a></li>
 							</ul>
-						</div>
+							<adres class="header-small__contacts">
+								<a class="_text" href="tel:+79831029180" target="_blank">+7(983)102 91 80</a>
+								<a class="_text" href="tel:+79139991307" target="_blank">+7(913)999 13 07</a>
+							</adres>
+						</nav>
 					</nav>
 				</div>
 			</div>
@@ -86,7 +90,7 @@
 				<p><span>Если вы мечтаете о</span> приключениях, горных вершинах, связью с природой и незабываемых ощущениях, <span>то наши туры для вас.</span></p>
 			</div>
 
-			<section class="page__best best">
+			<section id="best" class="page__best best">
 				<article class="best__one-page one-page">
 					<div class="one-page__clouds">
 						<div class="one-page__row-1">
@@ -152,7 +156,7 @@
 				</artical>
 			</section>
 
-			<section class="page__gallary gallary">
+			<section id="gallary" class="page__gallary gallary">
 				<h2 class="gallary__title _h2 _container">Фоторепортаж из поездок</h2>
 				<div class="gallary-slider gallary swiper">
 					<div class="gallary-slider__wrapper swiper-wrapper">
@@ -222,7 +226,7 @@
 				</div>
 			</section>
 
-			<section class="page__catalog catalog">
+			<section id="catalog" class="page__catalog catalog">
 				<div class="catalog__title _container">
 					<h2 class="_h2">Выбери свой маршрут</h2>
 				</div>
@@ -321,18 +325,18 @@
 								<div class="cataloge__subject subject ">
 									<div class="subject__container _container">
 										<div class="subject__body">
-											<a href="/first-tour.html" class="subject__more _text-link">Подробнее<span class="material-symbols-outlined"> pending </span></a>
+											<a href="/3nd-tour.html" class="subject__more _text-link">Подробнее<span class="material-symbols-outlined"> pending </span></a>
 											<ul class="subject-list">
-												<li class="subject__items _h4">Продолжительность:<span class="_text-bold">5 дней</span></li>
+												<li class="subject__items _h4">Продолжительность:<span class="_text-bold">1 день</span></li>
 												<li class="subject__items _h4">Группы:<span class="_text-bold">2-8 человек</span></li>
-												<li class="subject__items _h4">Протяженность:<span class="_text-bold">883 км</span></li>
+												<li class="subject__items _h4">Протяженность:<span class="_text-bold">260 км</span></li>
 												<li class="subject__items _h4">Физическая нагрузка:<span class="_text-bold">полный релакс</span></li>
 											</ul>
 											<div class="subject__button button-2">
 												<a href="javascript://" class="_text-btn">Забронировать тур<span class="material-symbols-outlined"> arrow_forward </span></a>
 											</div>
 											<div class="subject-price">
-												<p class="_h4">Цена:<span class="_text-bold">от 40 000 ₽/чел</span></p>
+												<p class="_h4">Цена:<span class="_text-bold">от 3000 ₽/чел</span></p>
 											</div>
 										</div>
 									</div>
@@ -383,16 +387,16 @@
 					</div>
 					<div class="team__cta cta _container">
 						<div class="cta__content _h6">Свяжитесь с нами и мы сделаем все возможное, чтобы исполнить вашу мечту.</div>
-						<div class="cta__contacts">
-							<div class="cta__list contacts">
+						<div class="cta__contact-us">
+							<address class="cta__list contacts">
 								<ul class="contacts__list">
-									<li class="contacts__item contacts__item_bright"><a class="contacts__link contacts__link_phone" href="javascript://"><i class="fas fa-phone-alt"></i></a></li>
-									<li class="contacts__item contacts__item_bright"><a class="contacts__link" href="javascript://"><i class="fab fa-telegram-plane"></i></a></li>
-									<li class="contacts__item contacts__item_bright"><a class="contacts__link" href="javascript://"><i class="fab fa-whatsapp"></i></a></li>
-									<li class="contacts__item contacts__item_bright"><a class="contacts__link" href="javascript://"><i class="fab fa-odnoklassniki"></i></li>
-									<li class="contacts__item contacts__item_bright"><a class="contacts__link" href="javascript://"><i class="fas fa-envelope"></i></a></li>
+									<li class="contacts__item"><a class="" href="https://t.me/roman_krets" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
+									<li class="contacts__item"><a class="" href="tel:+79831029180" target="_blank"><i class="fas fa-phone-alt"></i></a></li>
+									<li class="contacts__item"><a class="" href="https://wa.me/+79831029180" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+									<li class="contacts__item"><a class="" href="https://ok.ru/roman.krets" target="_blank"><i class="fab fa-odnoklassniki"></i></a></li>
+									<li class="contacts__item"><a class="" href="mailto:example@mail.ru" target="_blank"><i class="fas fa-envelope"></i></a></li>
 								</ul>
-							</div>
+							</address>
 							<div class="cta__button button-2">
 								<a href="javascript://" class="_text-btn">Задать вопрос<span class="material-symbols-outlined"> arrow_forward </span></a>
 							</div>
@@ -406,13 +410,28 @@
 					<div class="base__title _h2">Наше всё</div>
 					<div class="base__avto-1 avto-1">
 						<div class="avto-1__title _h3">Транспорт</div>
-						<div class="avto-1__subtitle _h4">Автомобили повышенной прходимости </div>
+						<div class="avto-1__subtitle _h4">Автомобили повышенной прходимости</div>
 						<div class="avto-1__items">
 							<div class="avto-1__item avto-1__item_full">
 								<img src="/img/base/01.jpg" alt="Магия Алтая- Наши автомобили повышенной проходимости" class="avto-1__img">
 								<div class="avto-1__content _h3">Подпись авто</div>
 							</div>
-							<div class="avto-1__item">
+							<div class="avto-1__item avto-1__item_norm">
+								<img src="/img/base/01.jpg" alt="Магия Алтая- Наши автомобили повышенной проходимости" class="avto-1__img">
+								<div class="avto-1__content _h3">Подпись авто</div>
+							</div>
+							<div class="avto-1__item avto-1__item_long">
+								<img src="/img/base/01.jpg" alt="Магия Алтая- Наши автомобили повышенной проходимости" class="avto-1__img">
+								<div class="avto-1__content _h3">Подпись авто</div>
+							</div>
+						</div>
+						<div class="avto-1__subtitle _h4">прочие авто</div>
+						<div class="avto-1__items">
+							<div class="avto-1__item avto-1__item_full">
+								<img src="/img/base/01.jpg" alt="Магия Алтая- Наши автомобили повышенной проходимости" class="avto-1__img">
+								<div class="avto-1__content _h3">Подпись авто</div>
+							</div>
+							<div class="avto-1__item avto-1__item_norm">
 								<img src="/img/base/01.jpg" alt="Магия Алтая- Наши автомобили повышенной проходимости" class="avto-1__img">
 								<div class="avto-1__content _h3">Подпись авто</div>
 							</div>
@@ -424,57 +443,57 @@
 					</div>
 				</div>
 			</section>
-			<div class="form _container">
-				<div class="form__content">
-					<div class="form__title lirics">
-						<p>Заполните форму и <span>забронируйте</span> поездку в места <span>магического Алтая</span></p>
-					</div>
-					<address class="form__contacts contacts">
-						<div class="contacts__text _text-btn">или свяжитесь с нами любым удобным способом</div>
-						<ul class="contacts__list">
-							<li class="contacts__item contacts__item_bright"><a class="contacts__link contacts__link_phone" href="javascript://"><i class="fas fa-phone-alt"></i></a></li>
-							<li class="contacts__item contacts__item_bright"><a class="contacts__link" href="javascript://"><i class="fab fa-telegram-plane"></i></a></li>
-							<li class="contacts__item contacts__item_bright"><a class="contacts__link" href="javascript://"><i class="fab fa-whatsapp"></i></a></li>
-							<li class="contacts__item contacts__item_bright"><a class="contacts__link" href="javascript://"><i class="fab fa-odnoklassniki"></i></li>
-							<li class="contacts__item contacts__item_bright"><a class="contacts__link" href="javascript://"><i class="fas fa-envelope"></i></li>
-						</ul>
-					</address>
-				</div>
-				<form action="/sendmail.php" method="post" id="form" class="form__body">
-					<div class="form__item">
-						<label for="formName" class="form__label"></label>
-						<input type="text" id="formName" name="name" placeholder="Ваше имя" class="form__input _text _req">
-					</div>
-					<div class="form__item">
-						<label for="formPhone" class="form__label"></label>
-						<input type="text" id="formPhone" name="phone" placeholder="Телефон" class="form__input _text _req">
-					</div>
-					<div class="form__item">
-						<label for="formEmail" class="form__label"></label>
-						<input type="text" id="formEmail" name="email" placeholder="Почта" class="form__input _text _req _email">
-					</div>
-					<div class="form__item">
-						<label for="formMessage" class="form__label"></label>
-						<textarea id="formMessage" name="message" placeholder="Сообщение" class="form__input _text"></textarea>
-					</div>
-					<div class="form__item">
-						<div class="checkbox">
-							<input type="checkbox" checked id="formAgreement" class="checkbox__input _req" name="agreement">
-							<label for="formAgreement" class="form__label"><span>Я даю свое согласие на обработку персональных данных в соответствии с <a href="">Условиями*</a></span></label>
+			<div class="page__form form _container">
+				<div class="form__container">
+					<div class="form__content">
+						<div class="form__title lirics">
+							<p>Заполните форму и <span>забронируйте</span> поездку в места <span>магического Алтая</span></p>
 						</div>
+						<div class="form__subtitle _text-btn">или свяжитесь с нами любым удобным способом</div>
+						<address class="form__contacts contacts">
+							<ul class="contacts__list">
+								<li class="contacts__item"><a class="" href="https://t.me/roman_krets" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
+								<li class="contacts__item"><a class="" href="tel:+79831029180" target="_blank"><i class="fas fa-phone-alt"></i></a></li>
+								<li class="contacts__item"><a class="" href="https://wa.me/+79831029180" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+								<li class="contacts__item"><a class="" href="https://ok.ru/roman.krets" target="_blank"><i class="fab fa-odnoklassniki"></i></a></li>
+								<li class="contacts__item"><a class="" href="mailto:example@mail.ru" target="_blank"><i class="fas fa-envelope"></i></a></li>
+							</ul>
+						</address>
 					</div>
-					<button type="submit" class="form__button _text-btn">Отправить<span class="material-symbols-outlined"> arrow_forward </span></button>
-				</form>
+					<form action="/sendmail.php" method="post" id="form" class="form__body">
+						<div class="form__item">
+							<label for="formName" class="form__label"></label>
+							<input type="text" id="formName" name="name" placeholder="Ваше имя" class="form__input _text _req">
+						</div>
+						<div class="form__item">
+							<label for="formPhone" class="form__label"></label>
+							<input type="text" id="formPhone" name="phone" placeholder="Телефон" class="form__input _text _req">
+						</div>
+						<div class="form__item">
+							<label for="formEmail" class="form__label"></label>
+							<input type="text" id="formEmail" name="email" placeholder="Почта" class="form__input _text _req _email">
+						</div>
+						<div class="form__item">
+							<label for="formMessage" class="form__label"></label>
+							<textarea id="formMessage" name="message" placeholder="Сообщение" class="form__input _text"></textarea>
+						</div>
+						<div class="form__item">
+							<div class="checkbox">
+								<input type="checkbox" checked id="formAgreement" class="checkbox__input _req" name="agreement">
+								<label for="formAgreement" class="form__label _text"><span>Я даю свое согласие на обработку персональных данных в соответствии с <a href="">Условиями*</a></span></label>
+							</div>
+						</div>
+						<button type="submit" class="form__button _text-btn">Отправить<span class="material-symbols-outlined"> arrow_forward </span></button>
+					</form>
+				</div>
 			</div>
 		</main>
-		<footer class=" footer">
-			<div class="footer__image">
-				<img src="/img/footer/footer-bg.png" alt="Магия Алтая- пейзажный рисунок">
-			</div>
+		<footer class="page-footer footer">
 			<div class="footer__container _container">
 				<div class="footer__body">
 					<div class="footer__logo">
 						<img src="/img/footer/footer-logo.png" alt="Магия Алтая- логотип">
+						<p class="_text-bold">Магия Алтая</p>
 					</div>
 					<div class="footer__content">
 						<div class="footer__column">
@@ -488,23 +507,26 @@
 							<div class="footer__block">
 								<address class="footer__contacts contacts">
 									<ul class="contacts__list">
-										<li class="contacts__item contacts__item_grey"><a class="contacts__link contacts__link_phone" href="javascript://"><i class="fas fa-phone-alt"></i></a></li>
-										<li class="contacts__item contacts__item_grey"><a class="contacts__link" href="javascript://"><i class="fab fa-telegram-plane"></i></a></li>
-										<li class="contacts__item contacts__item_grey"><a class="contacts__link" href="javascript://"><i class="fab fa-whatsapp"></i></a></li>
-										<li class="contacts__item contacts__item_grey"><a class="contacts__link" href="javascript://"><i class="fab fa-odnoklassniki"></i></li>
-										<li class="contacts__item contacts__item_grey"><a class="contacts__link" href="javascript://"><i class="fas fa-envelope"></i></li>
+										<li class="contacts__item"><a class="" href="https://t.me/roman_krets" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
+										<li class="contacts__item"><a class="" href="tel:+79831029180" target="_blank"><i class="fas fa-phone-alt"></i></a></li>
+										<li class="contacts__item"><a class="" href="https://wa.me/+79831029180" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+										<li class="contacts__item"><a class="" href="https://ok.ru/roman.krets" target="_blank"><i class="fab fa-odnoklassniki"></i></a></li>
+										<li class="contacts__item"><a class="" href="mailto:example@mail.ru" target="_blank"><i class="fas fa-envelope"></i></a></li>
 									</ul>
 								</address>
 								<ul class="footer__menu">
-									<li class="footer__item"><a href="javascript://">Маршруты</a></li>
-									<li class="footer__item"><a href="javascript://">Захватывающий Алтай</a></li>
-									<li class="footer__item"><a href="javascript://">Фотоотчеты</a></li>
-									<li class="footer__item"><a href="javascript://">Задать вопрос</a></li>
+									<li class="footer__item _text-nav"><a href="javascript://">Маршруты</a></li>
+									<li class="footer__item _text-nav"><a href="javascript://">Захватывающий Алтай</a></li>
+									<li class="footer__item _text-nav"><a href="javascript://">Фотоотчеты</a></li>
+									<li class="footer__item _text-nav"><a href="javascript://">Задать вопрос</a></li>
 								</ul>
 							</div>
 						</div>
 					</div>
 				</div>
+			</div>
+			<div class="footer__image">
+				<img src="/img/footer/footer-bg.png" alt="Магия Алтая- пейзажный рисунок">
 			</div>
 		</footer>
 	</div>

@@ -19,40 +19,45 @@
 <body>
 	<div class="wrapper">
 		<header class="header header-tours">
-			<div class="header__clouds-tours"></div>
-			<div class="header__container header__container-tours _container">
-				<div class="header__menu menu">
-					<div class="menu__icon">
+			<div class="header__clouds"></div>
+			<div class="header__container header-tours__container _container">
+				<div class="header__menu">
+					<div class="header__burger">
 						<span></span>
 					</div>
-					<nav class="menu__body">
-						<ul class="menu__list">
-							<li class="menu__item"><a data-goto="" class="menu__link _text-nav" href="/first-tour.html">Маршруты</a></li>
-							<li class="menu__item"><a data-goto=".page__best" class="menu__link _text-nav" href="javascript://">Захватывающий Алтай</a></li>
+					<nav class="header__body">
+						<ul class="header__list">
+							<li class="header__item"><a data-goto=".catalog" class="_text-nav" href="/index.html#catalog">Маршруты</a></li>
+							<li class="header__item"><a data-goto=".page__best" class="_text-nav" href="/index.html#best">Захватывающий Алтай</a></li>
 						</ul>
-						<ul class="menu__list menu__list_2">
-							<li class="menu__item"><a data-goto=".gallary-slider" class="menu__link _text-nav" href="javascript://">Фотоотчеты</a></li>
-							<li class="menu__item"><a data-goto="" class="menu__link _text-nav " href="javascript://">Задать вопрос</a></li>
-						</ul>
-						<address class="menu__contacts contacts">
+						<address class="header__contacts contacts">
 							<ul class="contacts__list">
-								<li class="contacts__item"><a class="contacts__link contacts__link_phone" href="javascript://"><i class="fas fa-phone-alt"></i></a></li>
-								<li class="contacts__item"><a class="contacts__link" href="javascript://"><i class="fab fa-telegram-plane"></i></a></li>
-								<li class="contacts__item"><a class="contacts__link" href="javascript://"><i class="fab fa-odnoklassniki"></i></li>
-								<li class="contacts__item"><a class="contacts__link" href="javascript://"><i class="fab fa-whatsapp"></i></a></li>
+								<li class="contacts__item"><a class="" href="https://t.me/roman_krets" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
+								<li class="contacts__item"><a class="" href="tel:+79831029180" target="_blank"><i class="fas fa-phone-alt"></i></a></li>
+								<li class="contacts__item"><a class="" href="https://wa.me/+79831029180" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+								<li class="contacts__item"><a class="" href="https://ok.ru/roman.krets" target="_blank"><i class="fab fa-odnoklassniki"></i></a></li>
+								<li class="contacts__item"><a class="" href="mailto:example@mail.ru" target="_blank"><i class="fas fa-envelope"></i></a></li>
 							</ul>
 						</address>
-						<div class="menu-small">
-							<div class="menu-small__logo">
-								<img src="../img/first/Ресурс 7 1magic-of-altay-logo.png" alt="магия алтая логотип">
+						<ul class="header__list">
+							<li class="header__item"><a data-goto=".gallary-slider" class="_text-nav" href="/index.html#gallary">Фотоотчеты</a></li>
+							<li class="header__item header__item_atention"><a data-goto=".form" class="_text-nav " href="javascript://">Задать вопрос</a></li>
+						</ul>
+						<nav class="header-small">
+							<div class="header-small__logo">
+								<img src="../img/first/Ресурс 7 1magic-of-altay-logo.png" alt="Магия Алтая- логотип">
 							</div>
-							<ul class="menu-small__list">
-								<li class="menu-small__item"><a data-goto="" class="menu__link_small _text-nav" href="/first-tour.html">Маршруты</a></li>
-								<li class="menu-small__item"><a data-goto="" class="menu__link_small _text-nav" href="/first-tour.html">Маршруты</a></li>
-								<li class="menu-small__item"><a data-goto="" class="menu__link_small _text-nav" href="/first-tour.html">Маршруты</a></li>
-								<li class="menu-small__item"><a data-goto="" class="menu__link_small _text-nav" href="/first-tour.html">Маршруты</a></li>
+							<ul class="header-small__list">
+								<li class="header__item header-small__item"><a data-goto=".catalog" class="_text-nav" href="/index.html#catalog">Маршруты</a></li>
+								<li class="header__item header-small__item"><a data-goto=".page__best" class="_text-nav" href="/index.html#best">Захватывающий Алтай</a></li>
+								<li class="header__item header-small__item"><a data-goto=".gallary-slider" class="_text-nav" href="/index.html#gallary">Фотоотчеты</a></li>
+								<li class="header__item header-small__item header-small__item_atention"><a data-goto=".form" class="_text-nav " href="javascript://">Задать вопрос</a></li>
 							</ul>
-						</div>
+							<adres class="header-small__contacts">
+								<a class="_text" href="tel:+79831029180" target="_blank">+7(983)102 91 80</a>
+								<a class="_text" href="tel:+79139991307" target="_blank">+7(913)999 13 07</a>
+							</adres>
+						</nav>
 					</nav>
 				</div>
 			</div>
@@ -164,7 +169,6 @@
 					<li class="description__item _text">экскурсионная программа;</li>
 					<li class="description__item _text">фото и видеосъемка на протяжении всего тура, весь отснятый материал предоставляется.</li>
 				</ul>
-				<p class="description__text _text">В случае посещения Форелевого озера, выловленная форель оплачивается отдельно.</p>
 			</div>
 			<div class="tours__description description _container">
 				<h5 class="description__title _h5">Программа маршрута</h5>
@@ -552,25 +556,50 @@
 				<p class="description__text _text">группа от 3 до 4 человек - 55 000 руб. с человека;</p>
 				<p class="description__text _text">группа от 5 до 8 человек - 48 000 руб. с человека.</p>
 				<p class="description__text _text">Предоплата - 10%, окончательный расчет в день заселения после прибытия. Предоплата может быть возвращена при отмене тура не позднее, чем за 14 дней до начала поездки.</p>
+				<p class="description__text _text">В случае посещения Форелевого озера, выловленная форель оплачивается отдельно.</p>
 				<div class="first__button tours__button">
 					<a class="_text-btn" href="javascript://">Забронировать тур<span class="material-symbols-outlined"> arrow_forward </span></a>
 				</div>
 			</div>
 		</main>
-		<footer class=" tour-footer footer">
-			<div class="tour-footer__body _container">
-				<div class="tour-footer__nav"><span class="material-symbols-outlined"> arrow_circle_up </span>
+		<footer class="tour-footer footer">
+			<div class="footer__container _container">
+				<div class="footer__body">
+					<div class="footer__logo">
+						<img src="/img/footer/footer-logo.png" alt="Магия Алтая- логотип">
+						<p class="_text-bold">Магия Алтая</p>
+					</div>
+					<div class="footer__content">
+						<div class="footer__column">
+							<p class="_text">г. Горно-Алтайск</p>
+							<p class="_text"><a href="tel:+79831029180">+7 983 102-91-80</a></p>
+							<p class="_text"><a href="tel:+79139991307">+7 913 999-13-07</a></p>
+							<p class="_text"><a href="mailto:example@mail.com">example@mail.com</a></p>
+							<p class="_text">2022 год ©</p>
+						</div>
+						<div class="footer__column">
+							<div class="footer__block">
+								<address class="footer__contacts contacts">
+									<ul class="contacts__list">
+										<li class="contacts__item"><a class="" href="https://t.me/roman_krets" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
+										<li class="contacts__item"><a class="" href="tel:+79831029180" target="_blank"><i class="fas fa-phone-alt"></i></a></li>
+										<li class="contacts__item"><a class="" href="https://wa.me/+79831029180" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+										<li class="contacts__item"><a class="" href="https://ok.ru/roman.krets" target="_blank"><i class="fab fa-odnoklassniki"></i></a></li>
+										<li class="contacts__item"><a class="" href="mailto:example@mail.ru" target="_blank"><i class="fas fa-envelope"></i></a></li>
+									</ul>
+								</address>
+								<ul class="footer__menu">
+									<li class="footer__item _text-nav"><a href="/first-tour.html">“Знакомство с Алтаем”</a></li>
+									<li class="footer__item _text-nav"><a href="/3nd-tour.html">Однодневная автоэкскурсия</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
 				</div>
-				<address class="tour-footer__contacts menu__contacts contacts">
-					<ul class="contacts__list">
-						<li class="contacts__item"><a class="contacts__link contacts__link_phone" href="javascript://"><i class="fas fa-phone-alt"></i></a></li>
-						<li class="contacts__item"><a class="contacts__link" href="javascript://"><i class="fab fa-telegram-plane"></i></a></li>
-						<li class="contacts__item"><a class="contacts__link" href="javascript://"><i class="fab fa-odnoklassniki"></i></li>
-						<li class="contacts__item"><a class="contacts__link" href="javascript://"><i class="fab fa-whatsapp"></i></a></li>
-					</ul>
-				</address>
 			</div>
-			<div class="tour-footer__image"><img src="../img/footer/footer-bg.png" alt="магия алтая футер"></div>
+			<div class="footer__image">
+				<img src="/img/footer/footer-bg.png" alt="Магия Алтая- пейзажный рисунок">
+			</div>
 		</footer>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
