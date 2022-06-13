@@ -8,7 +8,7 @@
 	$mail = new PHPMailer(true);
 	$mail->CharSet = 'UTF-8';
 	$mail->setLanguage('ru', 'phpmailer/language/');
-	$mail->IsHTML(true);
+	$mail->IsHTML(false);
 
 	//От кого письмо
 	$mail->setFrom('novel86@mail.ru', 'Magic of Altay');
