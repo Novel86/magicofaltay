@@ -8,16 +8,15 @@
 	$mail = new PHPMailer(true);
 	$mail->CharSet = 'UTF-8';
 	$mail->setLanguage('ru', 'phpmailer/language/');
-	$mail->IsHTML(false);
+	$mail->IsHTML(true);
 
 	//От кого письмо
-	$mail->setFrom('novel86@mail.ru', 'Magic of Altay');
+	$mail->setFrom('main@magicaltai.su', 'Magic of Altay');
 	//Кому отправить
-	$mail->addAddress('romankrets@gmail.com');
+	$mail->addAddress('admin@magicaltai.su');
 	//Тема письма
 	$mail->Subject = 'Заявка на тур с сайта';
-
-
+	
 	//Тело письма
 	$body = 'Встречайте супер письмо!     ';
 	
