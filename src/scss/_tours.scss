@@ -1,7 +1,6 @@
 @import "_header";
 
 .header-tours {
-
 	position: relative;
 }
 
@@ -9,14 +8,14 @@
 	position: relative;
 	z-index: 10;
 	padding: 100px 20px 50px;
-	@media ( max-width: 1280px) {
+	@media (max-width: 1280px) {
 		padding: calc(50px + (100 - 50) * ((100vw - 375px) / (1400 - 375))) 20px calc(30px + (50 - 30) * ((100vw - 375px) / (1400 - 375))) 20px;
 	}
-	border-bottom: 1px solid #000;	
+	border-bottom: 1px solid #000;
 }
 
 .header__clouds {
-	background: url(../img/tours/clouds-tours.png) 0 0 / 100% calc(50% + (100 - 50) * ((100vw - 375px) / (1400 - 375)))  no-repeat;
+	background: url(../img/tours/clouds-tours.png) 0 0 / 100% calc(50% + (100 - 50) * ((100vw - 375px) / (1400 - 375))) no-repeat;
 	position: absolute;
 	z-index: 5;
 	width: 100%;
@@ -27,23 +26,20 @@
 }
 
 .page {
-
 	&__tours {
 		text-align: center;
 		margin: 340px 0px 0px 0px;
-		@media ( max-width: 1400px) {
+		@media (max-width: 1400px) {
 			margin: calc(200px + (340 - 200) * ((100vw - 375px) / (1400 - 375))) 0 0 0;
 		}
 	}
 }
 .tours {
-
 	&__head {
 		margin-bottom: 100px;
 	}
 }
 .head {
-
 	&__container {
 	}
 
@@ -63,23 +59,21 @@
 }
 
 .tours {
-
 	&__spec {
 		margin-bottom: 80px;
 	}
 }
 .spec {
-
 	&__container {
 	}
 
 	&__body {
-		@media ( min-width: 1024px) {
+		@media (min-width: 1024px) {
 			display: flex;
 			justify-content: space-between;
 			align-items: flex-end;
 		}
-			}
+	}
 
 	&__column {
 		flex: 1 0 50%;
@@ -90,7 +84,7 @@
 
 	&__list {
 	}
-	
+
 	&__item {
 		display: flex;
 		align-items: center;
@@ -100,7 +94,7 @@
 
 	&__icon {
 		margin: 0px 20px 0px 0px !important;
-		@media ( max-width: 425px) {
+		@media (max-width: 425px) {
 			margin: 0px 10px 0px 0px !important;
 		}
 	}
@@ -110,7 +104,7 @@
 
 	&__parametr {
 		margin: 0px 20px 0px 0px !important;
-		@media ( max-width: 425px) {
+		@media (max-width: 425px) {
 			margin: 0px 10px 0px 0px !important;
 		}
 		flex: 0 0 auto;
@@ -121,18 +115,16 @@
 }
 
 .tours {
-
 	&__description {
 		margin-bottom: 80px;
 
 		&_shto-brat {
-
 		}
 		&_price {
 			position: relative;
 			z-index: 5;
 			p {
-			text-align: center;
+				text-align: center;
 			}
 			h5 {
 				text-align: center;
@@ -141,7 +133,7 @@
 	}
 	&__button {
 		margin-bottom: 500px;
-		@media ( max-width: 1280px) {
+		@media (max-width: 1280px) {
 			margin-bottom: calc(10px + (500 - 10) * ((100vw - 375px) / (1400 - 375)));
 		}
 	}
@@ -160,7 +152,7 @@
 		text-align: left;
 		margin-bottom: 20px;
 	}
-	
+
 	&__text {
 		text-align: left;
 	}
@@ -183,9 +175,8 @@
 }
 
 .tours {
-
 	&__gallary {
-		>:not(:last-child) {
+		> :not(:last-child) {
 			margin-bottom: 30px;
 		}
 	}
@@ -193,8 +184,6 @@
 
 .tours-gallary {
 	margin-bottom: 80px;
-
-
 
 	&__wrapper {
 	}
@@ -220,7 +209,7 @@
 			opacity: 0.6;
 			padding: 20px;
 			color: $bg;
-			font-family: 'Montserrat';
+			font-family: "Montserrat";
 			font-style: normal;
 			font-weight: 400;
 			font-size: calc(12px + (22 - 12) * ((100vw - 375px) / (1400 - 375)));
@@ -256,17 +245,15 @@
 	}
 }
 
-
 //====================day======================
 
 .discription {
-
 	&__day {
 		position: relative;
 		z-index: 2;
 		padding: calc(15px + (45 - 15) * ((100vw - 375px) / (1400 - 374))) calc(20px + (50 - 20) * ((100vw - 375px) / (1400 - 374)));
 		background: white;
-		
+
 		border: 1px solid $main;
 		border-radius: 3px;
 		box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.08);
@@ -277,7 +264,6 @@
 	}
 }
 .day {
-	
 	&__title {
 		cursor: pointer;
 		text-align: left;
@@ -292,21 +278,20 @@
 		margin-top: 50px;
 		padding: 0px calc(20px + (60 - 20) * ((100vw - 375px) / (1400 - 375)));
 		background: url(../img/tours/day-mountains-1-.png) 50% 100% / auto calc(700px + (700 - 700) * ((100vw - 375px) / (1400 - 375))) no-repeat;
-		@media ( max-width: 512px) {
+		@media (max-width: 512px) {
 			padding: 0;
 		}
 	}
 
 	&__spec {
 		margin-bottom: 80px;
-
 	}
 
 	&__map {
 		margin-top: 20px;
 		span {
 			padding: 0px 10px;
-			display: inline-block;	
+			display: inline-block;
 		}
 	}
 
@@ -316,22 +301,19 @@
 }
 
 .dishes {
-
 	&__title {
-		
 	}
 
 	&__body {
-		@media ( min-width: 797px) {
-		display: flex;
-		justify-content: center;
+		@media (min-width: 797px) {
+			display: flex;
+			justify-content: center;
 		}
-
 	}
 
 	&__column {
 		margin: 0px 15px;
-		@media ( max-width: 797px) {
+		@media (max-width: 797px) {
 			&:not(:last-child) {
 				margin-bottom: 10px;
 			}
@@ -344,9 +326,9 @@
 
 	&__table {
 		padding: 20px 80px;
-		@media ( max-width: 1400px) {
+		@media (max-width: 1400px) {
 			padding: calc(10px + (20 - 10) * ((100vw - 375px) / (1400 - 375))) calc(30px + (80 - 30) * ((100vw - 375px) / (1400 - 375)));
-		}	
+		}
 		background: linear-gradient(180deg, rgba(186, 231, 221, 0.7) 49.27%, rgba(186, 231, 221, 0) 100%);
 		border-radius: 3px;
 		backdrop-filter: blur(1.2px);

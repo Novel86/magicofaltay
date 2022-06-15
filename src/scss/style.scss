@@ -1,13 +1,13 @@
 //====================глобальные переменные======================
 
-$ffbody: 'Montserrat', sans-serif;
+$ffbody: "Montserrat", sans-serif;
 $fzbody: 24px;
-$main: #33333C;
-$link: #007B88;
-$bg-dark: #C4C4C4;
-$bg: #F1F1F1;
-$bg-bright: #FAFAFA;
-$bg-card: #BAE7DD;
+$main: #33333c;
+$link: #007b88;
+$bg-dark: #c4c4c4;
+$bg: #f1f1f1;
+$bg-bright: #fafafa;
+$bg-card: #bae7dd;
 
 //===============================================================
 
@@ -15,8 +15,8 @@ $bg-card: #BAE7DD;
 
 //====================ui/ux======================
 
-._h1{
-	font-family: 'Montserrat';
+._h1 {
+	font-family: "Montserrat";
 	font-weight: 500;
 	font-size: 164px;
 	line-height: 95%;
@@ -25,62 +25,61 @@ $bg-card: #BAE7DD;
 	color: $main;
 }
 
-._h2{
-	font-family: 'Noto Serif Display', serif;
+._h2 {
+	font-family: "Noto Serif Display", serif;
 	font-weight: 700;
 	font-size: 80px;
-	@media ( max-width: 1280px) {
+	@media (max-width: 1280px) {
 		font-size: calc(55px + (80 - 55) * ((100vw - 768px) / (1280 - 768)));
 	}
 	line-height: 100%;
 	text-transform: capitalize;
 	color: $main;
 	text-shadow: 180px 80px 0px rgba(0, 0, 0, 0.05);
-	@media ( max-width: 1024px) {
+	@media (max-width: 1024px) {
 		text-shadow: 130px 60px 0px rgba(0, 0, 0, 0.05);
 	}
-	@media ( max-width: 767px) {
+	@media (max-width: 767px) {
 		text-shadow: 60px 50px 0px rgba(0, 0, 0, 0.05);
 	}
 }
 
-._h3{
-	font-family: 'Noto Serif Display', serif;
+._h3 {
+	font-family: "Noto Serif Display", serif;
 	font-style: italic;
 	font-weight: 700;
 	font-size: 48px;
 	line-height: 135.4%;
-	@media ( max-width: 1280px) {
+	@media (max-width: 1280px) {
 		font-size: calc(28px + (48 - 28) * ((100vw - 375px) / (1280 - 375)));
 		line-height: calc(120% + (135.4 - 120) * ((100vw - 375px) / (1280 - 375)));
 	}
 	text-transform: capitalize;
 	color: $main;
 	margin-bottom: 20px;
-	
 }
 
-._h4{
-	font-family: 'Montserrat', sans-serif;
+._h4 {
+	font-family: "Montserrat", sans-serif;
 	font-weight: 400;
 	font-size: 24px;
 	line-height: 120.8%;
-	@media ( max-width: 1280px) {
+	@media (max-width: 1280px) {
 		font-size: calc(18px + (24 - 18) * ((100vw - 375px) / (1280 - 375)));
 		line-height: calc(110% + (120.8 - 110) * ((100vw - 375px) / (1280 - 375)));
-	}	
+	}
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
 	color: $main;
 }
 
-._h5{
-	font-family: 'Noto Serif Display', serif;
+._h5 {
+	font-family: "Noto Serif Display", serif;
 	font-style: italic;
 	font-weight: 700;
 	font-size: 40px;
 	line-height: 135%;
-	@media ( max-width: 1280px) {
+	@media (max-width: 1280px) {
 		font-size: calc(20px + (40 - 20) * ((100vw - 375px) / (1280 - 375)));
 		line-height: calc(120% + (135 - 120) * ((100vw - 375px) / (1280 - 375)));
 	}
@@ -88,23 +87,27 @@ $bg-card: #BAE7DD;
 	color: $main;
 }
 
-._h6{	
-	font-family: 'Noto Serif Display', serif;
+._h6 {
+	font-family: "Noto Serif Display", serif;
 	font-style: italic;
 	font-weight: 700;
 	font-size: 34px;
 	line-height: 135.3%;
+	@media (max-width: 1280px) {
+		font-size: calc(22px + (34 - 22) * ((100vw - 375px) / (1400 - 375)));
+		line-height: calc(115% + (135.3 - 115) * ((100vw - 375px) / (1400 - 375)));
+	}
 	text-transform: capitalize;
 	color: $main;
 }
 
 ._text {
-	font-family: 'Montserrat';
+	font-family: "Montserrat";
 	font-size: 24px;
 	line-height: 125%;
-	@media ( max-width: 1280px) {
-		font-size: calc(19px + (24 - 19) * ((100vw - 768px) / (1280 - 768)));
-		line-height: calc(122% + (125 - 122) * ((100vw - 375px) / (1280 - 375)));
+	@media (max-width: 1280px) {
+		font-size: calc(18px + (24 - 18) * ((100vw - 375px) / (1400 - 375)));
+		line-height: calc(122% + (125 - 122) * ((100vw - 375px) / (1400 - 375)));
 	}
 	letter-spacing: 0.02em;
 	color: $main;
@@ -115,8 +118,8 @@ p._text {
 	}
 }
 
-._text-nav{
-	font-family: 'Noto Serif', serif;
+._text-nav {
+	font-family: "Noto Serif", serif;
 	font-weight: 600;
 	font-size: 24px;
 	font-size: calc(17px + (24 - 17) * ((100vw - 375px) / (1400 - 375)));
@@ -124,43 +127,43 @@ p._text {
 	text-transform: capitalize;
 	color: $main;
 	transition: 0.5s;
-	&:hover{
+	&:hover {
 		text-shadow: 0px 20px 0px rgba(0, 0, 0, 0.05);
 		color: $link;
 	}
 }
 
-._text-btn{
-	font-family: 'Noto Serif', serif;
+._text-btn {
+	font-family: "Noto Serif", serif;
 	font-style: normal;
 	font-weight: 600;
 	font-size: 24px;
-	@media ( max-width: 1280px) {
-		font-size: calc(19px + (24 - 19) * ((100vw - 768px) / (1280 - 768)));;
+	@media (max-width: 1280px) {
+		font-size: calc(19px + (24 - 19) * ((100vw - 768px) / (1280 - 768)));
 	}
 	line-height: 137.5%;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
 }
 
-._text-bold{
+._text-bold {
 	font-weight: 700;
 	font-size: 24px;
 	line-height: 120.8%;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
-	@media ( max-width: 1280px) {
+	@media (max-width: 1280px) {
 		font-size: calc(19px + (24 - 19) * ((100vw - 768px) / (1280 - 768)));
 	}
 }
 
-._text-link{
-	font-family: 'Noto Serif Display', serif;
+._text-link {
+	font-family: "Noto Serif Display", serif;
 	font-weight: 400;
 	font-size: 28px;
 	line-height: 135.7%;
 	letter-spacing: 0.1em;
-	@media ( max-width: 1280px) {
+	@media (max-width: 1280px) {
 		font-size: calc(18px + (28 - 18) * ((100vw - 375px) / (1400 - 375)));
 	}
 	text-transform: uppercase;
@@ -173,7 +176,7 @@ p._text {
 
 //====================служебные классы======================
 
-.wrapper{
+.wrapper {
 	position: relative;
 	min-height: 100%;
 	overflow: hidden;
@@ -181,25 +184,24 @@ p._text {
 	flex-direction: column;
 }
 
-._container{
+._container {
 	// padding: 0px 20px;
 
 	// @media ( min-width: 767px) {
-		max-width: 1400px;
-		margin: 0 auto;
-		padding: 0px 20px;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0px 20px;
 	// }
 }
 
-.page{
+.page {
 	flex: 1 1 auto;
-
 }
 
-._ibg{
+._ibg {
 	position: relative;
 
-	img{
+	img {
 		position: absolute;
 		width: 100%;
 		height: 100%;
@@ -216,29 +218,24 @@ p._text {
 //====================main-block==================
 
 .page {
-
 	&__first {
 		padding: 190px 0px 100px 0px;
-		@media ( max-width: 1280px) {
+		@media (max-width: 1280px) {
 			padding-top: calc(120px + (190 - 120) * ((100vw - 375px) / (1280 - 375)));
 			padding-bottom: calc(70px + (100 - 70) * ((100vw - 768px) / (1280 - 768)));
 		}
 		position: relative;
-
 	}
 }
 .first {
-
-	
 	&__body {
-		
 	}
 
 	&__title {
 		position: relative;
 		z-index: 3;
 		display: flex;
-		@media ( max-width: 768px) {
+		@media (max-width: 768px) {
 			flex-wrap: wrap;
 		}
 		justify-content: center;
@@ -247,18 +244,18 @@ p._text {
 		margin: 0 auto 50px;
 		padding: 0px 20px;
 	}
-	
+
 	&__logo {
 		min-width: 365px;
 		margin: 0px 20px;
-		@media ( max-width: 1280px) {
+		@media (max-width: 1280px) {
 			min-width: calc(255px + (365 - 255) * ((100vw - 375px) / (1280 - 375)));
 			margin: 0 0 20px 0;
 		}
-		@media ( max-width: 580px) {
+		@media (max-width: 580px) {
 			max-width: 300px;
 		}
-		@media ( max-width: 424px) {
+		@media (max-width: 424px) {
 			max-width: 285px;
 		}
 
@@ -273,30 +270,29 @@ p._text {
 		flex: 0 1 auto;
 		font-weight: 500;
 		font-size: 164px;
-		@media ( max-width: 1280px) {
+		@media (max-width: 1280px) {
 			font-size: calc(92px + (164 - 92) * ((100vw - 375px) / (1280 - 375)));
 		}
 		line-height: 95%;
 		text-align: center;
 		letter-spacing: 0.1em;
-		@media ( max-width: 1280px) {
+		@media (max-width: 1280px) {
 			letter-spacing: calc(0em + (0.1 - 0) * ((100vw - 768px) / (1280 - 768)));
 		}
 		text-transform: uppercase;
 		color: $main;
-		
 	}
-	
+
 	&__utp-slider {
 		position: relative;
 		z-index: 2;
 		text-align: center;
 		margin-bottom: 50px;
 		margin-top: -92px;
-		font-family: 'Noto Serif', serif;
+		font-family: "Noto Serif", serif;
 		font-weight: 400;
 		font-size: 35px;
-		@media ( max-width: 1280px) {
+		@media (max-width: 1280px) {
 			font-size: calc(16px + (35 - 16) * ((100vw - 375px) / (1280 - 375)));
 		}
 		line-height: 137%;
@@ -306,17 +302,17 @@ p._text {
 		background: #ffffff59;
 		padding: 94px 0px 40px 0px;
 	}
-	
+
 	&__button {
 		display: flex;
 		justify-content: center;
 		position: relative;
 		z-index: 100;
-		a{
+		a {
 			position: relative;
 			padding: 27px 40px;
 			background: rgba(255, 255, 255, 0.4);
-			border: 4px solid #FFFFFF;
+			border: 4px solid #ffffff;
 			box-sizing: border-box;
 			backdrop-filter: blur(3px);
 			border-radius: 3px;
@@ -330,7 +326,7 @@ p._text {
 				color: $main;
 				transition: 0.5s ease-in-out;
 			}
-			&:hover{
+			&:hover {
 				color: $bg;
 				border: 4px solid $link;
 				background: $link;
@@ -340,24 +336,22 @@ p._text {
 					transform: translate(5px, -2px);
 				}
 			}
-
 		}
 	}
-	
+
 	&__bg {
 		position: absolute;
 		width: 100%;
 		height: 100%;
 		top: 0;
 		left: 0;
-		
 	}
 }
 
 .clouds {
-	background: url(../img/first/clouds-main.png) 50% 0/cover no-repeat;
+	background: url(../img/first/clouds-main.png) 50% 0 / cover no-repeat;
 	pointer-events: none;
-	
+
 	&__first {
 		position: absolute;
 		z-index: 20;
@@ -372,123 +366,115 @@ p._text {
 //====================лирика-один======================
 
 .page {
-
 	&__lirics {
 		margin: 150px auto;
-		@media ( max-width: 1280px) {
+		@media (max-width: 1280px) {
 			margin: calc(50px + (150 - 50) * ((100vw - 375px) / (1280 - 375))) auto;
 		}
-		@media ( max-width: 767px) {
+		@media (max-width: 767px) {
 			margin: 50px auto;
 		}
-
-}
-.lirics {
-	position: relative;
-	z-index: 50;
-	p{
-		font-family: 'Noto Serif', serif;
-		font-size: 48px;
-		@media ( max-width: 1280px) {
-			font-size: calc(35px + (48 - 35) * ((100vw - 768px) / (1280 - 768)));
+	}
+	.lirics {
+		position: relative;
+		z-index: 50;
+		p {
+			font-family: "Noto Serif", serif;
+			font-size: 48px;
+			@media (max-width: 1280px) {
+				font-size: calc(35px + (48 - 35) * ((100vw - 768px) / (1280 - 768)));
+			}
+			line-height: 135.4%;
+			text-align: center;
 		}
-		line-height: 135.4%;
-		text-align: center;
-
+		span {
+			font-family: "Noto Serif Display", serif;
+			font-style: italic;
+			font-weight: 700;
+		}
 	}
-	span{
-		font-family: 'Noto Serif Display', serif;
-		font-style: italic;
-		font-weight: 700;
-	}
-}
 }
 
 //====================best======================
 
 .page {
-
 	&__best {
 		padding: 150px 0px;
-		@media ( max-width: 1280px) {
+		@media (max-width: 1280px) {
 			padding: calc(50px + (150 - 50) * ((100vw - 375px) / (1280 - 375))) 0;
 		}
-
 	}
 }
 .best {
-
 	&__one-page {
 		margin-bottom: 100px;
-		@media ( max-width: 767px) {
+		@media (max-width: 767px) {
 			margin-bottom: 50px;
 		}
 	}
 }
 .one-page {
 	&__clouds {
-		background: url(../img/best/best-clouds.png) 50% 1%/contain no-repeat;
-		@media ( max-width: 940px) {
-			background: url(../img/best/best-clouds.png) -130% 50%/contain no-repeat;
+		background: url(../img/best/best-clouds.png) 50% 1% / contain no-repeat;
+		@media (max-width: 940px) {
+			background: url(../img/best/best-clouds.png) -130% 50% / contain no-repeat;
 		}
 	}
 	&__row-1 {
-		@media ( min-width: 767px) {
+		@media (min-width: 767px) {
 			display: flex;
 		}
-	margin-bottom: 50px;
-	@media ( max-width: 767px) {
-		margin-bottom: 20px;
-	}
+		margin-bottom: 50px;
+		@media (max-width: 767px) {
+			margin-bottom: 20px;
+		}
 	}
 
 	&__content {
 		flex: 0 0 100%;
-		@media ( max-width: 767px) {
+		@media (max-width: 767px) {
 			margin-bottom: 20px;
 		}
 	}
 
 	&__container {
-
 	}
 
 	&__body {
-		@media ( min-width: 767px) {
+		@media (min-width: 767px) {
 			width: 50%;
 		}
 		padding: 150px 100px 0 0;
-		@media (min-width: 767px) and ( max-width: 1280px) {
+		@media (min-width: 767px) and (max-width: 1280px) {
 			padding: calc(75px + (150 - 75) * ((100vw - 768px) / (1280 - 768))) calc(50px + (100 - 50) * ((100vw - 768px) / (1280 - 768))) 0 0;
 		}
-		@media ( max-width: 767px) {
+		@media (max-width: 767px) {
 			padding: 0;
 		}
 	}
-	
+
 	&__title {
 		position: relative;
 		z-index: 100;
 		white-space: nowrap;
-		@media ( max-width: 510px) {
+		@media (max-width: 510px) {
 			white-space: normal;
 		}
 		margin-bottom: 100px;
-		@media ( max-width: 1280px) {
-			margin-bottom: calc(35px + (100 - 35) * ((100vw - 375px) / (1280 - 375)));
+		@media (max-width: 992px) {
+			margin-bottom: calc(50px + (100 - 50) * ((100vw - 375px) / (1400 - 375)));
 		}
-
 	}
 
 	&__subtitle {
 	}
 
 	&__image {
-		@media ( max-width: 767px) {
+		@media (max-width: 767px) {
 			margin: 0px 20px;
 			height: 75vmax;
 		}
-		@media ( min-width: 767px) {
+		@media (min-width: 767px) {
 			position: relative;
 			flex: 0 0 50%;
 			transform: translate(-100%, 0px);
@@ -498,23 +484,21 @@ p._text {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		@media ( min-width: 767px) {
-		max-width: 100%;
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		left: 0;
-		top: 0;
-		object-fit: cover;
+		@media (min-width: 767px) {
+			max-width: 100%;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			object-fit: cover;
 		}
 	}
-
 }
 
 .one-page {
-
 	&__container-2 {
-		@media ( min-width: 767px) {
+		@media (min-width: 767px) {
 			display: flex;
 			align-items: end;
 		}
@@ -522,11 +506,11 @@ p._text {
 
 	&__image-2 {
 		width: 100%;
-		@media ( max-width: 767px) {
+		@media (max-width: 767px) {
 			height: 75vmax;
 			margin-bottom: 20px;
 		}
-		@media ( min-width: 767px) {
+		@media (min-width: 767px) {
 			flex: 1 0 50%;
 			height: 100%;
 		}
@@ -536,57 +520,54 @@ p._text {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		@media ( min-width: 767px) {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
+		@media (min-width: 767px) {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
 		}
 	}
 
 	&__content-2 {
-		@media ( min-width: 767px) {
+		@media (min-width: 767px) {
 		}
 
-		@media ( min-width: 767px) {
+		@media (min-width: 767px) {
 			padding-left: calc(50px + (100 - 50) * ((100vw - 768px) / (1280 - 768)));
 		}
 	}
 }
 
 .best {
-
 	&__two-page {
-
 	}
 }
 .two-page {
-
 	&__clouds {
 		background: url(../img/best/best-clouds.png) -10% 40%/70% auto no-repeat;
 	}
 
 	&__row1 {
-		@media ( min-width: 767px) {
+		@media (min-width: 767px) {
 			display: flex;
 		}
-		.two-page__content {	
+		.two-page__content {
 			flex: 0 0 100%;
 		}
 		.two-page__image {
-			@media ( min-width: 767px) {
+			@media (min-width: 767px) {
 				flex: 0 0 50%;
 				transform: translate(-100%, 0);
 				position: relative;
 				margin: 0 0 20px 0;
 			}
-			@media ( max-width: 767px) {
+			@media (max-width: 767px) {
 				margin: 20px;
 			}
 		}
-	
+
 		.two-page__img {
 			max-width: 100%;
-			@media ( min-width: 767px) {
+			@media (min-width: 767px) {
 				position: absolute;
 				width: 100%;
 				height: 100%;
@@ -597,19 +578,18 @@ p._text {
 		}
 	}
 
-
 	&__container {
 	}
 
 	&__body {
-		@media ( min-width: 767px) {
+		@media (min-width: 767px) {
 			width: 50%;
 		}
 		padding: 0 100px 0 0;
-		@media (min-width: 767px) and ( max-width: 1280px) {
+		@media (min-width: 767px) and (max-width: 1280px) {
 			padding: 0 calc(50px + (100 - 50) * ((100vw - 768px) / (1280 - 768))) 0 0;
 		}
-		@media ( max-width: 767px) {
+		@media (max-width: 767px) {
 			padding: 0;
 		}
 	}
@@ -617,16 +597,14 @@ p._text {
 	&__title {
 	}
 
-
 	&__row2 {
 		background: url(../img/best/best-clouds.png) 50% 0/100% auto no-repeat;
 		margin: 0 0 20px 0;
 	}
 
 	&__row3 {
-
 		.two-page__container {
-			@media ( min-width: 767px) {
+			@media (min-width: 767px) {
 				display: flex;
 				justify-content: space-between;
 				max-width: 1430px;
@@ -637,11 +615,11 @@ p._text {
 		.two-page__image {
 			position: relative;
 			aspect-ratio: 4 / 3;
-			@media ( min-width: 767px) {
+			@media (min-width: 767px) {
 				flex: 1 1 auto;
 				margin: 0px 15px;
 			}
-			@media ( max-width: 767px) {
+			@media (max-width: 767px) {
 				&:not(:last-child) {
 					margin-bottom: 20px;
 				}
@@ -649,7 +627,7 @@ p._text {
 		}
 		.two-page__img {
 			max-width: 100%;
-			@media ( min-width: 767px) {
+			@media (min-width: 767px) {
 				position: absolute;
 				width: 100%;
 				height: 100%;
@@ -661,26 +639,23 @@ p._text {
 	}
 }
 
-
 //====================gallary======================
 
 .page {
-
 	&__gallary {
 		padding: 150px 0px 150px 0px;
-		@media ( max-width: 1360px) {
+		@media (max-width: 1360px) {
 			padding: calc(50px + (150 - 50) * ((100vw - 375px) / (1400 - 375))) 0 calc(50px + (150 - 50) * ((100vw - 375px) / (1400 - 375))) 0;
 		}
 	}
 }
 .gallary {
-
 	&__title {
 		position: relative;
 		z-index: 50;
-		padding: 0 0 100px 0;
-		@media ( max-width: 1280px) {
-			padding: 0 20px calc(35px + (100 - 35) * ((100vw - 375px) / (1280 - 375))) 20px;
+		margin-bottom: 100px;
+		@media (max-width: 992px) {
+			margin-bottom: calc(50px + (100 - 50) * ((100vw - 375px) / (1400 - 375)));
 		}
 	}
 }
@@ -694,39 +669,40 @@ p._text {
 	}
 
 	&__slide {
-		aspect-ratio: 1.78;
+		aspect-ratio: 1 / 0.6;
 	}
-	
+
 	&__img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
 	}
 	.swiper-slide {
-
 	}
 }
 
 //====================catalog======================
 
 .page__catalog {
-	
 }
 
 .catalog {
 	padding: 150px 0px 150px 0px;
-		@media ( max-width: 1360px) {
-			padding: calc(50px + (150 - 50) * ((100vw - 375px) / (1400 - 375))) 0 calc(50px + (150 - 50) * ((100vw - 375px) / (1400 - 375))) 0;
-		}
+	@media (max-width: 1360px) {
+		padding: calc(50px + (150 - 50) * ((100vw - 375px) / (1400 - 375))) 0 calc(50px + (150 - 50) * ((100vw - 375px) / (1400 - 375))) 0;
+	}
 	background: white;
 	&__title {
 		margin-bottom: 100px;
+		@media (max-width: 992px) {
+			margin-bottom: calc(50px + (100 - 50) * ((100vw - 375px) / (1400 - 375)));
+		}
 		h2 {
-		display: inline-block;
-			@media ( min-width: 768px) {
+			display: inline-block;
+			@media (min-width: 768px) {
 				position: relative;
 				&::after {
-					content: '';
+					content: "";
 					position: absolute;
 					width: 100%;
 					height: 2px;
@@ -737,28 +713,26 @@ p._text {
 			}
 		}
 	}
-	
-	&__block {
 
+	&__block {
 	}
 }
 
 .cataloge-header__container {
-	@media ( min-width: 992px) {
+	@media (min-width: 992px) {
 		display: flex;
 	}
 	margin-bottom: 40px;
 }
 
 .catalog {
-
 	&__navigation {
 		flex: 0 1 40%;
 		display: flex;
 		justify-content: end;
 		align-items: center;
 		padding: 0 80px 0 0;
-		@media ( max-width: 992px) {
+		@media (max-width: 992px) {
 			justify-content: center;
 			padding: 0;
 		}
@@ -817,28 +791,26 @@ p._text {
 
 .catalog-header {
 	text-align: center;
-	@media ( min-width: 992px) {
+	@media (min-width: 992px) {
 		text-align: right;
 	}
 
 	&__title {
-		
 	}
 
 	&__subtitle {
 	}
 }
 .cataloge {
-
 	&__content {
-		@media ( min-width: 992px) {
+		@media (min-width: 992px) {
 			display: flex;
 		}
 	}
-	
+
 	&__image {
 		flex: 0 0 50%;
-		@media ( max-width: 992px) {
+		@media (max-width: 992px) {
 			margin-bottom: 20px;
 		}
 		img {
@@ -847,18 +819,17 @@ p._text {
 			object-fit: cover;
 		}
 	}
-	
+
 	&__subject {
-		@media ( min-width: 992px) {
+		@media (min-width: 992px) {
 			flex: 0 0 100%;
 			transform: translate(-50%, 0);
 		}
 	}
 }
 .subject {
-
 	&__body {
-		@media ( min-width: 992px) {
+		@media (min-width: 992px) {
 			max-width: 50%;
 			margin-left: auto;
 			padding: 0 0 150px 50px;
@@ -869,7 +840,7 @@ p._text {
 		display: inline-flex;
 		align-items: center;
 		margin-bottom: 80px;
-		@media ( max-width: 1360px) {
+		@media (max-width: 1360px) {
 			margin-bottom: calc(30px + (80 - 30) * ((100vw - 375px) / (1400 - 375)));
 		}
 		transition: 0.5s;
@@ -884,7 +855,7 @@ p._text {
 		&:not(:last-child) {
 			margin-bottom: 20px;
 		}
-		@media ( max-width: 1360px) {
+		@media (max-width: 1360px) {
 			&:not(:last-child) {
 				margin-bottom: calc(5px + (20 - 5) * ((100vw - 375px) / (1400 - 375)));
 			}
@@ -893,10 +864,10 @@ p._text {
 			padding-left: 10px;
 		}
 	}
-	
+
 	&__button {
 		margin-bottom: 40px;
-		@media ( max-width: 1360px) {
+		@media (max-width: 1360px) {
 			margin-bottom: calc(20px + (40 - 20) * ((100vw - 375px) / (1400 - 375)));
 		}
 	}
@@ -904,7 +875,7 @@ p._text {
 
 .subject-list {
 	margin-bottom: 80px;
-	@media ( max-width: 1360px) {
+	@media (max-width: 1360px) {
 		margin-bottom: calc(30px + (80 - 30) * ((100vw - 375px) / (1400 - 375)));
 	}
 }
@@ -912,10 +883,10 @@ p._text {
 	a {
 		display: inline-block;
 		padding: 28px 45px;
-		@media ( max-width: 1360px) {
+		@media (max-width: 1360px) {
 			padding: calc(15px + (28 - 15) * ((100vw - 375px) / (1400 - 375))) calc(25px + (45 - 25) * ((100vw - 375px) / (1400 - 375)));
 		}
-		@media ( max-width: 440px) {
+		@media (max-width: 440px) {
 			width: 100%;
 			text-align: center;
 		}
@@ -932,7 +903,7 @@ p._text {
 			}
 		}
 	}
-	
+
 	* {
 		color: $bg;
 		vertical-align: middle;
@@ -943,7 +914,6 @@ p._text {
 		font-size: 30px;
 		transition: 0.5s;
 	}
-	
 }
 
 .subject-price {
@@ -955,27 +925,25 @@ p._text {
 //====================команда======================
 
 .page {
-
 	&__team {
-	padding: 150px 0px 150px 0px;
-		@media ( max-width: 1360px) {
+		padding: 150px 0px 150px 0px;
+		@media (max-width: 1360px) {
 			padding: calc(50px + (150 - 50) * ((100vw - 375px) / (1400 - 375))) 0 calc(50px + (150 - 50) * ((100vw - 375px) / (1400 - 375))) 0;
 		}
 	}
 }
 .team {
-
 	&__title {
 		margin-bottom: 100px;
-		@media ( max-width: 1280px) {
-			margin-bottom: calc(30px + (100 - 30) * ((100vw - 375px) / (1400 - 375)));
+		@media (max-width: 992px) {
+			margin-bottom: calc(50px + (100 - 50) * ((100vw - 375px) / (1400 - 375)));
 		}
 		text-align: right;
 		text-shadow: -180px 80px 0px rgba(0, 0, 0, 0.05);
-		@media ( max-width: 1024px) {
+		@media (max-width: 1024px) {
 			text-shadow: -130px 60px 0px rgba(0, 0, 0, 0.05);
 		}
-		@media ( max-width: 767px) {
+		@media (max-width: 767px) {
 			text-shadow: -60px 50px 0px rgba(0, 0, 0, 0.05);
 		}
 	}
@@ -983,45 +951,45 @@ p._text {
 	&__bg {
 		position: relative;
 		p {
-		pointer-events: none;
-		word-break: break-word;
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		left: 100px;
-		top: 0px;
+			pointer-events: none;
+			word-break: break-word;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 100px;
+			top: 0px;
 
-		font-family: 'Montserrat';
-		font-style: normal;
-		font-weight: 700;
-		font-size: 520px;
-		@media ( max-width: 1360px) {
-			font-size: calc(250px + (490 - 250) * ((100vw - 375px) / (1400 - 375)));
-		}
-		line-height: 670px;
-		display: flex;
-		align-items: center;
-		letter-spacing: 0.1em;
-		text-transform: uppercase;
-		color: rgba(0, 0, 0, 0.1);
+			font-family: "Montserrat";
+			font-style: normal;
+			font-weight: 700;
+			font-size: 520px;
+			@media (max-width: 1360px) {
+				font-size: calc(250px + (490 - 250) * ((100vw - 375px) / (1400 - 375)));
+			}
+			line-height: 670px;
+			display: flex;
+			align-items: center;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			color: rgba(0, 0, 0, 0.1);
 		}
 	}
 
 	&__head {
-		@media ( min-width: 992px) {
+		@media (min-width: 992px) {
 			display: flex;
 			align-items: center;
 			.team__column {
-				&:last-child{
+				&:last-child {
 					padding-right: 200px;
-					@media ( max-width: 1280px) {
+					@media (max-width: 1280px) {
 						padding-right: calc(10px + (200 - 10) * ((100vw - 375px) / (1400 - 375)));
 					}
 				}
 			}
 		}
 		margin-bottom: 50px;
-		@media ( max-width: 992px) {
+		@media (max-width: 992px) {
 			.team__column {
 				display: flex;
 				justify-content: center;
@@ -1030,11 +998,9 @@ p._text {
 	}
 
 	&__column {
-
 	}
 
 	&__avatar {
-
 	}
 
 	&__body {
@@ -1050,7 +1016,7 @@ p._text {
 .team__column_bg {
 	position: relative;
 	&::before {
-		content: '';
+		content: "";
 		position: absolute;
 		width: 100%;
 		height: 100%;
@@ -1066,7 +1032,7 @@ p._text {
 	position: relative;
 	width: 350px;
 	height: 350px;
-	@media ( max-width: 1280px) {
+	@media (max-width: 1280px) {
 		width: calc(220px + (350 - 220) * ((100vw - 375px) / (1400 - 375)));
 		height: calc(220px + (350 - 220) * ((100vw - 375px) / (1400 - 375)));
 	}
@@ -1111,7 +1077,7 @@ p._text {
 .team__avatar_bg {
 	position: relative;
 	&::before {
-		content: '';
+		content: "";
 		position: absolute;
 		width: 1000%;
 		height: 100%;
@@ -1122,7 +1088,6 @@ p._text {
 }
 
 .team {
-
 	&__bottom {
 		img {
 			max-width: 100%;
@@ -1131,66 +1096,61 @@ p._text {
 }
 
 .team {
-
 	&__cta {
 	}
 }
 .cta {
-
 	&__content {
 		text-align: center;
 		margin-bottom: 40px;
 	}
 
 	&__contact-us {
-		@media ( min-width: 993px) {
+		@media (min-width: 993px) {
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
 			align-items: center;
 			& > * {
 				margin: 0px 20px;
-			} 
+			}
 		}
 	}
 
 	&__list {
-		@media ( max-width: 992px) {
+		@media (max-width: 992px) {
 			margin-bottom: 20px;
 		}
-
 	}
-
 }
 
 .cta {
-
 	&__button {
 		text-align: center;
 	}
 }
 .button-3 {
-
 }
 
 //====================материальная база======================
 
 .page {
-
 	&__base {
 		padding: 150px 0px 150px 0px;
-		@media ( max-width: 1360px) {
+		@media (max-width: 1360px) {
 			padding: calc(50px + (150 - 50) * ((100vw - 375px) / (1400 - 375))) 0 calc(50px + (150 - 50) * ((100vw - 375px) / (1400 - 375))) 0;
 		}
 	}
 }
 .base {
-
 	&__container {
 	}
 
 	&__title {
 		margin-bottom: 100px;
+		@media (max-width: 992px) {
+			margin-bottom: calc(50px + (100 - 50) * ((100vw - 375px) / (1400 - 375)));
+		}
 	}
 
 	&__avto-1 {
@@ -1198,7 +1158,6 @@ p._text {
 }
 
 .avto-1 {
-
 	&__title {
 	}
 
@@ -1208,7 +1167,7 @@ p._text {
 
 	&__items {
 		display: grid;
-		grid-template: calc(400px + (600 - 400) * ((100vw - 375px) / (1400 - 375))) calc(220px + (355 - 220) * ((100vw - 375px) / (1400 - 375))) / repeat(auto-fit,minmax(50px, 1fr));
+		grid-template: calc(400px + (600 - 400) * ((100vw - 375px) / (1400 - 375))) calc(220px + (355 - 220) * ((100vw - 375px) / (1400 - 375))) / repeat(auto-fit, minmax(50px, 1fr));
 		grid-gap: calc(10px + (30 - 10) * ((100vw - 375px) / (1400 - 375)));
 		margin-bottom: 80px;
 	}
@@ -1287,7 +1246,7 @@ p._text {
 	width: 70%;
 	max-width: 1000px;
 	margin: 0 auto;
-	@media ( max-width: 768px) {
+	@media (max-width: 768px) {
 		width: 85%;
 	}
 }
@@ -1302,49 +1261,49 @@ p._text {
 	position: relative;
 
 	.slick-arrow {
-		@media ( max-width: 767px) {
+		@media (max-width: 767px) {
 			display: none;
 		}
-			position: absolute;
-			top: 50%;
-			font-size: 0;
-			z-index: 10;
-			width: 71px;
-			height: 60px;
-			@media ( max-width: 1280px) {
-				width: calc(40px + (71 - 40) * ((100vw - 768px) / (1400 - 768)));
-				height: calc(40px + (71 - 40) * ((100vw - 768px) / (1400 - 768)));
-			}
-			opacity: 0.8;
+		position: absolute;
+		top: 50%;
+		font-size: 0;
+		z-index: 10;
+		width: 71px;
+		height: 60px;
+		@media (max-width: 1280px) {
+			width: calc(40px + (71 - 40) * ((100vw - 768px) / (1400 - 768)));
+			height: calc(40px + (71 - 40) * ((100vw - 768px) / (1400 - 768)));
+		}
+		opacity: 0.8;
 	}
 
 	.slick-arrow.slick-prev {
 		cursor: pointer;
 		left: 100px;
-		@media ( max-width: 1400px) {
+		@media (max-width: 1400px) {
 			left: calc(50px + (100 - 50) * ((100vw - 768px) / (1400 - 768)));
 		}
 		background: url(../img/first/Union.svg) 0 0 / 100% no-repeat;
 		transform: translateY(-50%);
 		transition: left 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-		&:hover{
+		&:hover {
 			left: calc((50px + (100 - 50) * ((100vw - 768px) / (1400 - 768))) - 24px);
 		}
 	}
-	
+
 	.slick-arrow.slick-next {
 		cursor: pointer;
 		right: 110px;
-		@media ( max-width: 1400px) {
+		@media (max-width: 1400px) {
 			right: calc(50px + (100 - 50) * ((100vw - 768px) / (1400 - 768)));
 		}
-			background: url(../img/first/Union.svg) 0 0 / 100% no-repeat;
-			transform: scale(-1, 1) translateY(-50%);
-			transition: right 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-		&:hover{
+		background: url(../img/first/Union.svg) 0 0 / 100% no-repeat;
+		transform: scale(-1, 1) translateY(-50%);
+		transition: right 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+		&:hover {
 			right: calc((50px + (100 - 50) * ((100vw - 768px) / (1400 - 768))) - 17px);
 		}
-	}	
+	}
 
 	/* Точки (булиты) */
 
@@ -1353,14 +1312,14 @@ p._text {
 		justify-content: center;
 		align-items: center;
 		opacity: 0.8;
-		
+
 		button {
 			margin-right: 10px;
 			font-size: 0;
 			width: 10px;
 			height: 10px;
 			border-radius: 50%;
-			background: #FFFFFF;
+			background: #ffffff;
 			transition: 1s;
 		}
 
@@ -1370,11 +1329,9 @@ p._text {
 			height: 14px;
 		}
 	}
-	
-	
+
 	/* Активная точка */
 	.slick-dots li.slick-active {
-
 	}
 }
 
@@ -1382,24 +1339,23 @@ p._text {
 
 .form {
 	&__container {
-	padding: 150px 0px 150px 0px;
-		@media ( max-width: 1360px) {
+		padding: 150px 0px 150px 0px;
+		@media (max-width: 1360px) {
 			padding: calc(50px + (150 - 50) * ((100vw - 375px) / (1400 - 375))) 0 calc(50px + (150 - 50) * ((100vw - 375px) / (1400 - 375))) 0;
 		}
-	@media ( min-width: 769px) {
-		display: flex;
-		align-items: center;
-		position: relative;
+		@media (min-width: 769px) {
+			display: flex;
+			align-items: center;
+			position: relative;
 		}
 	}
-	
 
 	&__content {
-		@media ( min-width: 769px) {
+		@media (min-width: 769px) {
 			flex: 0 1 40%;
 			position: relative;
 			&::after {
-				content: '';
+				content: "";
 				position: absolute;
 				width: 2px;
 				height: 100%;
@@ -1413,12 +1369,15 @@ p._text {
 	&__title {
 		position: relative;
 		padding: 80px 30px 20px 0px;
+		@media (max-width: 768px) {
+			padding: 0px 30px 20px 0px;
+		}
 		margin-bottom: 50px;
 		p {
 			text-align: left !important;
 		}
 		&::after {
-			content: '';
+			content: "";
 			position: absolute;
 			width: 95%;
 			height: 2px;
@@ -1427,7 +1386,7 @@ p._text {
 			background: $main;
 		}
 		&::before {
-			content: '';
+			content: "";
 			position: absolute;
 			width: 14px;
 			height: 14px;
@@ -1441,15 +1400,14 @@ p._text {
 
 	&__subtitle {
 		margin-bottom: 20px;
-		@media ( max-width: 768px) {
+		@media (max-width: 768px) {
 			display: none;
 		}
 	}
 
 	&__contacts {
-		
 		.contacts__list {
-			@media ( max-width: 768px) {
+			@media (max-width: 768px) {
 				display: none;
 			}
 			justify-content: start;
@@ -1461,16 +1419,15 @@ p._text {
 				}
 			}
 		}
-
 	}
 
 	&__body {
-		@media ( min-width: 769px) {
+		@media (min-width: 769px) {
 			flex: 0 1 60%;
 			margin: 0px 0px 40px 30px;
 		}
 		&::after {
-			content: '';
+			content: "";
 			position: absolute;
 			z-index: 150;
 			width: 100%;
@@ -1483,7 +1440,7 @@ p._text {
 			visibility: hidden;
 			transition: 0.5s;
 		}
-	
+
 		&._sending::after {
 			opacity: 0.9;
 			visibility: visible;
@@ -1509,17 +1466,17 @@ p._text {
 
 	&__input._error {
 		box-shadow: 0 0 15px red;
-	}	
+	}
 
 	&__button {
 		display: inline-block;
 		padding: 28px 45px;
 		min-width: 430px;
 		margin: 0 auto;
-		@media ( max-width: 1360px) {
+		@media (max-width: 1360px) {
 			padding: calc(15px + (28 - 15) * ((100vw - 375px) / (1400 - 375))) calc(25px + (45 - 25) * ((100vw - 375px) / (1400 - 375)));
 		}
-		@media ( max-width: 820px) {
+		@media (max-width: 820px) {
 			min-width: 100%;
 		}
 		background: $link;
@@ -1527,15 +1484,15 @@ p._text {
 		border-radius: 3px;
 		border: 2px $link solid;
 		transition: 0.5s;
-			&:hover {
-				background: $bg;
-				border: 2px $main solid;
+		&:hover {
+			background: $bg;
+			border: 2px $main solid;
+			color: $main;
+			span {
 				color: $main;
-				span {
-					color: $main;
-				}
 			}
-		
+		}
+
 		* {
 			color: $bg;
 			vertical-align: middle;
@@ -1554,46 +1511,44 @@ textarea.form__input {
 }
 
 .checkbox {
-
 	span {
-	color: $main;
+		color: $main;
 	}
 	&__input._error {
 		box-shadow: 0 0 15px red;
 	}
 
 	&__label {
-		
 	}
 }
 
 //====================цитаты======================
 
 .page {
-
 	&__quote {
 		padding: 150px 0px 150px 0px;
-		@media ( max-width: 1360px) {
+		@media (max-width: 1360px) {
 			padding: calc(50px + (150 - 50) * ((100vw - 375px) / (1400 - 375))) 0 calc(50px + (150 - 50) * ((100vw - 375px) / (1400 - 375))) 0;
 		}
 	}
 }
 
 .quotes {
-	
 	&__container {
 		display: flex;
 		flex-direction: column;
 		.quotes__quote:first-child {
-			margin: 0 100px 100px;
+			margin: 0 calc(0px + (100 - 0) * ((100vw - 375px) / (1400 - 375)));
 		}
 		._text:first-child {
 			position: relative;
-			&::before, &::after {
+			display: inline;
+			&::before,
+			&::after {
 				position: absolute;
 				// width: 100%;
 				height: 100%;
-				font-family: 'Noto Serif Display', serif;
+				font-family: "Noto Serif Display", serif;
 				font-style: italic;
 				font-weight: 700;
 				font-size: 34px;
@@ -1602,26 +1557,30 @@ textarea.form__input {
 				color: $main;
 			}
 			&::before {
-				content: '“';
+				content: "“";
 				transform: translate(-22px, -7px);
 				left: 0;
 				top: 0;
 			}
 			&::after {
-				content: '”';
-				transform: translate(-50px, -28px);
+				content: "”";
+				transform: translate(15px, -35px);
 				right: 0;
 				bottom: -100%;
 			}
 		}
 	}
-	
+
 	&__quote {
-		margin-bottom: 100px;
+		&:not(:last-child) {
+			margin-bottom: 100px;
+			@media (max-width: 992px) {
+				margin-bottom: calc(50px + (100 - 50) * ((100vw - 375px) / (1400 - 375))) !important;
+			}
+		}
 		cite {
 			display: block;
 		}
-
 	}
 
 	&__right {
@@ -1634,15 +1593,15 @@ textarea.form__input {
 
 .footer {
 	padding-top: 350px;
-	@media ( max-width: 1360px) {
-	padding-top: calc(250px + (350 - 250) * ((100vw - 375px) / (1400 - 375)));
+	@media (max-width: 1360px) {
+		padding-top: calc(250px + (350 - 250) * ((100vw - 375px) / (1400 - 375)));
 	}
-	
+
 	&__image {
 		pointer-events: none;
 		position: absolute;
 		width: 100%;
-		@media ( max-width: 710px) {
+		@media (max-width: 710px) {
 			width: calc(250% + (150 - 250) * ((100vw - 375px) / (1400 - 375)));
 			transform: translate(-30%, 0);
 			display: flex;
@@ -1656,22 +1615,20 @@ textarea.form__input {
 			object-position: center;
 		}
 	}
-	
-	&__container {
 
+	&__container {
 	}
 
 	&__body {
 		position: relative;
 		z-index: 5;
 		margin-bottom: 50px;
-		@media ( max-width: 1280px) {
+		@media (max-width: 1280px) {
 			margin-bottom: calc(20px + (50 - 20) * ((100vw - 375px) / (1400 - 375)));
 		}
 		* {
 			color: $bg;
 		}
-
 	}
 
 	&__logo {
@@ -1682,7 +1639,7 @@ textarea.form__input {
 		}
 		p {
 			color: $main;
-			@media ( max-width: 710px) {
+			@media (max-width: 710px) {
 				color: $bg;
 				margin-top: 10px;
 			}
@@ -1690,7 +1647,7 @@ textarea.form__input {
 	}
 
 	&__content {
-		@media ( min-width: 425px) {
+		@media (min-width: 425px) {
 			display: flex;
 			justify-content: space-between;
 			align-items: flex-end;
@@ -1698,7 +1655,7 @@ textarea.form__input {
 	}
 
 	&__column {
-		@media ( max-width: 425px) {
+		@media (max-width: 425px) {
 			display: flex;
 			justify-content: center;
 			flex-wrap: wrap;
@@ -1712,10 +1669,9 @@ textarea.form__input {
 			line-height: 100%;
 			font-weight: 400;
 			font-size: 18px;
-			@media ( max-width: 1280px) {
+			@media (max-width: 1280px) {
 				font-size: calc(15px + (18 - 15) * ((100vw - 375px) / (1280 - 375)));
 			}
-
 		}
 		p:not(:last-child) {
 			margin-bottom: 5px;
@@ -1729,7 +1685,7 @@ textarea.form__input {
 	}
 
 	&__contacts {
-		@media ( min-width: 993px) {
+		@media (min-width: 993px) {
 			padding-bottom: 20px;
 		}
 		.contacts__item {
@@ -1750,7 +1706,7 @@ textarea.form__input {
 			margin-right: 20px;
 		}
 		::before {
-			content: '';
+			content: "";
 			position: absolute;
 			width: 100%;
 			height: 2px;
@@ -1758,7 +1714,7 @@ textarea.form__input {
 			top: 0;
 			background: $bg;
 		}
-		@media ( max-width: 992px) {
+		@media (max-width: 992px) {
 			display: none;
 		}
 	}

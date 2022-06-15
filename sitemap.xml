@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?> 
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"> 
+<url>
+<loc>https://magicaltai.su/first-tour.html</loc>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://magicaltai.su/2nd-tour.html</loc>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://magicaltai.su/3nd-tour.html</loc>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://magicaltai.su/4th-tour.html</loc>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://magicaltai.su/index.html</loc>
+<priority>1</priority>
+</url>
+</urlset>
