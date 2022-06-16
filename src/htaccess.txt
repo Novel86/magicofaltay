@@ -1,15 +1,8 @@
 Options -Indexes
 
-<IfModule mod_dir.c>
-  DirectoryIndex index.html
-</IfModule>
-
-
 RewriteEngine On
 RewriteCond %{HTTP:X-Forwarded-Proto} !=https
 RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
-<FilesMatch "robots.txt$"> RewriteEngine off </FilesMatch>
-
 
     # 1. Удалить www
 RewriteCond %{ENV:HTTPS} on

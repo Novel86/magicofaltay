@@ -120,6 +120,7 @@ $(document).ready(function () {
 	});
 });
 
+// слайдер swiper галерея
 new Swiper('.gallary', {
 	slidesPerView: 2.2,
 	spaceBetween: 30,
@@ -128,8 +129,12 @@ new Swiper('.gallary', {
 		disableOnInteraction: false,
 		pauseOnMouseEnter: true
 	},
-	speed: 6000,
+	speed: 18000,
 	loop: true,
+	freeMode: {
+		enabled: true,
+		momentum: false
+	},
 	// Responsive breakpoints
 	breakpoints: {
 		// when window width is >= 320px
@@ -153,10 +158,14 @@ new Swiper('.gallary-revers', {
 		disableOnInteraction: false,
 		pauseOnMouseEnter: true,
 	},
-	speed: 6000,
+	speed: 18000,
 	loop: true,
 	slidesPerView: 2.2,
 	spaceBetween: 30,
+	freeMode: {
+		enabled: true,
+		momentum: false
+	},
 	breakpoints: {
 		320: {
 			slidesPerView: 1.2,

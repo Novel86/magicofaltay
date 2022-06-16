@@ -1,5 +1,4 @@
 .header {
-
 	&__index {
 		position: absolute;
 		z-index: 100;
@@ -13,7 +12,7 @@
 	}
 
 	&__menu {
-		@media ( max-width: 1100px) {
+		@media (max-width: 1100px) {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -22,14 +21,16 @@
 
 	&__burger {
 		display: none;
-		@media ( max-width: 1100px) {
+		@media (max-width: 1100px) {
 			display: block;
 			position: relative;
 			z-index: 5;
 			width: 40px;
 			height: 30px;
 			cursor: pointer;
-			&::before, &::after, span {
+			&::before,
+			&::after,
+			span {
 				position: absolute;
 				overflow: hidden;
 				width: 100%;
@@ -39,7 +40,8 @@
 				background: $main;
 				transition: all 0.5s;
 			}
-			&._active::before, &._active::after {
+			&._active::before,
+			&._active::after {
 				background: $bg;
 			}
 
@@ -47,8 +49,9 @@
 				opacity: 0;
 			}
 
-			&::before, &::after {
-				content: '';
+			&::before,
+			&::after {
+				content: "";
 			}
 			&::before {
 				top: 0;
@@ -82,7 +85,7 @@
 			padding: 0 calc(15px + (25 - 15) * ((100vw - 375px) / (1400 - 375))) 0 0;
 		}
 
-		@media ( max-width: 1100px) {
+		@media (max-width: 1100px) {
 			display: none;
 		}
 	}
@@ -106,7 +109,6 @@
 }
 
 .contacts {
-
 	&__list {
 		display: flex;
 		align-items: center;
@@ -114,7 +116,7 @@
 		:not(:last-child) {
 			padding: 0 20px 0 0;
 		}
-		@media ( max-width: 1280px) {
+		@media (max-width: 1280px) {
 			:not(:last-child) {
 				padding: 0 calc(15px + (25 - 15) * ((100vw - 375px) / (1400 - 375))) 0 0;
 			}
@@ -148,6 +150,9 @@
 	align-items: center;
 	position: absolute;
 	width: 60vw;
+	@media (max-width: 610px) {
+		width: 100vw;
+	}
 	height: 100vh;
 	left: 0;
 	top: 0;
@@ -197,7 +202,6 @@
 				}
 			}
 		}
-
 	}
 
 	&__contacts {

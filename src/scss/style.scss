@@ -211,6 +211,10 @@ p._text {
 	}
 }
 
+.lock {
+	overflow: hidden;
+}
+
 //====================header======================
 
 @import "_header";
@@ -235,7 +239,7 @@ p._text {
 		position: relative;
 		z-index: 3;
 		display: flex;
-		@media (max-width: 768px) {
+		@media (max-width: 830px) {
 			flex-wrap: wrap;
 		}
 		justify-content: center;
@@ -291,16 +295,22 @@ p._text {
 		margin-top: -92px;
 		font-family: "Noto Serif", serif;
 		font-weight: 400;
+		@media (max-width: 768px) {
+			font-weight: 600;
+		}
 		font-size: 35px;
 		@media (max-width: 1280px) {
-			font-size: calc(16px + (35 - 16) * ((100vw - 375px) / (1280 - 375)));
+			font-size: calc(17px + (35 - 17) * ((100vw - 375px) / (1280 - 375)));
 		}
 		line-height: 137%;
 		text-align: center;
 		text-transform: uppercase;
 		color: $main;
-		background: #ffffff59;
+		background: rgba(255, 255, 255, 0.35);
 		padding: 94px 0px 40px 0px;
+		@media (max-width: 768px) {
+			padding: calc(60px + (94 - 60) * ((100vw - 375px) / (1400 - 375))) 0px 40px 0px;
+		}
 	}
 
 	&__button {
@@ -349,7 +359,7 @@ p._text {
 }
 
 .clouds {
-	background: url(../img/first/clouds-main.png) 50% 0 / cover no-repeat;
+	background: url(../img/first/clouds-main.webp) 50% 0 / cover no-repeat;
 	pointer-events: none;
 
 	&__first {
@@ -415,9 +425,9 @@ p._text {
 }
 .one-page {
 	&__clouds {
-		background: url(../img/best/best-clouds.png) 50% 1% / contain no-repeat;
+		background: url(../img/best/best-clouds.webp) 50% 1% / contain no-repeat;
 		@media (max-width: 940px) {
-			background: url(../img/best/best-clouds.png) -130% 50% / contain no-repeat;
+			background: url(../img/best/best-clouds.webp) -130% 50% / contain no-repeat;
 		}
 	}
 	&__row-1 {
@@ -512,7 +522,6 @@ p._text {
 		}
 		@media (min-width: 767px) {
 			flex: 1 0 50%;
-			height: 100%;
 		}
 	}
 
@@ -520,11 +529,6 @@ p._text {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		@media (min-width: 767px) {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		}
 	}
 
 	&__content-2 {
@@ -543,7 +547,7 @@ p._text {
 }
 .two-page {
 	&__clouds {
-		background: url(../img/best/best-clouds.png) -10% 40%/70% auto no-repeat;
+		background: url(../img/best/best-clouds.webp) -10% 40%/70% auto no-repeat;
 	}
 
 	&__row1 {
@@ -598,7 +602,7 @@ p._text {
 	}
 
 	&__row2 {
-		background: url(../img/best/best-clouds.png) 50% 0/100% auto no-repeat;
+		background: url(../img/best/best-clouds.webp) 50% 0/100% auto no-repeat;
 		margin: 0 0 20px 0;
 	}
 
@@ -1053,14 +1057,22 @@ p._text {
 		left: 0;
 		top: 0;
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		text-align: center;
-		color: $bg-bright;
+		* {
+			line-height: 100% !important;
+			text-align: center;
+			color: $bg-bright;
+		}
 		background: linear-gradient(0deg, rgba(0, 123, 136, 0.7), rgba(0, 123, 136, 0.7));
 		opacity: 0;
 		pointer-events: none;
 		transition: 0.5s;
+		padding: 5px;
+		:not(:last-child) {
+			margin-bottom: 10px;
+		}
 	}
 
 	&__img {
@@ -1212,6 +1224,7 @@ p._text {
 		position: absolute;
 		z-index: 10;
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		width: 100%;
@@ -1253,6 +1266,10 @@ p._text {
 
 .swiper-slide {
 	cursor: grab;
+}
+
+.swiper-wrapper {
+	transition-timing-function: linear !important;
 }
 
 // слайдер главный экран
@@ -1336,13 +1353,15 @@ p._text {
 }
 
 //====================форма отправки на главной======================
+.page__form {
+	padding: 150px 0px 150px 0px;
+	@media (max-width: 1360px) {
+		padding: calc(50px + (150 - 50) * ((100vw - 375px) / (1400 - 375))) 0 calc(50px + (150 - 50) * ((100vw - 375px) / (1400 - 375))) 0;
+	}
+}
 
 .form {
 	&__container {
-		padding: 150px 0px 150px 0px;
-		@media (max-width: 1360px) {
-			padding: calc(50px + (150 - 50) * ((100vw - 375px) / (1400 - 375))) 0 calc(50px + (150 - 50) * ((100vw - 375px) / (1400 - 375))) 0;
-		}
 		@media (min-width: 769px) {
 			display: flex;
 			align-items: center;
@@ -1374,7 +1393,18 @@ p._text {
 		}
 		margin-bottom: 50px;
 		p {
-			text-align: left !important;
+			font-family: "Noto Serif", serif;
+			font-size: 48px;
+			@media (max-width: 1280px) {
+				font-size: calc(35px + (48 - 35) * ((100vw - 768px) / (1280 - 768)));
+			}
+			line-height: 135.4%;
+			text-align: left;
+		}
+		span {
+			font-family: "Noto Serif Display", serif;
+			font-style: italic;
+			font-weight: 700;
 		}
 		&::after {
 			content: "";
@@ -1530,6 +1560,10 @@ textarea.form__input {
 		@media (max-width: 1360px) {
 			padding: calc(50px + (150 - 50) * ((100vw - 375px) / (1400 - 375))) 0 calc(50px + (150 - 50) * ((100vw - 375px) / (1400 - 375))) 0;
 		}
+		background: $bg url(/img/best/best-clouds.webp) center / 100% 100% no-repeat;
+		@media (max-width: 768px) {
+			background: $bg url(/img/best/best-clouds.webp) center / auto 100% no-repeat;
+		}
 	}
 }
 
@@ -1537,9 +1571,6 @@ textarea.form__input {
 	&__container {
 		display: flex;
 		flex-direction: column;
-		.quotes__quote:first-child {
-			margin: 0 calc(0px + (100 - 0) * ((100vw - 375px) / (1400 - 375)));
-		}
 		._text:first-child {
 			position: relative;
 			display: inline;
@@ -1572,10 +1603,14 @@ textarea.form__input {
 	}
 
 	&__quote {
+		&:first-child {
+			margin-left: calc(10px + (100 - 10) * ((100vw - 375px) / (1400 - 375)));
+			margin-right: calc(10px + (100 - 10) * ((100vw - 375px) / (1400 - 375)));
+		}
 		&:not(:last-child) {
 			margin-bottom: 100px;
 			@media (max-width: 992px) {
-				margin-bottom: calc(50px + (100 - 50) * ((100vw - 375px) / (1400 - 375))) !important;
+				margin-bottom: calc(60px + (100 - 60) * ((100vw - 375px) / (1400 - 375))) !important;
 			}
 		}
 		cite {
@@ -1725,3 +1760,4 @@ textarea.form__input {
 
 //==========================================
 @import "_tours";
+@import "_popups";
