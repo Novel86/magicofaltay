@@ -1,0 +1,55 @@
+.page {
+	&__gratitude {
+	}
+}
+.gratitude {
+	&__container {
+	}
+
+	&__head {
+		margin: 150px 0 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+
+	&__content {
+	}
+
+	&__title {
+		margin-bottom: 50px;
+	}
+
+	&__text {
+		margin-bottom: 20px;
+	}
+
+	&__link {
+		text-align: center;
+		a {
+			color: $link;
+			transition: 0.5s;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.head {
+	&__container {
+	}
+
+	&__logo {
+	}
+
+	&__img {
+	}
+
+	&__title {
+	}
+
+	&__subtitle {
+	}
+}

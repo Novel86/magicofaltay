@@ -290,8 +290,11 @@
 	&__map {
 		margin-top: 20px;
 		span {
-			padding: 0px 10px;
+			// padding: 0px 10px;
 			display: inline-block;
+		}
+		.material-symbols-outlined {
+			padding-left: 0px !important;
 		}
 	}
 

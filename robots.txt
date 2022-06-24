@@ -1,4 +1,6 @@
 User-Agent: *
 Allow: /
+Disallow: /soglashenie.files/
+Disallow: /gratitude.html
 
 sitemap: https://magicaltai.su/sitemap.xml

@@ -312,6 +312,110 @@ p._text {
 			padding: calc(60px + (94 - 60) * ((100vw - 375px) / (1400 - 375))) 0px 40px 0px;
 		}
 	}
+	//====================first-slider======================
+	&__first-slider {
+		padding: 94px 0px 40px 0px;
+		@media (max-width: 768px) {
+			padding: calc(60px + (94 - 60) * ((100vw - 375px) / (1400 - 375))) 0px 40px 0px;
+		}
+		background: rgba(255, 255, 255, 0.35);
+		position: relative;
+		z-index: 2;
+		margin-bottom: 50px;
+		margin-top: -92px;
+	}
+
+	.first-slider {
+		&__body {
+		}
+
+		&__arrow {
+			@media (max-width: 767px) {
+				display: none;
+			}
+			position: absolute;
+			top: 50%;
+			font-size: 0;
+			z-index: 10;
+			width: 71px;
+			height: 60px;
+			@media (max-width: 1280px) {
+				width: calc(40px + (71 - 40) * ((100vw - 768px) / (1400 - 768)));
+				height: calc(40px + (71 - 40) * ((100vw - 768px) / (1400 - 768)));
+			}
+			opacity: 0.8;
+		}
+
+		&__prev {
+			cursor: pointer;
+			left: 100px;
+			@media (max-width: 1400px) {
+				left: calc(50px + (100 - 50) * ((100vw - 768px) / (1400 - 768)));
+			}
+			background: url(../img/first/Union.svg) 0 0 / 100% no-repeat;
+			transform: translateY(-50%);
+			transition: left 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+			&:hover {
+				left: calc((50px + (100 - 50) * ((100vw - 768px) / (1400 - 768))) - 24px);
+			}
+		}
+
+		&__next {
+			cursor: pointer;
+			right: 110px;
+			@media (max-width: 1400px) {
+				right: calc(50px + (100 - 50) * ((100vw - 768px) / (1400 - 768)));
+			}
+			background: url(../img/first/Union.svg) 0 0 / 100% no-repeat;
+			transform: scale(-1, 1) translateY(-50%);
+			transition: right 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+			&:hover {
+				right: calc((50px + (100 - 50) * ((100vw - 768px) / (1400 - 768))) - 17px);
+			}
+		}
+
+		&__slide {
+			p {
+				max-width: 70%;
+				margin: 0 auto;
+				font-family: "Noto Serif", serif;
+				font-weight: 400;
+				text-align: center;
+				@media (max-width: 768px) {
+					font-weight: 600;
+				}
+				font-size: 35px;
+				@media (max-width: 1280px) {
+					font-size: calc(17px + (35 - 17) * ((100vw - 375px) / (1280 - 375)));
+				}
+				line-height: 137%;
+				text-align: center;
+				text-transform: uppercase;
+				color: $main;
+			}
+		}
+
+		&__bullets {
+			flex: 0 0 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.swiper-pagination-bullet {
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background-color: #ffffff;
+			}
+			.swiper-pagination-bullet-active {
+				width: 14px;
+				height: 14px;
+				background-color: $main;
+				opacity: 0.6;
+			}
+		}
+	}
+
+	//==========================================
 
 	&__button {
 		display: flex;
@@ -377,14 +481,39 @@ p._text {
 
 .page {
 	&__lirics {
-		margin: 150px auto;
+		padding: 150px 0;
 		@media (max-width: 1280px) {
-			margin: calc(50px + (150 - 50) * ((100vw - 375px) / (1280 - 375))) auto;
+			padding: calc(50px + (150 - 50) * ((100vw - 375px) / (1280 - 375))) 0;
 		}
 		@media (max-width: 767px) {
-			margin: 50px auto;
+			padding: 50px 0;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			width: 100vw;
+			height: 2px;
+			left: 30%;
+			bottom: 0;
+			background: $main;
+		}
+		&:before {
+			content: "";
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			left: 30%;
+			bottom: 0;
+			border-left: 2px solid $main;
+			border-top: 2px solid $main;
+			transform: translate(0, calc(50% - 1px)) rotate(-45deg);
 		}
 	}
+
+	&__content {
+	}
+
 	.lirics {
 		position: relative;
 		z-index: 50;
@@ -662,18 +791,21 @@ p._text {
 			margin-bottom: calc(50px + (100 - 50) * ((100vw - 375px) / (1400 - 375)));
 		}
 	}
+	.swiper-wrapper {
+		transition-timing-function: linear !important;
+	}
 }
 
 .gallary-slider {
-	:not(:last-child) {
-		margin-bottom: 15px;
-	}
-
-	&__wrapper {
+	&:not(:last-child) {
+		margin-bottom: 30px;
+		@media (max-width: 870px) {
+			margin-bottom: 15px;
+		}
 	}
 
 	&__slide {
-		aspect-ratio: 1 / 0.6;
+		aspect-ratio: 1 / 0.7 !important;
 	}
 
 	&__img {
@@ -681,21 +813,20 @@ p._text {
 		height: 100%;
 		object-fit: cover;
 	}
-	.swiper-slide {
-	}
 }
 
 //====================catalog======================
 
 .page__catalog {
-}
-
-.catalog {
 	padding: 150px 0px 150px 0px;
 	@media (max-width: 1360px) {
 		padding: calc(50px + (150 - 50) * ((100vw - 375px) / (1400 - 375))) 0 calc(50px + (150 - 50) * ((100vw - 375px) / (1400 - 375))) 0;
 	}
+}
+
+.catalog {
 	background: white;
+
 	&__title {
 		margin-bottom: 100px;
 		@media (max-width: 992px) {
@@ -847,11 +978,43 @@ p._text {
 		@media (max-width: 1360px) {
 			margin-bottom: calc(30px + (80 - 30) * ((100vw - 375px) / (1400 - 375)));
 		}
-		transition: 0.5s;
 		border-bottom: 2px #007a8800 solid;
+		transition: 0.5s;
 		&:hover {
 			color: $main;
 			border-bottom: 2px $main solid;
+		}
+
+		@media (max-width: 991.98px) {
+			span {
+				position: relative;
+			}
+			span::before {
+				content: "";
+				position: absolute;
+				width: 10px;
+				height: 10px;
+				left: 50%;
+				top: 50%;
+				transform: translateY(-5px);
+				border-radius: 50%;
+				background: rgba(85, 180, 190, 0.25);
+				animation: shockwave 1.8s 0.65s ease-out infinite;
+				@keyframes shockwave {
+					0% {
+						transform: translateY(-5px) scale(1);
+						box-shadow: 0 0 2px rgba(0, 0, 0, 0.15), inset 0 0 1px rgba(0, 0, 0, 0.15);
+					}
+					95% {
+						box-shadow: 0 0 50px rgba(0, 0, 0, 0), inset 0 0 30px rgba(0, 0, 0, 0);
+					}
+
+					100% {
+						transform: translateY(-5px) scale(7.25);
+						opacity: 0;
+					}
+				}
+			}
 		}
 	}
 
@@ -1248,108 +1411,12 @@ p._text {
 
 //====================слайдеры======================
 
-// общее для слайдеров
-
-.slick-track {
-	display: flex;
-}
-
-.slick-list {
-	overflow: hidden;
-	width: 70%;
-	max-width: 1000px;
-	margin: 0 auto;
-	@media (max-width: 768px) {
-		width: 85%;
-	}
-}
-
 .swiper-slide {
 	cursor: grab;
 }
 
 .swiper-wrapper {
-	transition-timing-function: linear !important;
-}
-
-// слайдер главный экран
-
-.first__utp-slider {
-	position: relative;
-
-	.slick-arrow {
-		@media (max-width: 767px) {
-			display: none;
-		}
-		position: absolute;
-		top: 50%;
-		font-size: 0;
-		z-index: 10;
-		width: 71px;
-		height: 60px;
-		@media (max-width: 1280px) {
-			width: calc(40px + (71 - 40) * ((100vw - 768px) / (1400 - 768)));
-			height: calc(40px + (71 - 40) * ((100vw - 768px) / (1400 - 768)));
-		}
-		opacity: 0.8;
-	}
-
-	.slick-arrow.slick-prev {
-		cursor: pointer;
-		left: 100px;
-		@media (max-width: 1400px) {
-			left: calc(50px + (100 - 50) * ((100vw - 768px) / (1400 - 768)));
-		}
-		background: url(../img/first/Union.svg) 0 0 / 100% no-repeat;
-		transform: translateY(-50%);
-		transition: left 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-		&:hover {
-			left: calc((50px + (100 - 50) * ((100vw - 768px) / (1400 - 768))) - 24px);
-		}
-	}
-
-	.slick-arrow.slick-next {
-		cursor: pointer;
-		right: 110px;
-		@media (max-width: 1400px) {
-			right: calc(50px + (100 - 50) * ((100vw - 768px) / (1400 - 768)));
-		}
-		background: url(../img/first/Union.svg) 0 0 / 100% no-repeat;
-		transform: scale(-1, 1) translateY(-50%);
-		transition: right 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-		&:hover {
-			right: calc((50px + (100 - 50) * ((100vw - 768px) / (1400 - 768))) - 17px);
-		}
-	}
-
-	/* Точки (булиты) */
-
-	.slick-dots {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		opacity: 0.8;
-
-		button {
-			margin-right: 10px;
-			font-size: 0;
-			width: 10px;
-			height: 10px;
-			border-radius: 50%;
-			background: #ffffff;
-			transition: 1s;
-		}
-
-		.slick-active button {
-			background: $main;
-			width: 14px;
-			height: 14px;
-		}
-	}
-
-	/* Активная точка */
-	.slick-dots li.slick-active {
-	}
+	// transition-timing-function: linear !important;
 }
 
 //====================форма отправки на главной======================
@@ -1452,6 +1519,7 @@ p._text {
 	}
 
 	&__body {
+		position: relative;
 		@media (min-width: 769px) {
 			flex: 0 1 60%;
 			margin: 0px 0px 40px 30px;
@@ -1761,3 +1829,4 @@ textarea.form__input {
 //==========================================
 @import "_tours";
 @import "_popups";
+@import "_gratitude";
