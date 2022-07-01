@@ -225,14 +225,23 @@ new Swiper('.gallary', {
 			spaceBetween: 15,
 			freeMode: {
 				enabled: true,
-				momentum: false
+				momentum: true
 			}
 		},
 		870: {
 			slidesPerView: 2.2,
-			spaceBetween: 30
+			spaceBetween: 30,
+			freeMode: {
+				enabled: true,
+				momentum: false
+			}
 		}
 	},
+	preloadImages: false,
+	lazy: {
+		// loadPrevNext: true,
+		preloaderClass: 'lazy-preloader'
+	}
 });
 
 // слайдер каталог
