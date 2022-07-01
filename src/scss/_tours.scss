@@ -190,7 +190,7 @@
 
 	&__slide {
 		position: relative;
-		aspect-ratio: 1 / 0.6;
+		aspect-ratio: 1 / 0.7 !important;
 
 		img {
 			filter: sepia(0.3) saturate(0.6) hue-rotate(20deg);
