@@ -903,7 +903,7 @@ p._text:not(:last-child) {
 
 @media (max-width: 767px) {
   .page__lirics {
-    padding: 50px 15px;
+    padding: 50px 15px 75px;
   }
 }
 
