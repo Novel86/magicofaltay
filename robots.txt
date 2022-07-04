@@ -1,9 +1,9 @@
 User-Agent: *
-Allow: /
-Disallow: /soglashenie.files/
-Disallow: /gratitude.html
-Disallow: /soglashenie.htm
-Disallow: /cgi-bin/
-Disallow: /phpmailer/
+Disallow: /
+Allow: /index.html
+Allow: /first-tour.html
+Allow: /2nd-tour.html
+Allow: /3nd-tour.html
+Allow: /4th-tour.html
 
 sitemap: https://magicaltai.su/sitemap.xml
