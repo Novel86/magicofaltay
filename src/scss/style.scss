@@ -1726,8 +1726,8 @@ textarea.form__input {
 		}
 		p {
 			color: $main;
+			margin-bottom: 10px;
 			@media (max-width: 710px) {
-				color: $bg;
 				margin-top: 10px;
 			}
 		}

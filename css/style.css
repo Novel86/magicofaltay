@@ -2445,11 +2445,11 @@ textarea.form__input {
 
 .footer__logo p {
   color: #33333c;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 710px) {
   .footer__logo p {
-    color: #f1f1f1;
     margin-top: 10px;
   }
 }
