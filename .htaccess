@@ -13,3 +13,11 @@ RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
     # Проверяем, содержит ли домен www в начале URL.
 RewriteRule ^(.*)$ http%{ENV:SSL}://%1/$1 [R=301,L]
     # Перенаправляем удаляем www
+
+	#301 редирект со страниц со слешем на без слеша (весь сайт)
+RewriteCond %{REQUEST_URI} !\?
+RewriteCond %{REQUEST_URI} !\&
+RewriteCond %{REQUEST_URI} !\=
+RewriteCond %{REQUEST_URI} !\.
+RewriteCond %{REQUEST_URI} ![^\/]$
+RewriteRule ^(.*)\/$ /$1 [R=301,L]
