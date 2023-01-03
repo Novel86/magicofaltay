@@ -1,209 +1,451 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- подключаем шрифт латиница- после начертаний вставить текст &display=swap (для оптимизации)-->
+    <!-- подключаем шрифт кирилица- после начертаний вставить текст &display=swap&subset=cyrillic-ext (для оптимизации и подключения кирилицы)-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:regular,500,700&display=swap&subset=cyrillic-ext"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Serif:regular,600&display=swap&subset=cyrillic-ext"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Serif+Display:regular,700,700italic&display=swap&subset=cyrillic-ext"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- подключение Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(
+        window,
+        document,
+        'script',
+        'https://mc.yandex.ru/metrika/tag.js',
+        'ym'
+      );
 
-<head>
-	<meta charset="UTF-8">
-	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- подключаем шрифт латиница- после начертаний вставить текст &display=swap (для оптимизации)-->
-	<!-- подключаем шрифт кирилица- после начертаний вставить текст &display=swap&subset=cyrillic-ext (для оптимизации и подключения кирилицы)-->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:regular,500,700&display=swap&subset=cyrillic-ext" rel="stylesheet" />
-	<link href="https://fonts.googleapis.com/css?family=Noto+Serif:regular,600&display=swap&subset=cyrillic-ext" rel="stylesheet" />
-	<link href="https://fonts.googleapis.com/css?family=Noto+Serif+Display:regular,700,700italic&display=swap&subset=cyrillic-ext" rel="stylesheet" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-	<link rel="stylesheet" href="css/style.css">
-	<!-- подключение Favicon -->
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
-	<!-- Yandex.Metrika counter -->
-	<script type="text/javascript">
-		(function (m, e, t, r, i, k, a) {
-			m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
-			m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-		})
-			(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+      ym(89202976, 'init', {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+      });
+    </script>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-3N0QCJKRM9"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
 
-		ym(89202976, "init", {
-			clickmap: true,
-			trackLinks: true,
-			accurateTrackBounce: true,
-			webvisor: true
-		});
-	</script>
-	<!-- /Yandex.Metrika counter -->
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-3N0QCJKRM9"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
+      gtag('config', 'G-3N0QCJKRM9');
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <title>Магия Алтая</title>
+  </head>
 
-		gtag('config', 'G-3N0QCJKRM9');
-	</script>
-	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-	<title>Магия Алтая</title>
-</head>
-
-<body>
-	<noscript>
-		<div><img src="https://mc.yandex.ru/watch/89202976" style="position:absolute; left:-9999px;" alt="" /></div>
-	</noscript>
-	<div class="wrapper">
-		<header class="header__index header">
-			<div class="header__container _container">
-				<div class="header__menu">
-					<div class="header__burger">
-						<span></span>
-					</div>
-					<nav class="header__body">
-						<ul class="header__list">
-							<li class="header__item"><a data-goto=".catalog" class="_text-nav" href="javascript://">Маршруты</a></li>
-							<li class="header__item"><a data-goto=".page__best" class="_text-nav" href="javascript://">Захватывающий Алтай</a></li>
-						</ul>
-						<address class="header__contacts contacts">
-							<ul class="contacts__list">
-								<li class="contacts__item"><a class="" href="https://t.me/+79619879854" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
-								<li class="contacts__item"><a class="" href="tel:+79831029180" target="_blank"><i class="fas fa-phone-alt"></i></a></li>
-								<li class="contacts__item"><a class="" href="https://wa.me/+79831029180" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-								<li class="contacts__item"><a class="" href="https://ok.ru/profile/568907572916" target="_blank"><i class="fab fa-odnoklassniki"></i></a></li>
-								<li class="contacts__item"><a class="" href="mailto:admin@magicaltai.su" target="_blank"><i class="fas fa-envelope"></i></a></li>
-							</ul>
-						</address>
-						<ul class="header__list">
-							<li class="header__item"><a data-goto=".gallary-slider" class="_text-nav" href="javascript://">Фотоотчеты</a></li>
-							<li class="header__item header__item_atention"><a class="popup-link _text-nav " href="#popup">Задать вопрос</a></li>
-						</ul>
-						<nav class="header-small">
-							<div class="header-small__logo">
-								<img src="../img/first/Ресурс 7 1magic-of-altay-logo.png" alt="Магия Алтая- логотип">
-							</div>
-							<ul class="header-small__list">
-								<li class="header__item header-small__item"><a data-goto=".catalog" class="_text-nav" href="javascript://">Маршруты</a></li>
-								<li class="header__item header-small__item"><a data-goto=".page__best" class="_text-nav" href="javascript://">Захватывающий Алтай</a></li>
-								<li class="header__item header-small__item"><a data-goto=".gallary-slider" class="_text-nav" href="javascript://">Фотоотчеты</a></li>
-								<li class="header__item header-small__item header-small__item_atention"><a class="popup-link _text-nav " href="#popup">Задать вопрос</a></li>
-							</ul>
-							<adres class="header-small__contacts">
-								<a class="_text" href="tel:+79831029180" target="_blank">+7(983)102 91 80</a>
-								<a class="_text" href="tel:+79139991307" target="_blank">+7(913)999 13 07</a>
-							</adres>
-						</nav>
-					</nav>
-				</div>
-			</div>
-		</header>
-		<main class="page">
-			<div class="page__gratitude gratitude">
-				<div class="gratitude__container _container">
-					<div class="gratitude__head head">
-						<div class="head__container _container">
-							<a class="head__logo" href="https://magicaltai.su"><img class="head__img" src="../img/tours/Magic-Altai-logo-cut.png" alt="логотип Магия Алтая-"></a>
-							<h3 class="head__title _h3">Магия Алтая</h3>
-						</div>
-					</div>
-					<div class="gratitude__content">
-						<h2 class="gratitude__title _h2">Все OK</h2>
-						<div class="gratitude__text lirics">
-							<p>Ваши <span>данные отправленны.</span> Скоро мы свяжемся с вами. <span>Спасибо</span></p>
-						</div>
-						<div class="gratitude__link">
-							<a class="_h4" href="https://magicaltai.su">На главную</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</main>
-		<footer class="page-footer footer">
-			<div class="footer__container _container">
-				<div class="footer__body">
-					<div class="footer__logo">
-						<a href="https://magicaltai.su"><img src="/img/footer/footer-logo.png" alt="Магия Алтая- логотип"></a>
-						<p class="_text-bold">Магия Алтая</p>
-					</div>
-					<div class="footer__content">
-						<div class="footer__column">
-							<p class="_text">г. Горно-Алтайск</p>
-							<p class="_text"><a href="tel:+79831029180">+7 983 102-91-80</a></p>
-							<p class="_text"><a href="tel:+79139991307">+7 913 999-13-07</a></p>
-							<p class="_text"><a href="mailto:admin@magicaltai.su">admin@magicaltai.su</a></p>
-							<p class="_text">2022 год ©</p>
-						</div>
-						<div class="footer__column">
-							<div class="footer__block">
-								<address class="footer__contacts contacts">
-									<ul class="contacts__list">
-										<li class="contacts__item"><a class="" href="https://t.me/+79619879854" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
-										<li class="contacts__item"><a class="" href="tel:+79831029180" target="_blank"><i class="fas fa-phone-alt"></i></a></li>
-										<li class="contacts__item"><a class="" href="https://wa.me/+79831029180" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-										<li class="contacts__item"><a class="" href="https://ok.ru/profile/568907572916" target="_blank"><i class="fab fa-odnoklassniki"></i></a></li>
-										<li class="contacts__item"><a class="" href="mailto:admin@magicaltai.su" target="_blank"><i class="fas fa-envelope"></i></a></li>
-									</ul>
-								</address>
-								<ul class="footer__menu">
-									<li class="footer__item _text-nav"><a data-goto=".catalog" href="javascript://">Маршруты</a></li>
-									<li class="footer__item _text-nav"><a data-goto=".page__best" href="javascript://">Захватывающий Алтай</a></li>
-									<li class="footer__item _text-nav"><a data-goto=".gallary" href="javascript://">Фотоотчеты</a></li>
-									<li class="footer__item _text-nav"><a href="#popup" class="popup-link">Задать вопрос</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="footer__image">
-				<img src="/img/footer/footer-bg.png" alt="Магия Алтая- пейзажный рисунок">
-			</div>
-		</footer>
-	</div>
-	<div id="popup" class="popup__form popup">
-		<div class="popup__body">
-			<a href="#" class="popup__close close-popup"><span class="material-symbols-outlined"> cancel </span></a>
-			<div class="popups__form form">
-				<div class="popup__content">
-					<div class="form__container _container">
-						<div class="form__content">
-							<div class="form__title">
-								<p>Заполните форму и <span>забронируйте</span> поездку в места <span>магического Алтая</span></p>
-							</div>
-						</div>
-						<form action="/sendmail.php" method="post" id="form" class="form__body">
-							<div class="form__item">
-								<label for="formName" class="form__label"></label>
-								<input type="text" id="formName" name="name" placeholder="Ваше имя" class="form__input _text ">
-							</div>
-							<div class="form__item">
-								<label for="formPhone" class="form__label"></label>
-								<input type="text" id="formPhone" name="phone" placeholder="Телефон" class="form__input _text ">
-							</div>
-							<div class="form__item">
-								<label for="formEmail" class="form__label"></label>
-								<input type="text" id="formEmail" name="email" placeholder="Почта" class="form__input _text  _email">
-							</div>
-							<div class="form__item">
-								<label for="formMessage" class="form__label"></label>
-								<textarea id="formMessage" name="message" placeholder="Сообщение" class="form__input _text"></textarea>
-							</div>
-							<div class="form__item">
-								<div class="checkbox">
-									<input type="checkbox" checked id="formAgreement" class="checkbox__input _req" name="agreement">
-									<label for="formAgreement" class="form__label _text"><span>Я даю свое согласие на обработку персональных данных в соответствии с <a target="_blank" href="/soglashenie.htm">Условиями</a></span></label>
-								</div>
-							</div>
-							<button type="submit" class="form__button _text-btn">Отправить<span class="material-symbols-outlined"> arrow_forward </span></button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script src="/script/slick.min.js"></script>
-	<script src="https://kit.fontawesome.com/ed24aaf06b.js" crossorigin="anonymous"></script>
-	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-	<script src="/script/script.js"></script>
-	<script src="/script/popups.js"></script>
-</body>
-
+  <body>
+    <noscript>
+      <div>
+        <img
+          src="https://mc.yandex.ru/watch/89202976"
+          style="position: absolute; left: -9999px"
+          alt=""
+        />
+      </div>
+    </noscript>
+    <div class="wrapper">
+      <header class="header__index header">
+        <div class="header__container _container">
+          <div class="header__menu">
+            <div class="header__burger">
+              <span></span>
+            </div>
+            <nav class="header__body">
+              <ul class="header__list">
+                <li class="header__item">
+                  <a data-goto=".catalog" class="_text-nav" href="javascript://"
+                    >Маршруты</a
+                  >
+                </li>
+                <li class="header__item">
+                  <a
+                    data-goto=".page__best"
+                    class="_text-nav"
+                    href="javascript://"
+                    >Захватывающий Алтай</a
+                  >
+                </li>
+              </ul>
+              <address class="header__contacts contacts">
+                <ul class="contacts__list">
+                  <li class="contacts__item">
+                    <a class="" href="https://t.me/+79619879854" target="_blank"
+                      ><i class="fab fa-telegram-plane"></i
+                    ></a>
+                  </li>
+                  <li class="contacts__item">
+                    <a class="" href="tel:+79831029180" target="_blank"
+                      ><i class="fas fa-phone-alt"></i
+                    ></a>
+                  </li>
+                  <li class="contacts__item">
+                    <a
+                      class=""
+                      href="https://wa.me/+79831029180"
+                      target="_blank"
+                      ><i class="fab fa-whatsapp"></i
+                    ></a>
+                  </li>
+                  <li class="contacts__item">
+                    <a
+                      class=""
+                      href="https://ok.ru/profile/568907572916"
+                      target="_blank"
+                      ><i class="fab fa-odnoklassniki"></i
+                    ></a>
+                  </li>
+                  <li class="contacts__item">
+                    <a
+                      class=""
+                      href="mailto:admin@magicaltai.su"
+                      target="_blank"
+                      ><i class="fas fa-envelope"></i
+                    ></a>
+                  </li>
+                </ul>
+              </address>
+              <ul class="header__list">
+                <li class="header__item">
+                  <a
+                    data-goto=".gallary-slider"
+                    class="_text-nav"
+                    href="javascript://"
+                    >Фотоотчеты</a
+                  >
+                </li>
+                <li class="header__item header__item_atention">
+                  <a class="popup-link _text-nav" href="#popup"
+                    >Задать вопрос</a
+                  >
+                </li>
+              </ul>
+              <nav class="header-small">
+                <div class="header-small__logo">
+                  <img
+                    src="img/first/Ресурс 7 1magic-of-altay-logo.png"
+                    alt="Магия Алтая- логотип"
+                  />
+                </div>
+                <ul class="header-small__list">
+                  <li class="header__item header-small__item">
+                    <a
+                      data-goto=".catalog"
+                      class="_text-nav"
+                      href="javascript://"
+                      >Маршруты</a
+                    >
+                  </li>
+                  <li class="header__item header-small__item">
+                    <a
+                      data-goto=".page__best"
+                      class="_text-nav"
+                      href="javascript://"
+                      >Захватывающий Алтай</a
+                    >
+                  </li>
+                  <li class="header__item header-small__item">
+                    <a
+                      data-goto=".gallary-slider"
+                      class="_text-nav"
+                      href="javascript://"
+                      >Фотоотчеты</a
+                    >
+                  </li>
+                  <li
+                    class="header__item header-small__item header-small__item_atention"
+                  >
+                    <a class="popup-link _text-nav" href="#popup"
+                      >Задать вопрос</a
+                    >
+                  </li>
+                </ul>
+                <adres class="header-small__contacts">
+                  <a class="_text" href="tel:+79831029180" target="_blank"
+                    >+7(983)102 91 80</a
+                  >
+                  <a class="_text" href="tel:+79139991307" target="_blank"
+                    >+7(913)999 13 07</a
+                  >
+                </adres>
+              </nav>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main class="page">
+        <div class="page__gratitude gratitude">
+          <div class="gratitude__container _container">
+            <div class="gratitude__head head">
+              <div class="head__container _container">
+                <a class="head__logo" href="https://magicaltai.su"
+                  ><img
+                    class="head__img"
+                    src="img/tours/Magic-Altai-logo-cut.png"
+                    alt="логотип Магия Алтая-"
+                /></a>
+                <h3 class="head__title _h3">Магия Алтая</h3>
+              </div>
+            </div>
+            <div class="gratitude__content">
+              <h2 class="gratitude__title _h2">Все OK</h2>
+              <div class="gratitude__text lirics">
+                <p>
+                  Ваши <span>данные отправленны.</span> Скоро мы свяжемся с
+                  вами. <span>Спасибо</span>
+                </p>
+              </div>
+              <div class="gratitude__link">
+                <a class="_h4" href="https://magicaltai.su">На главную</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="page-footer footer">
+        <div class="footer__container _container">
+          <div class="footer__body">
+            <div class="footer__logo">
+              <a href="https://magicaltai.su"
+                ><img
+                  src="img/footer/footer-logo.png"
+                  alt="Магия Алтая- логотип"
+              /></a>
+              <p class="_text-bold">Магия Алтая</p>
+            </div>
+            <div class="footer__content">
+              <div class="footer__column">
+                <p class="_text">г. Горно-Алтайск</p>
+                <p class="_text">
+                  <a href="tel:+79831029180">+7 983 102-91-80</a>
+                </p>
+                <p class="_text">
+                  <a href="tel:+79139991307">+7 913 999-13-07</a>
+                </p>
+                <p class="_text">
+                  <a href="mailto:admin@magicaltai.su">admin@magicaltai.su</a>
+                </p>
+                <p class="_text">2022 год ©</p>
+              </div>
+              <div class="footer__column">
+                <div class="footer__block">
+                  <address class="footer__contacts contacts">
+                    <ul class="contacts__list">
+                      <li class="contacts__item">
+                        <a
+                          class=""
+                          href="https://t.me/+79619879854"
+                          target="_blank"
+                          ><i class="fab fa-telegram-plane"></i
+                        ></a>
+                      </li>
+                      <li class="contacts__item">
+                        <a class="" href="tel:+79831029180" target="_blank"
+                          ><i class="fas fa-phone-alt"></i
+                        ></a>
+                      </li>
+                      <li class="contacts__item">
+                        <a
+                          class=""
+                          href="https://wa.me/+79831029180"
+                          target="_blank"
+                          ><i class="fab fa-whatsapp"></i
+                        ></a>
+                      </li>
+                      <li class="contacts__item">
+                        <a
+                          class=""
+                          href="https://ok.ru/profile/568907572916"
+                          target="_blank"
+                          ><i class="fab fa-odnoklassniki"></i
+                        ></a>
+                      </li>
+                      <li class="contacts__item">
+                        <a
+                          class=""
+                          href="mailto:admin@magicaltai.su"
+                          target="_blank"
+                          ><i class="fas fa-envelope"></i
+                        ></a>
+                      </li>
+                    </ul>
+                  </address>
+                  <ul class="footer__menu">
+                    <li class="footer__item _text-nav">
+                      <a data-goto=".catalog" href="javascript://">Маршруты</a>
+                    </li>
+                    <li class="footer__item _text-nav">
+                      <a data-goto=".page__best" href="javascript://"
+                        >Захватывающий Алтай</a
+                      >
+                    </li>
+                    <li class="footer__item _text-nav">
+                      <a data-goto=".gallary" href="javascript://"
+                        >Фотоотчеты</a
+                      >
+                    </li>
+                    <li class="footer__item _text-nav">
+                      <a href="#popup" class="popup-link">Задать вопрос</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__image">
+          <img
+            src="img/footer/footer-bg.png"
+            alt="Магия Алтая- пейзажный рисунок"
+          />
+        </div>
+      </footer>
+    </div>
+    <div id="popup" class="popup__form popup">
+      <div class="popup__body">
+        <a href="#" class="popup__close close-popup"
+          ><span class="material-symbols-outlined"> cancel </span></a
+        >
+        <div class="popups__form form">
+          <div class="popup__content">
+            <div class="form__container _container">
+              <div class="form__content">
+                <div class="form__title">
+                  <p>
+                    Заполните форму и <span>забронируйте</span> поездку в места
+                    <span>магического Алтая</span>
+                  </p>
+                </div>
+              </div>
+              <form
+                action="/sendmail.php"
+                method="post"
+                id="form"
+                class="form__body"
+              >
+                <div class="form__item">
+                  <label for="formName" class="form__label"></label>
+                  <input
+                    type="text"
+                    id="formName"
+                    name="name"
+                    placeholder="Ваше имя"
+                    class="form__input _text"
+                  />
+                </div>
+                <div class="form__item">
+                  <label for="formPhone" class="form__label"></label>
+                  <input
+                    type="text"
+                    id="formPhone"
+                    name="phone"
+                    placeholder="Телефон"
+                    class="form__input _text"
+                  />
+                </div>
+                <div class="form__item">
+                  <label for="formEmail" class="form__label"></label>
+                  <input
+                    type="text"
+                    id="formEmail"
+                    name="email"
+                    placeholder="Почта"
+                    class="form__input _text _email"
+                  />
+                </div>
+                <div class="form__item">
+                  <label for="formMessage" class="form__label"></label>
+                  <textarea
+                    id="formMessage"
+                    name="message"
+                    placeholder="Сообщение"
+                    class="form__input _text"
+                  ></textarea>
+                </div>
+                <div class="form__item">
+                  <div class="checkbox">
+                    <input
+                      type="checkbox"
+                      checked
+                      id="formAgreement"
+                      class="checkbox__input _req"
+                      name="agreement"
+                    />
+                    <label for="formAgreement" class="form__label _text"
+                      ><span
+                        >Я даю свое согласие на обработку персональных данных в
+                        соответствии с
+                        <a target="_blank" href="/soglashenie.htm"
+                          >Условиями</a
+                        ></span
+                      ></label
+                    >
+                  </div>
+                </div>
+                <button type="submit" class="form__button _text-btn">
+                  Отправить<span class="material-symbols-outlined">
+                    arrow_forward
+                  </span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/script/slick.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ed24aaf06b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="/script/script.js"></script>
+    <script src="/script/popups.js"></script>
+  </body>
 </html>

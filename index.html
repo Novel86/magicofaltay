@@ -1,750 +1,1579 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- подключаем шрифт латиница- после начертаний вставить текст &display=swap (для оптимизации)-->
+    <!-- подключаем шрифт кирилица- после начертаний вставить текст &display=swap&subset=cyrillic-ext (для оптимизации и подключения кирилицы)-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:regular,500,700&display=swap&subset=cyrillic-ext"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Serif:regular,600&display=swap&subset=cyrillic-ext"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Serif+Display:regular,700,700italic&display=swap&subset=cyrillic-ext"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- подключение Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(
+        window,
+        document,
+        'script',
+        'https://mc.yandex.ru/metrika/tag.js',
+        'ym'
+      );
 
-<head>
-	<meta charset="UTF-8">
-	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- подключаем шрифт латиница- после начертаний вставить текст &display=swap (для оптимизации)-->
-	<!-- подключаем шрифт кирилица- после начертаний вставить текст &display=swap&subset=cyrillic-ext (для оптимизации и подключения кирилицы)-->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:regular,500,700&display=swap&subset=cyrillic-ext" rel="stylesheet" />
-	<link href="https://fonts.googleapis.com/css?family=Noto+Serif:regular,600&display=swap&subset=cyrillic-ext" rel="stylesheet" />
-	<link href="https://fonts.googleapis.com/css?family=Noto+Serif+Display:regular,700,700italic&display=swap&subset=cyrillic-ext" rel="stylesheet" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-	<link rel="stylesheet" href="css/style.css">
-	<!-- подключение Favicon -->
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
-	<!-- Yandex.Metrika counter -->
-	<script type="text/javascript">
-		(function (m, e, t, r, i, k, a) {
-			m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
-			m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-		})
-			(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+      ym(89202976, 'init', {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+      });
+    </script>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-3N0QCJKRM9"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
 
-		ym(89202976, "init", {
-			clickmap: true,
-			trackLinks: true,
-			accurateTrackBounce: true,
-			webvisor: true
-		});
-	</script>
-	<!-- /Yandex.Metrika counter -->
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-3N0QCJKRM9"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
+      gtag('config', 'G-3N0QCJKRM9');
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="canonical" href="https://magicaltai.su" />
+    <title>Автомобильные туры по Горному Алтаю</title>
+    <meta
+      name="keywords"
+      content="автомобильные туры, горный алтай, алтай, путешествия на автомобилях"
+    />
+    <meta
+      name="description"
+      content="Автомобильные туры по Горному Алтаю различной степени сложности до высоты 3000 метров над уровнем моря. Посещение высокогорных стоянок алтайских пастухов, жизнь и быт простых алтайцев."
+    />
+  </head>
 
-		gtag('config', 'G-3N0QCJKRM9');
-	</script>
-	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-	<link rel="canonical" href="https://magicaltai.su">
-	<title>Автомобильные туры по Горному Алтаю</title>
-	<meta name="keywords" content="автомобильные туры, горный алтай, алтай, путешествия на автомобилях" />
-	<meta name="description" content="Автомобильные туры по Горному Алтаю различной степени сложности до высоты 3000 метров над уровнем моря. Посещение высокогорных стоянок алтайских пастухов, жизнь и быт простых алтайцев." />
-</head>
+  <body>
+    <noscript>
+      <div>
+        <img
+          src="https://mc.yandex.ru/watch/89202976"
+          style="position: absolute; left: -9999px"
+          alt=""
+        />
+      </div>
+    </noscript>
+    <div class="wrapper">
+      <header class="header__index header">
+        <div class="header__container _container">
+          <div class="header__menu">
+            <div class="header__burger">
+              <span></span>
+            </div>
+            <nav class="header__body">
+              <ul class="header__list">
+                <li class="header__item">
+                  <a data-goto=".catalog" class="_text-nav" href="javascript://"
+                    >Маршруты</a
+                  >
+                </li>
+                <li class="header__item">
+                  <a
+                    data-goto=".page__best"
+                    class="_text-nav"
+                    href="javascript://"
+                    >Захватывающий Алтай</a
+                  >
+                </li>
+              </ul>
+              <address class="header__contacts contacts">
+                <ul class="contacts__list">
+                  <li class="contacts__item">
+                    <a class="" href="https://t.me/+79619879854" target="_blank"
+                      ><i class="fab fa-telegram-plane"></i
+                    ></a>
+                  </li>
+                  <li class="contacts__item">
+                    <a class="" href="tel:+79831029180" target="_blank"
+                      ><i class="fas fa-phone-alt"></i
+                    ></a>
+                  </li>
+                  <li class="contacts__item">
+                    <a
+                      class=""
+                      href="https://wa.me/+79831029180"
+                      target="_blank"
+                      ><i class="fab fa-whatsapp"></i
+                    ></a>
+                  </li>
+                  <li class="contacts__item">
+                    <a
+                      class=""
+                      href="https://ok.ru/profile/568907572916"
+                      target="_blank"
+                      ><i class="fab fa-odnoklassniki"></i
+                    ></a>
+                  </li>
+                  <li class="contacts__item">
+                    <a
+                      class=""
+                      href="mailto:admin@magicaltai.su"
+                      target="_blank"
+                      ><i class="fas fa-envelope"></i
+                    ></a>
+                  </li>
+                </ul>
+              </address>
+              <ul class="header__list">
+                <li class="header__item">
+                  <a
+                    data-goto=".gallary-slider"
+                    class="_text-nav"
+                    href="javascript://"
+                    >Фотоотчеты</a
+                  >
+                </li>
+                <li class="header__item header__item_atention">
+                  <a class="popup-link _text-nav" href="#popup"
+                    >Задать вопрос</a
+                  >
+                </li>
+              </ul>
+              <nav class="header-small">
+                <div class="header-small__logo">
+                  <img
+                    src="img/first/Ресурс 7 1magic-of-altay-logo.png"
+                    alt="Магия Алтая- логотип"
+                  />
+                </div>
+                <ul class="header-small__list">
+                  <li class="header__item header-small__item">
+                    <a
+                      data-goto=".catalog"
+                      class="_text-nav"
+                      href="javascript://"
+                      >Маршруты</a
+                    >
+                  </li>
+                  <li class="header__item header-small__item">
+                    <a
+                      data-goto=".page__best"
+                      class="_text-nav"
+                      href="javascript://"
+                      >Захватывающий Алтай</a
+                    >
+                  </li>
+                  <li class="header__item header-small__item">
+                    <a
+                      data-goto=".gallary-slider"
+                      class="_text-nav"
+                      href="javascript://"
+                      >Фотоотчеты</a
+                    >
+                  </li>
+                  <li
+                    class="header__item header-small__item header-small__item_atention"
+                  >
+                    <a class="popup-link _text-nav" href="#popup"
+                      >Задать вопрос</a
+                    >
+                  </li>
+                </ul>
+                <adres class="header-small__contacts">
+                  <a class="_text" href="tel:+79831029180" target="_blank"
+                    >+7(983)102 91 80</a
+                  >
+                  <a class="_text" href="tel:+79139991307" target="_blank"
+                    >+7(913)999 13 07</a
+                  >
+                </adres>
+              </nav>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main class="page">
+        <section class="page__first first">
+          <div class="first__body">
+            <div class="first__title">
+              <div class="first__logo">
+                <img
+                  src="img/first/Ресурс 7 1magic-of-altay-logo.png"
+                  alt="логотип Магия Алтая"
+                />
+              </div>
+              <h1 class="first__text">Магия Алтая</h1>
+            </div>
+            <div class="first__first-slider first-slider">
+              <div class="first-slider__body swiper">
+                <div class="first-slider__arrow first-slider__prev"></div>
+                <div class="first-slider__wrapper swiper-wrapper">
+                  <div class="first-slider__slide swiper-slide">
+                    <p>
+                      Автомобильные туры по Горному Алтаю различной степени
+                      сложности
+                    </p>
+                  </div>
+                  <div class="first-slider__slide swiper-slide">
+                    <p>
+                      Посещение высокогорных стоянок алтайских пастухов. Жизнь и
+                      быт простых алтайцев
+                    </p>
+                  </div>
+                  <div class="first-slider__slide swiper-slide">
+                    <p>
+                      Горные путешествия на автомобилях до высоты 3000 метров
+                      над уровнем моря
+                    </p>
+                  </div>
+                </div>
+                <div class="first-slider__arrow first-slider__next"></div>
+                <div class="first-slider__bullets"></div>
+              </div>
+            </div>
+            <div class="first__button">
+              <a class="popup-link _text-btn" href="#popup"
+                >Забронировать тур<span class="material-symbols-outlined">
+                  arrow_forward
+                </span></a
+              >
+            </div>
+          </div>
+          <div class="first__bg _ibg">
+            <img
+              src="img/first/DSC_0594 1magic-of-altay.webp"
+              alt="Магия Алтая- главный экран"
+            />
+          </div>
+          <div class="clouds clouds__first"></div>
+        </section>
+        <div class="page__lirics lirics _container">
+          <div class="lirics__content">
+            <p>
+              <span>Если вы мечтаете о</span> приключениях, горных вершинах,
+              связью с природой и незабываемых ощущениях,
+              <span>то наши туры для вас.</span>
+            </p>
+          </div>
+        </div>
 
-<body>
-	<noscript>
-		<div><img src="https://mc.yandex.ru/watch/89202976" style="position:absolute; left:-9999px;" alt="" /></div>
-	</noscript>
-	<div class="wrapper">
-		<header class="header__index header">
-			<div class="header__container _container">
-				<div class="header__menu">
-					<div class="header__burger">
-						<span></span>
-					</div>
-					<nav class="header__body">
-						<ul class="header__list">
-							<li class="header__item"><a data-goto=".catalog" class="_text-nav" href="javascript://">Маршруты</a></li>
-							<li class="header__item"><a data-goto=".page__best" class="_text-nav" href="javascript://">Захватывающий Алтай</a></li>
-						</ul>
-						<address class="header__contacts contacts">
-							<ul class="contacts__list">
-								<li class="contacts__item"><a class="" href="https://t.me/+79619879854" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
-								<li class="contacts__item"><a class="" href="tel:+79831029180" target="_blank"><i class="fas fa-phone-alt"></i></a></li>
-								<li class="contacts__item"><a class="" href="https://wa.me/+79831029180" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-								<li class="contacts__item"><a class="" href="https://ok.ru/profile/568907572916" target="_blank"><i class="fab fa-odnoklassniki"></i></a></li>
-								<li class="contacts__item"><a class="" href="mailto:admin@magicaltai.su" target="_blank"><i class="fas fa-envelope"></i></a></li>
-							</ul>
-						</address>
-						<ul class="header__list">
-							<li class="header__item"><a data-goto=".gallary-slider" class="_text-nav" href="javascript://">Фотоотчеты</a></li>
-							<li class="header__item header__item_atention"><a class="popup-link _text-nav " href="#popup">Задать вопрос</a></li>
-						</ul>
-						<nav class="header-small">
-							<div class="header-small__logo">
-								<img src="../img/first/Ресурс 7 1magic-of-altay-logo.png" alt="Магия Алтая- логотип">
-							</div>
-							<ul class="header-small__list">
-								<li class="header__item header-small__item"><a data-goto=".catalog" class="_text-nav" href="javascript://">Маршруты</a></li>
-								<li class="header__item header-small__item"><a data-goto=".page__best" class="_text-nav" href="javascript://">Захватывающий Алтай</a></li>
-								<li class="header__item header-small__item"><a data-goto=".gallary-slider" class="_text-nav" href="javascript://">Фотоотчеты</a></li>
-								<li class="header__item header-small__item header-small__item_atention"><a class="popup-link _text-nav " href="#popup">Задать вопрос</a></li>
-							</ul>
-							<adres class="header-small__contacts">
-								<a class="_text" href="tel:+79831029180" target="_blank">+7(983)102 91 80</a>
-								<a class="_text" href="tel:+79139991307" target="_blank">+7(913)999 13 07</a>
-							</adres>
-						</nav>
-					</nav>
-				</div>
-			</div>
-		</header>
-		<main class="page">
+        <section id="best" class="page__best best">
+          <article class="best__one-page one-page">
+            <div class="one-page__clouds">
+              <div class="one-page__row-1">
+                <div class="one-page__content">
+                  <div class="one-page__container _container">
+                    <div class="one-page__body">
+                      <h2 class="one-page__title _h2">Лучшие места Алтая</h2>
+                      <h3 class="one-page__subtitle _h3">Ороктойский мост</h3>
+                      <p class="_text">
+                        Ороктойский мост находится в Горном Алтае в Чемальском
+                        районе рядом с Чемальским трактом. Ближайшие населенные
+                        пункты — Эдиган, Ороктой, Еланда, Куюс, Толгоек, Уожан,
+                        Чемал и Аюла. Мост построен над самым глубоким (70
+                        метров) местом реки Катунь и самым узким (20 метров).
+                        Это место также известно под названием Тельдекпенские
+                        пороги. При высокой воде река здесь представляет собой
+                        настоящий бурлящий поток, которому тесно в этом узком
+                        коридоре из причудливых черных лавовых скал. Создается
+                        ощущение, что на этом месте энергия реки вливается в
+                        тебя мощным потоком.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="one-page__image">
+                  <img
+                    src="img/best/magicaltai2.webp"
+                    alt="Магия Алтая- Ороктойский мост"
+                    class="one-page__img"
+                  />
+                </div>
+              </div>
+              <div class="one-page__container-2 _container">
+                <div class="one-page__image-2">
+                  <img
+                    src="img/best/magicaltai3.webp"
+                    alt="Магия Алтая- Ороктойский мост"
+                    class="one-page__img-2"
+                  />
+                </div>
+                <div class="one-page__content-2">
+                  <p class="_text">
+                    Ороктойский мост окружен такими вершинами как Хребет
+                    Куминские Белки, гора Тысташ, гора Талдинский Белок и
+                    другими. Инженерное сооружение получило свое название от
+                    алтайского горного села Ороктой, которое находится в 12 км
+                    на левом берегу Катуни. Его население составляет менее 200
+                    коренных жителей, занимающихся охотой и шишкарством (сбором
+                    кедровых шишек). Словосочетание «ороктой» (Орыкту-Ой)
+                    дословно переводится с алтайского как “котловина, впадина с
+                    тропкой диких зверей”. Перевод села Эдиган звучит еще
+                    интереснее — «пьяная деревня». Несмотря на говорящее
+                    название поселения, алкоголь здесь даже не продают.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <artical class="best__two-page two-page">
+            <div class="two-page__clouds">
+              <div class="two-page__row1">
+                <div class="two-page__content">
+                  <div class="two-page__container _container">
+                    <div class="two-page__body">
+                      <h3 class="two-page__title _h3">Себыстей</h3>
+                      <p class="_text">
+                        Что такое Себыстей? Себыстей — река в Кош-Агачском
+                        районе Республики Алтай. Протяженность реки составляет
+                        всего 31 км. Чем же так примечательна эта небольшая
+                        река? Давайте окунемся в историю.
+                      </p>
+                      <p class="_text">
+                        <span class="_text-bold">Юэчжи</span
+                        ><span class="_h5">
+                          — белые кочевники Древнего Китая, которых китайцы
+                          считали предками русских.</span
+                        >
+                      </p>
+                      <p class="_text">
+                        Вся степная Монголия была занята племенами "жун" -
+                        тюркско-монгольско-маньчжурскими народами, явными
+                        монголоидами, которых хорошо знают китайские хроники.
+                      </p>
+                      <p class="_text">
+                        Западнее простирались земли, населенные европеоидными
+                        индоевропейцами скифо-сибирской и родственных ей
+                        культур, которых китайские тексты с III в. до н.э.
+                        именуют юэчжами и усунями. Своих мертвых они хоронили не
+                        в каменных ящиках, как их восточные соседи, а в
+                        курганах. Область их расселения включала Западный Саян,
+                        Алтай, Западную Монголию, Ганьсу, Турфан, Тарим и
+                        Джунгарию.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="two-page__image">
+                  <img
+                    class="two-page__img"
+                    src="img/best/magicaltai4.webp"
+                    alt="Магия Алтая- Себыстей"
+                  />
+                </div>
+              </div>
+              <div class="two-page__row2">
+                <div class="two-page__container _container">
+                  <p class="_text">
+                    В долине реки Себыстей на Алтае был исследован курган,
+                    датируемый около 450 г. до н.э. Похороненный в нем мужчина
+                    был носителем мужской гаплогруппы R1a1, что позволило
+                    сделать вывод о том, что он относится к алтайским скифам
+                    Пазырыкской культуры (северной родни юэчжей).
+                  </p>
+                  <p class="_text">
+                    Чем еще интересен Себыстей? Тем, что там совсем нет
+                    туристов. В истоке реки находятся 3 озера запрудного
+                    происхождения, образовавшиеся, судя по всему, в результате
+                    обвала или мощнейшего оползня во время землетрясения. Нижнее
+                    и среднее озеро богаты хариусом, в верхнее опускается
+                    ледник.
+                  </p>
+                </div>
+              </div>
+              <div class="two-page__row3">
+                <div class="two-page__container _container">
+                  <div class="two-page__image">
+                    <img
+                      class="two-page__img"
+                      src="img/best/magicaltai5.webp"
+                      alt="Магия Алтая- Себыстей"
+                    />
+                  </div>
+                  <div class="two-page__image">
+                    <img
+                      class="two-page__img"
+                      src="img/best/magicaltai6.webp"
+                      alt="Магия Алтая- Себыстей"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </artical>
+        </section>
 
-			<section class="page__first first">
-				<div class="first__body">
-					<div class="first__title">
-						<div class="first__logo">
-							<img src="../img/first/Ресурс 7 1magic-of-altay-logo.png" alt="логотип Магия Алтая">
-						</div>
-						<h1 class="first__text">Магия Алтая</h1>
-					</div>
-					<div class="first__first-slider first-slider">
-						<div class="first-slider__body swiper">
-							<div class="first-slider__arrow first-slider__prev"></div>
-							<div class="first-slider__wrapper swiper-wrapper">
-								<div class="first-slider__slide swiper-slide">
-									<p>Автомобильные туры по Горному Алтаю различной степени сложности</p>
-								</div>
-								<div class="first-slider__slide swiper-slide">
-									<p>Посещение высокогорных стоянок алтайских пастухов. Жизнь и быт простых алтайцев</p>
-								</div>
-								<div class="first-slider__slide swiper-slide">
-									<p>Горные путешествия на автомобилях до высоты 3000 метров над уровнем моря</p>
-								</div>
-							</div>
-							<div class="first-slider__arrow first-slider__next"></div>
-							<div class="first-slider__bullets"></div>
-						</div>
-					</div>
-					<div class="first__button">
-						<a class="popup-link _text-btn" href="#popup">Забронировать тур<span class="material-symbols-outlined"> arrow_forward </span></a>
-					</div>
-				</div>
-				<div class="first__bg _ibg">
-					<img src="../img/first/DSC_0594 1magic-of-altay.webp" alt="Магия Алтая- главный экран">
-				</div>
-				<div class="clouds clouds__first"></div>
-			</section>
-			<div class="page__lirics lirics _container">
-				<div class="lirics__content">
-					<p><span>Если вы мечтаете о</span> приключениях, горных вершинах, связью с природой и незабываемых ощущениях, <span>то наши туры для вас.</span></p>
-				</div>
-			</div>
+        <section id="gallary" class="page__gallary gallary">
+          <h2 class="gallary__title _h2 _container">Фоторепортаж из поездок</h2>
+          <div class="gallary-slider gallary swiper">
+            <div class="gallary-slider__wrapper swiper-wrapper">
+              <div class="gallary-slider__slide swiper-slide">
+                <img
+                  data-src="img/gallary/magicaltai7.jpg"
+                  alt="Магия Алтая-"
+                  class="gallary-slider__img swiper-lazy"
+                />
+                <div class="lazy-preloader"></div>
+              </div>
+              <div class="gallary-slider__slide swiper-slide">
+                <img
+                  data-src="img/gallary/magicaltai8.jpg"
+                  alt="Магия Алтая-"
+                  class="gallary-slider__img swiper-lazy"
+                />
+                <div class="lazy-preloader"></div>
+              </div>
+              <div class="gallary-slider__slide swiper-slide">
+                <img
+                  data-src="img/gallary/magicaltai9.jpg"
+                  alt="Магия Алтая-"
+                  class="gallary-slider__img swiper-lazy"
+                />
+                <div class="lazy-preloader"></div>
+              </div>
+              <div class="gallary-slider__slide swiper-slide">
+                <img
+                  data-src="img/gallary/magicaltai10.jpg"
+                  alt="Магия Алтая-"
+                  class="gallary-slider__img swiper-lazy"
+                />
+                <div class="lazy-preloader"></div>
+              </div>
+              <div class="gallary-slider__slide swiper-slide">
+                <img
+                  data-src="img/gallary/magicaltai11.jpg"
+                  alt="Магия Алтая-"
+                  class="gallary-slider__img swiper-lazy"
+                />
+                <div class="lazy-preloader"></div>
+              </div>
+              <div class="gallary-slider__slide swiper-slide">
+                <img
+                  data-src="img/gallary/magicaltai12.jpg"
+                  alt="Магия Алтая-"
+                  class="gallary-slider__img swiper-lazy"
+                />
+                <div class="lazy-preloader"></div>
+              </div>
+              <div class="gallary-slider__slide swiper-slide">
+                <img
+                  data-src="img/gallary/magicaltai13.jpg"
+                  alt="Магия Алтая-"
+                  class="gallary-slider__img swiper-lazy"
+                />
+                <div class="lazy-preloader"></div>
+              </div>
+            </div>
+          </div>
+          <div dir="RTL" class="gallary-slider gallary swiper">
+            <div class="gallary-slider__wrapper swiper-wrapper">
+              <div class="gallary-slider__slide swiper-slide">
+                <img
+                  data-src="img/gallary/magicaltai14.jpg"
+                  alt="Магия Алтая-"
+                  class="gallary-slider__img swiper-lazy"
+                />
+                <div class="lazy-preloader"></div>
+              </div>
+              <div class="gallary-slider__slide swiper-slide">
+                <img
+                  data-src="img/gallary/magicaltai15.jpg"
+                  alt="Магия Алтая-"
+                  class="gallary-slider__img swiper-lazy"
+                />
+                <div class="lazy-preloader"></div>
+              </div>
+              <div class="gallary-slider__slide swiper-slide">
+                <img
+                  data-src="img/gallary/magicaltai16.jpg"
+                  alt="Магия Алтая-"
+                  class="gallary-slider__img swiper-lazy"
+                />
+                <div class="lazy-preloader"></div>
+              </div>
+              <div class="gallary-slider__slide swiper-slide">
+                <img
+                  data-src="img/gallary/magicaltai17.jpg"
+                  alt="Магия Алтая-"
+                  class="gallary-slider__img swiper-lazy"
+                />
+                <div class="lazy-preloader"></div>
+              </div>
+              <div class="gallary-slider__slide swiper-slide">
+                <img
+                  data-src="img/gallary/magicaltai18.jpg"
+                  alt="Магия Алтая-"
+                  class="gallary-slider__img swiper-lazy"
+                />
+                <div class="lazy-preloader"></div>
+              </div>
+              <div class="gallary-slider__slide swiper-slide">
+                <img
+                  data-src="img/gallary/magicaltai19.jpg"
+                  alt="Магия Алтая-"
+                  class="gallary-slider__img swiper-lazy"
+                />
+                <div class="lazy-preloader"></div>
+              </div>
+              <div class="gallary-slider__slide swiper-slide">
+                <img
+                  data-src="img/gallary/magicaltai20.jpg"
+                  alt="Магия Алтая-"
+                  class="gallary-slider__img swiper-lazy"
+                />
+                <div class="lazy-preloader"></div>
+              </div>
+              <div class="gallary-slider__slide swiper-slide">
+                <img
+                  data-src="img/gallary/magicaltai21.jpg"
+                  alt="Магия Алтая-"
+                  class="gallary-slider__img swiper-lazy"
+                />
+                <div class="lazy-preloader"></div>
+              </div>
+            </div>
+          </div>
+          <div class="gallary-slider gallary swiper">
+            <div class="gallary-slider__wrapper swiper-wrapper">
+              <div class="gallary-slider__slide swiper-slide">
+                <img
+                  data-src="img/gallary/magicaltai22.jpg"
+                  alt="Магия Алтая-"
+                  class="gallary-slider__img swiper-lazy"
+                />
+                <div class="lazy-preloader"></div>
+              </div>
+              <div class="gallary-slider__slide swiper-slide">
+                <img
+                  data-src="img/gallary/magicaltai23.jpg"
+                  alt="Магия Алтая-"
+                  class="gallary-slider__img swiper-lazy"
+                />
+                <div class="lazy-preloader"></div>
+              </div>
+              <div class="gallary-slider__slide swiper-slide">
+                <img
+                  data-src="img/gallary/magicaltai24.jpg"
+                  alt="Магия Алтая-"
+                  class="gallary-slider__img swiper-lazy"
+                />
+                <div class="lazy-preloader"></div>
+              </div>
+              <div class="gallary-slider__slide swiper-slide">
+                <img
+                  data-src="img/gallary/magicaltai25.jpg"
+                  alt="Магия Алтая-"
+                  class="gallary-slider__img swiper-lazy"
+                />
+                <div class="lazy-preloader"></div>
+              </div>
+              <div class="gallary-slider__slide swiper-slide">
+                <img
+                  data-src="img/gallary/magicaltai26.jpg"
+                  alt="Магия Алтая-"
+                  class="gallary-slider__img swiper-lazy"
+                />
+                <div class="lazy-preloader"></div>
+              </div>
+              <div class="gallary-slider__slide swiper-slide">
+                <img
+                  data-src="img/gallary/magicaltai27.jpg"
+                  alt="Магия Алтая-"
+                  class="gallary-slider__img swiper-lazy"
+                />
+                <div class="lazy-preloader"></div>
+              </div>
+              <div class="gallary-slider__slide swiper-slide">
+                <img
+                  data-src="img/gallary/magicaltai28.jpg"
+                  alt="Магия Алтая-"
+                  class="gallary-slider__img swiper-lazy"
+                />
+                <div class="lazy-preloader"></div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-			<section id="best" class="page__best best">
-				<article class="best__one-page one-page">
-					<div class="one-page__clouds">
-						<div class="one-page__row-1">
-							<div class="one-page__content">
-								<div class="one-page__container _container">
-									<div class="one-page__body">
-										<h2 class="one-page__title _h2">Лучшие места Алтая</h2>
-										<h3 class="one-page__subtitle _h3">Ороктойский мост</h3>
-										<p class="_text">Ороктойский мост находится в Горном Алтае в Чемальском районе рядом с Чемальским трактом. Ближайшие населенные пункты — Эдиган, Ороктой, Еланда, Куюс, Толгоек, Уожан, Чемал и Аюла. Мост построен над самым глубоким (70 метров) местом реки Катунь и самым узким (20 метров). Это место также известно под названием Тельдекпенские пороги. При высокой воде река здесь представляет собой настоящий бурлящий поток, которому тесно в этом узком коридоре из причудливых черных лавовых скал. Создается ощущение, что на этом месте энергия реки вливается в тебя мощным потоком.</p>
-									</div>
-								</div>
-							</div>
-							<div class="one-page__image">
-								<img src="/img/best/magicaltai2.webp" alt="Магия Алтая- Ороктойский мост" class="one-page__img">
-							</div>
-						</div>
-						<div class="one-page__container-2 _container">
-							<div class="one-page__image-2">
-								<img src="/img/best/magicaltai3.webp" alt="Магия Алтая- Ороктойский мост" class="one-page__img-2">
-							</div>
-							<div class="one-page__content-2">
-								<p class="_text">Ороктойский мост окружен такими вершинами как Хребет Куминские Белки, гора Тысташ, гора Талдинский Белок и другими. Инженерное сооружение получило свое название от алтайского горного села Ороктой, которое находится в 12 км на левом берегу Катуни. Его население составляет менее 200 коренных жителей, занимающихся охотой и шишкарством (сбором кедровых шишек). Словосочетание «ороктой» (Орыкту-Ой) дословно переводится с алтайского как “котловина, впадина с тропкой диких зверей”. Перевод села Эдиган звучит еще интереснее — «пьяная деревня». Несмотря на говорящее название поселения, алкоголь здесь даже не продают.</p>
-							</div>
-						</div>
-					</div>
-				</article>
-				<artical class="best__two-page two-page">
-					<div class="two-page__clouds">
-						<div class="two-page__row1">
-							<div class="two-page__content">
-								<div class="two-page__container _container">
-									<div class="two-page__body">
-										<h3 class="two-page__title _h3">Себыстей</h3>
-										<p class="_text">Что такое Себыстей? Себыстей — река в Кош-Агачском районе Республики Алтай. Протяженность реки составляет всего 31 км. Чем же так примечательна эта небольшая река? Давайте окунемся в историю. </p>
-										<p class="_text"> <span class="_text-bold">Юэчжи</span><span class="_h5"> — белые кочевники Древнего Китая, которых китайцы считали предками русских.</span>
-										</p>
-										<p class="_text">Вся степная Монголия была занята племенами "жун" - тюркско-монгольско-маньчжурскими народами, явными монголоидами, которых хорошо знают китайские хроники.</p>
-										<p class="_text">Западнее простирались земли, населенные европеоидными индоевропейцами скифо-сибирской и родственных ей культур, которых китайские тексты с III в. до н.э. именуют юэчжами и усунями. Своих мертвых они хоронили не в каменных ящиках, как их восточные соседи, а в курганах. Область их расселения включала Западный Саян, Алтай, Западную Монголию, Ганьсу, Турфан, Тарим и Джунгарию.</p>
-									</div>
-								</div>
-							</div>
-							<div class="two-page__image">
-								<img class="two-page__img" src="/img/best/magicaltai4.webp" alt="Магия Алтая- Себыстей">
-							</div>
-						</div>
-						<div class="two-page__row2">
-							<div class="two-page__container _container">
-								<p class="_text">В долине реки Себыстей на Алтае был исследован курган, датируемый около 450 г. до н.э. Похороненный в нем мужчина был носителем мужской гаплогруппы R1a1, что позволило сделать вывод о том, что он относится к алтайским скифам Пазырыкской культуры (северной родни юэчжей). </p>
-								<p class="_text">Чем еще интересен Себыстей? Тем, что там совсем нет туристов. В истоке реки находятся 3 озера запрудного происхождения, образовавшиеся, судя по всему, в результате обвала или мощнейшего оползня во время землетрясения. Нижнее и среднее озеро богаты хариусом, в верхнее опускается ледник. </p>
-							</div>
-						</div>
-						<div class="two-page__row3">
-							<div class="two-page__container _container">
-								<div class="two-page__image">
-									<img class="two-page__img" src="/img/best/magicaltai5.webp" alt="Магия Алтая- Себыстей">
-								</div>
-								<div class="two-page__image">
-									<img class="two-page__img" src="/img/best/magicaltai6.webp" alt="Магия Алтая- Себыстей">
-								</div>
-							</div>
-						</div>
-					</div>
-				</artical>
-			</section>
+        <section class="page__quote quotes">
+          <div class="quotes__container _container">
+            <div class="quotes__quote">
+              <blockquote class="_text">
+                Алтай – колокол земли, но звон его дано не каждому услышать.
+                Алтай – центр четырех океанов, но не всякий ощутит его. Алтай –
+                жилище трех богов, но прием они оказывают не всем. Алтай –
+                стойбище алмысов, но пройдешь мимо и не заметишь их. Здесь по
+                ночам веселятся распутные дочери Эрлика, но не узреешь их. В
+                определенное время слетает с небосвода мифический Конь – Аргымак
+                и мчится огненной стрелой над священным Алтаем, но не поймаешь
+                его, не догонишь его и не проскачешь на нем.
+              </blockquote>
+              <cite class="_h6 quotes__right"
+                >Этнограф Владимир Федорович Хохолков</cite
+              >
+            </div>
+            <div class="quotes__quote quotes__right">
+              <blockquote class="_h6">
+                “Простор такой, что душу ломит...”
+              </blockquote>
+              <cite class="_text">Василий Макарович Шукшин</cite>
+            </div>
+            <div class="quotes__quote">
+              <blockquote class="_h6 quotes__right">
+                “В жизни не видел ничего более прекрасного”
+              </blockquote>
+              <cite class="_text quotes__right"
+                >Виталий Валентинович Бианки</cite
+              >
+            </div>
+          </div>
+        </section>
 
-			<section id="gallary" class="page__gallary gallary">
-				<h2 class="gallary__title _h2 _container">Фоторепортаж из поездок</h2>
-				<div class="gallary-slider gallary swiper">
-					<div class="gallary-slider__wrapper swiper-wrapper">
-						<div class="gallary-slider__slide swiper-slide">
-							<img data-src="/img/gallary/magicaltai7.jpg" alt="Магия Алтая-" class="gallary-slider__img swiper-lazy">
-							<div class="lazy-preloader"></div>
-						</div>
-						<div class="gallary-slider__slide swiper-slide">
-							<img data-src="/img/gallary/magicaltai8.jpg" alt="Магия Алтая-" class="gallary-slider__img swiper-lazy">
-							<div class="lazy-preloader"></div>
-						</div>
-						<div class="gallary-slider__slide swiper-slide">
-							<img data-src="/img/gallary/magicaltai9.jpg" alt="Магия Алтая-" class="gallary-slider__img swiper-lazy">
-							<div class="lazy-preloader"></div>
-						</div>
-						<div class="gallary-slider__slide swiper-slide">
-							<img data-src="/img/gallary/magicaltai10.jpg" alt="Магия Алтая-" class="gallary-slider__img swiper-lazy">
-							<div class="lazy-preloader"></div>
-						</div>
-						<div class="gallary-slider__slide swiper-slide">
-							<img data-src="/img/gallary/magicaltai11.jpg" alt="Магия Алтая-" class="gallary-slider__img swiper-lazy">
-							<div class="lazy-preloader"></div>
-						</div>
-						<div class="gallary-slider__slide swiper-slide">
-							<img data-src="/img/gallary/magicaltai12.jpg" alt="Магия Алтая-" class="gallary-slider__img swiper-lazy">
-							<div class="lazy-preloader"></div>
-						</div>
-						<div class="gallary-slider__slide swiper-slide">
-							<img data-src="/img/gallary/magicaltai13.jpg" alt="Магия Алтая-" class="gallary-slider__img swiper-lazy">
-							<div class="lazy-preloader"></div>
-						</div>
-					</div>
-				</div>
-				<div dir="RTL" class="gallary-slider gallary swiper">
-					<div class="gallary-slider__wrapper swiper-wrapper">
-						<div class="gallary-slider__slide swiper-slide">
-							<img data-src="/img/gallary/magicaltai14.jpg" alt="Магия Алтая-" class="gallary-slider__img swiper-lazy">
-							<div class="lazy-preloader"></div>
-						</div>
-						<div class="gallary-slider__slide swiper-slide">
-							<img data-src="/img/gallary/magicaltai15.jpg" alt="Магия Алтая-" class="gallary-slider__img swiper-lazy">
-							<div class="lazy-preloader"></div>
-						</div>
-						<div class="gallary-slider__slide swiper-slide">
-							<img data-src="/img/gallary/magicaltai16.jpg" alt="Магия Алтая-" class="gallary-slider__img swiper-lazy">
-							<div class="lazy-preloader"></div>
-						</div>
-						<div class="gallary-slider__slide swiper-slide">
-							<img data-src="/img/gallary/magicaltai17.jpg" alt="Магия Алтая-" class="gallary-slider__img swiper-lazy">
-							<div class="lazy-preloader"></div>
-						</div>
-						<div class="gallary-slider__slide swiper-slide">
-							<img data-src="/img/gallary/magicaltai18.jpg" alt="Магия Алтая-" class="gallary-slider__img swiper-lazy">
-							<div class="lazy-preloader"></div>
-						</div>
-						<div class="gallary-slider__slide swiper-slide">
-							<img data-src="/img/gallary/magicaltai19.jpg" alt="Магия Алтая-" class="gallary-slider__img swiper-lazy">
-							<div class="lazy-preloader"></div>
-						</div>
-						<div class="gallary-slider__slide swiper-slide">
-							<img data-src="/img/gallary/magicaltai20.jpg" alt="Магия Алтая-" class="gallary-slider__img swiper-lazy">
-							<div class="lazy-preloader"></div>
-						</div>
-						<div class="gallary-slider__slide swiper-slide">
-							<img data-src="/img/gallary/magicaltai21.jpg" alt="Магия Алтая-" class="gallary-slider__img swiper-lazy">
-							<div class="lazy-preloader"></div>
-						</div>
-					</div>
-				</div>
-				<div class="gallary-slider gallary swiper">
-					<div class="gallary-slider__wrapper swiper-wrapper">
-						<div class="gallary-slider__slide swiper-slide">
-							<img data-src="/img/gallary/magicaltai22.jpg" alt="Магия Алтая-" class="gallary-slider__img swiper-lazy">
-							<div class="lazy-preloader"></div>
-						</div>
-						<div class="gallary-slider__slide swiper-slide">
-							<img data-src="/img/gallary/magicaltai23.jpg" alt="Магия Алтая-" class="gallary-slider__img swiper-lazy">
-							<div class="lazy-preloader"></div>
-						</div>
-						<div class="gallary-slider__slide swiper-slide">
-							<img data-src="/img/gallary/magicaltai24.jpg" alt="Магия Алтая-" class="gallary-slider__img swiper-lazy">
-							<div class="lazy-preloader"></div>
-						</div>
-						<div class="gallary-slider__slide swiper-slide">
-							<img data-src="/img/gallary/magicaltai25.jpg" alt="Магия Алтая-" class="gallary-slider__img swiper-lazy">
-							<div class="lazy-preloader"></div>
-						</div>
-						<div class="gallary-slider__slide swiper-slide">
-							<img data-src="/img/gallary/magicaltai26.jpg" alt="Магия Алтая-" class="gallary-slider__img swiper-lazy">
-							<div class="lazy-preloader"></div>
-						</div>
-						<div class="gallary-slider__slide swiper-slide">
-							<img data-src="/img/gallary/magicaltai27.jpg" alt="Магия Алтая-" class="gallary-slider__img swiper-lazy">
-							<div class="lazy-preloader"></div>
-						</div>
-						<div class="gallary-slider__slide swiper-slide">
-							<img data-src="/img/gallary/magicaltai28.jpg" alt="Магия Алтая-" class="gallary-slider__img swiper-lazy">
-							<div class="lazy-preloader"></div>
-						</div>
-					</div>
-				</div>
-			</section>
+        <section id="catalog" class="page__catalog catalog">
+          <div class="catalog__title _container">
+            <h2 class="_h2">Выбери свой маршрут</h2>
+          </div>
+          <div class="catalog__block swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div
+                  class="cataloge-header__container catalog-header _container"
+                >
+                  <div class="catalog__navigation">
+                    <div class="catalog__prev">
+                      <span class="material-symbols-outlined">
+                        arrow_right_alt
+                      </span>
+                    </div>
+                    <div class="catalog__bullets"></div>
+                    <div class="catalog__next">
+                      <span class="material-symbols-outlined">
+                        arrow_right_alt
+                      </span>
+                    </div>
+                  </div>
+                  <div class="catalog-header__content">
+                    <h3 class="catalog-header__title _h3">
+                      “Знакомство с Алтаем”
+                    </h3>
+                    <div class="catalog-header__subtitle _h4">
+                      По Чуйскому тракту до границы с Монголией
+                    </div>
+                  </div>
+                </div>
+                <div class="cataloge__content">
+                  <div class="cataloge__image">
+                    <img
+                      src="img/tours/tour1/MagicAltai-Chuyskiy-trakt-pereval-Chike-taman.jpg"
+                      alt="Магия Алтая-Знакомство с Алтаем"
+                    />
+                  </div>
+                  <div class="cataloge__subject subject">
+                    <div class="subject__container _container">
+                      <div class="subject__body">
+                        <a
+                          href="/first-tour.html"
+                          class="subject__more _text-link"
+                          >Подробнее<span class="material-symbols-outlined">
+                            pending
+                          </span></a
+                        >
+                        <ul class="subject-list">
+                          <li class="subject__items _h4">
+                            Продолжительность:<span class="_text-bold"
+                              >5 дней</span
+                            >
+                          </li>
+                          <li class="subject__items _h4">
+                            Группы:<span class="_text-bold">2-8 человек</span>
+                          </li>
+                          <li class="subject__items _h4">
+                            Протяженность:<span class="_text-bold">883 км</span>
+                          </li>
+                          <li class="subject__items _h4">
+                            Физическая нагрузка:<span class="_text-bold"
+                              >полный релакс</span
+                            >
+                          </li>
+                        </ul>
+                        <div class="subject__button button-2">
+                          <a href="#popup" class="popup-link _text-btn"
+                            >Забронировать тур<span
+                              class="material-symbols-outlined"
+                            >
+                              arrow_forward
+                            </span></a
+                          >
+                        </div>
+                        <div class="subject-price">
+                          <p class="_h4">
+                            Цена:<span class="_text-bold">от 40 000 ₽/чел</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="cataloge-header__container catalog-header _container"
+                >
+                  <div class="catalog__navigation">
+                    <div class="catalog__prev">
+                      <span class="material-symbols-outlined">
+                        arrow_right_alt
+                      </span>
+                    </div>
+                    <div class="catalog__bullets"></div>
+                    <div class="catalog__next">
+                      <span class="material-symbols-outlined">
+                        arrow_right_alt
+                      </span>
+                    </div>
+                  </div>
+                  <div class="catalog-header__content">
+                    <h3 class="catalog-header__title _h3">
+                      “Здравствуй, Алтай!”
+                    </h3>
+                    <div class="catalog-header__subtitle _h4">
+                      село Ая, село Чаган-Узун, перевал Кату-Ярык, село Инегень
+                    </div>
+                  </div>
+                </div>
+                <div class="cataloge__content">
+                  <div class="cataloge__image">
+                    <img
+                      src="img/tours/tour2/MagicAltai-Marsianskiy-peyzazh.jpg"
+                      alt="Магия Алтая-Здравствуй Алтай"
+                    />
+                  </div>
+                  <div class="cataloge__subject subject">
+                    <div class="subject__container _container">
+                      <div class="subject__body">
+                        <a
+                          href="/2nd-tour.html"
+                          class="subject__more _text-link"
+                          >Подробнее<span class="material-symbols-outlined">
+                            pending
+                          </span></a
+                        >
+                        <ul class="subject-list">
+                          <li class="subject__items _h4">
+                            Продолжительность:<span class="_text-bold"
+                              >6 дней</span
+                            >
+                          </li>
+                          <li class="subject__items _h4">
+                            Группы:<span class="_text-bold">3-8 человек</span>
+                          </li>
+                          <li class="subject__items _h4">
+                            Протяженность:<span class="_text-bold"
+                              >1265 км</span
+                            >
+                          </li>
+                          <li class="subject__items _h4">
+                            Физическая нагрузка:<span class="_text-bold"
+                              >полный релакс</span
+                            >
+                          </li>
+                        </ul>
+                        <div class="subject__button button-2">
+                          <a href="#popup" class="popup-link _text-btn"
+                            >Забронировать тур<span
+                              class="material-symbols-outlined"
+                            >
+                              arrow_forward
+                            </span></a
+                          >
+                        </div>
+                        <div class="subject-price">
+                          <p class="_h4">
+                            Цена:<span class="_text-bold">от 48 000 ₽/чел</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="cataloge-header__container catalog-header _container"
+                >
+                  <div class="catalog__navigation">
+                    <div class="catalog__prev">
+                      <span class="material-symbols-outlined">
+                        arrow_right_alt
+                      </span>
+                    </div>
+                    <div class="catalog__bullets"></div>
+                    <div class="catalog__next">
+                      <span class="material-symbols-outlined">
+                        arrow_right_alt
+                      </span>
+                    </div>
+                  </div>
+                  <div class="catalog-header__content">
+                    <h3 class="catalog-header__title _h3">
+                      “Чемал - Ороктойский мост”
+                    </h3>
+                    <div class="catalog-header__subtitle _h4">
+                      Однодневная автоэкскурсия
+                    </div>
+                  </div>
+                </div>
+                <div class="cataloge__content">
+                  <div class="cataloge__image">
+                    <img
+                      src="img/tours/tour3/MagicAltai-Oroktoyskiy-most.jpg"
+                      alt="Магия Алтая- Однодневная экскурсия"
+                    />
+                  </div>
+                  <div class="cataloge__subject subject">
+                    <div class="subject__container _container">
+                      <div class="subject__body">
+                        <a
+                          href="/3nd-tour.html"
+                          class="subject__more _text-link"
+                          >Подробнее<span class="material-symbols-outlined">
+                            pending
+                          </span></a
+                        >
+                        <ul class="subject-list">
+                          <li class="subject__items _h4">
+                            Продолжительность:<span class="_text-bold"
+                              >1 день</span
+                            >
+                          </li>
+                          <li class="subject__items _h4">
+                            Группы:<span class="_text-bold">2-8 человек</span>
+                          </li>
+                          <li class="subject__items _h4">
+                            Протяженность:<span class="_text-bold">260 км</span>
+                          </li>
+                          <li class="subject__items _h4">
+                            Физическая нагрузка:<span class="_text-bold"
+                              >полный релакс</span
+                            >
+                          </li>
+                        </ul>
+                        <div class="subject__button button-2">
+                          <a href="#popup" class="popup-link _text-btn"
+                            >Забронировать тур<span
+                              class="material-symbols-outlined"
+                            >
+                              arrow_forward
+                            </span></a
+                          >
+                        </div>
+                        <div class="subject-price">
+                          <p class="_h4">
+                            Цена:<span class="_text-bold">от 3000 ₽/чел</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="cataloge-header__container catalog-header _container"
+                >
+                  <div class="catalog__navigation">
+                    <div class="catalog__prev">
+                      <span class="material-symbols-outlined">
+                        arrow_right_alt
+                      </span>
+                    </div>
+                    <div class="catalog__bullets"></div>
+                    <div class="catalog__next">
+                      <span class="material-symbols-outlined">
+                        arrow_right_alt
+                      </span>
+                    </div>
+                  </div>
+                  <div class="catalog-header__content">
+                    <h3 class="catalog-header__title _h3">“Free Trail”</h3>
+                    <div class="catalog-header__subtitle _h4">
+                      Эксклюзивное предложение от нашей команды
+                    </div>
+                  </div>
+                </div>
+                <div class="cataloge__content">
+                  <div class="cataloge__image">
+                    <img
+                      src="img/tours/tour4/MagicAltai-Kanon-Chulyshmana.jpg"
+                      alt="Магия Алтая- Супер тур"
+                    />
+                  </div>
+                  <div class="cataloge__subject subject">
+                    <div class="subject__container _container">
+                      <div class="subject__body">
+                        <a
+                          href="/4th-tour.html"
+                          class="subject__more _text-link"
+                          >Подробнее<span class="material-symbols-outlined">
+                            pending
+                          </span></a
+                        >
+                        <ul class="subject-list">
+                          <li class="subject__items _h4">
+                            Продолжительность:<span class="_text-bold"
+                              >от 3 дней</span
+                            >
+                          </li>
+                          <li class="subject__items _h4">
+                            Группы:<span class="_text-bold">2-6 человек</span>
+                          </li>
+                          <li class="subject__items _h4">
+                            Протяженность:<span class="_text-bold"
+                              >Решаете вы</span
+                            >
+                          </li>
+                          <li class="subject__items _h4">
+                            Физическая нагрузка:<span class="_text-bold"
+                              >полный релакс</span
+                            >
+                          </li>
+                        </ul>
+                        <div class="subject__button button-2">
+                          <a href="#popup" class="popup-link _text-btn"
+                            >Забронировать тур<span
+                              class="material-symbols-outlined"
+                            >
+                              arrow_forward
+                            </span></a
+                          >
+                        </div>
+                        <div class="subject-price">
+                          <p class="_h4">
+                            Цена:<span class="_text-bold"
+                              >индивидуальный расчет</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-			<section class="page__quote quotes">
-				<div class="quotes__container _container">
-					<div class="quotes__quote">
-						<blockquote class="_text">Алтай – колокол земли, но звон его дано не каждому услышать. Алтай – центр четырех океанов, но не всякий ощутит его. Алтай – жилище трех богов, но прием они оказывают не всем. Алтай – стойбище алмысов, но пройдешь мимо и не заметишь их. Здесь по ночам веселятся распутные дочери Эрлика, но не узреешь их. В определенное время слетает с небосвода мифический Конь – Аргымак и мчится огненной стрелой над священным Алтаем, но не поймаешь его, не догонишь его и не проскачешь на нем.</blockquote>
-						<cite class="_h6 quotes__right">Этнограф Владимир Федорович Хохолков</cite>
-					</div>
-					<div class="quotes__quote quotes__right">
-						<blockquote class="_h6">“Простор такой, что душу ломит...”</blockquote>
-						<cite class="_text">Василий Макарович Шукшин</cite>
-					</div>
-					<div class="quotes__quote">
-						<blockquote class="_h6 quotes__right">“В жизни не видел ничего более прекрасного”</blockquote>
-						<cite class="_text quotes__right">Виталий Валентинович Бианки</cite>
-					</div>
-				</div>
-			</section>
+        <section class="page__team team">
+          <h2 class="team__title _h2 _container">команда</h2>
+          <div class="team__bg">
+            <p>AČ<br />ÏG</p>
+            <div class="team__head _container">
+              <div class="team__column _h4">
+                Мы - Сплоченная команда профессионалов. Более 15 лет
+                путешествуем вместе по Алтаю и за это время приобрели большой
+                опыт пеших, автомобильных, водных походов. Профессионально
+                фотографируем, вкусно готовим, очень любим Алтай, и вообще
+                замечательные ребята.<br /><br />Наши преимущества – мы
+                полностью автономны, не привязаны к туристической
+                инфраструктуре. При этом располагаем необходимой материальной
+                базой для создания достаточно высокого уровня комфорта.
+              </div>
+              <div class="team__column">
+                <div class="team__avatar_bg">
+                  <div class="team__avatar avatar">
+                    <img
+                      class="avatar__img"
+                      src="img/team/Аркадий Борисов.webp"
+                      alt="Магия Алтая Аркадий Борисов"
+                    />
+                    <div class="avatar__content">
+                      <div class="avatar__content">
+                        <div class="_h4">Аркадий Борисов</div>
+                        <div class="_text">
+                          гид/повар/фотограф/знаток Алтая<br />100lvl
+                        </div>
+                        <a
+                          href="https://ok.ru/profile/568907572916"
+                          target="_blank"
+                          class="avatar__link"
+                          ><i class="fab fa-odnoklassniki"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="team__body _container">
+              <div class="team__column">
+                <div class="team__avatar avatar">
+                  <img
+                    class="avatar__img"
+                    src="img/team/Сергей Гордеев.webp"
+                    alt="Магия Алтая- Сергей Гордеев"
+                  />
+                  <div class="avatar__content">
+                    <div class="avatar__content">
+                      <div class="_h4">Сергей Гордеев</div>
+                      <div class="_text">водитель от Бога<br />100lvl</div>
+                      <a
+                        href="https://ok.ru/profile/161552861564"
+                        target="_blank"
+                        class="avatar__link"
+                        ><i class="fab fa-odnoklassniki"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="team__column team__column_bg">
+                <div class="team__avatar avatar">
+                  <img
+                    class="avatar__img"
+                    src="img/team/Олег.webp"
+                    alt="Магия Алтая- Олег Коцюба"
+                  />
+                  <div class="avatar__content">
+                    <div class="_h4">Олег Коцюба</div>
+                    <div class="_text">травник, любитель дикой природы</div>
+                    <a
+                      href="https://ok.ru/profile/78174298"
+                      target="_blank"
+                      class="avatar__link"
+                      ><i class="fab fa-odnoklassniki"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="team__column">
+                <div class="team__avatar avatar">
+                  <img
+                    class="avatar__img"
+                    src="img/team/Роман Крец.webp"
+                    alt="Магия Алтая- Роман Крец"
+                  />
+                  <div class="avatar__content" <div class="avatar__content">
+                    <div class="_h4">Роман Крец</div>
+                    <div class="_text">
+                      IT/design/photo<br />обожатель алтайских гор
+                    </div>
+                    <a
+                      href="https://vk.com/rkrets"
+                      target="_blank"
+                      class="avatar__link"
+                      ><i class="fab fa-vk"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="team__bottom">
+            <img src="img/team/mountain-bg.png" alt="Магия Алтая горы" />
+          </div>
+          <div class="team__cta cta _container">
+            <div class="cta__content _h6">
+              Свяжитесь с нами, и мы сделаем все возможное, чтобы исполнить вашу
+              мечту.
+            </div>
+            <div class="cta__contact-us">
+              <address class="cta__list contacts">
+                <ul class="contacts__list">
+                  <li class="contacts__item">
+                    <a class="" href="https://t.me/+79619879854" target="_blank"
+                      ><i class="fab fa-telegram-plane"></i
+                    ></a>
+                  </li>
+                  <li class="contacts__item">
+                    <a class="" href="tel:+79831029180" target="_blank"
+                      ><i class="fas fa-phone-alt"></i
+                    ></a>
+                  </li>
+                  <li class="contacts__item">
+                    <a
+                      class=""
+                      href="https://wa.me/+79831029180"
+                      target="_blank"
+                      ><i class="fab fa-whatsapp"></i
+                    ></a>
+                  </li>
+                  <li class="contacts__item">
+                    <a
+                      class=""
+                      href="https://ok.ru/profile/568907572916"
+                      target="_blank"
+                      ><i class="fab fa-odnoklassniki"></i
+                    ></a>
+                  </li>
+                  <li class="contacts__item">
+                    <a
+                      class=""
+                      href="mailto:admin@magicaltai.su"
+                      target="_blank"
+                      ><i class="fas fa-envelope"></i
+                    ></a>
+                  </li>
+                </ul>
+              </address>
+              <div class="cta__button button-2">
+                <a href="#popup" class="popup-link _text-btn"
+                  >Задать вопрос<span class="material-symbols-outlined">
+                    arrow_forward
+                  </span></a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
 
-			<section id="catalog" class="page__catalog catalog">
-				<div class="catalog__title _container">
-					<h2 class="_h2">Выбери свой маршрут</h2>
-				</div>
-				<div class="catalog__block swiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<div class="cataloge-header__container catalog-header _container">
-								<div class="catalog__navigation">
-									<div class="catalog__prev"><span class="material-symbols-outlined"> arrow_right_alt </span></div>
-									<div class="catalog__bullets"></div>
-									<div class="catalog__next"><span class="material-symbols-outlined"> arrow_right_alt </span></div>
-								</div>
-								<div class="catalog-header__content">
-									<h3 class="catalog-header__title _h3">“Знакомство с Алтаем”</h3>
-									<div class="catalog-header__subtitle _h4">По Чуйскому тракту до границы с Монголией</div>
-								</div>
-							</div>
-							<div class="cataloge__content">
-								<div class="cataloge__image">
-									<img src="/img/tours/tour1/MagicAltai-Chuyskiy-trakt-pereval-Chike-taman.jpg" alt="Магия Алтая-Знакомство с Алтаем">
-								</div>
-								<div class="cataloge__subject subject ">
-									<div class="subject__container _container">
-										<div class="subject__body">
-											<a href="/first-tour.html" class="subject__more _text-link">Подробнее<span class="material-symbols-outlined"> pending </span></a>
-											<ul class="subject-list">
-												<li class="subject__items _h4">Продолжительность:<span class="_text-bold">5 дней</span></li>
-												<li class="subject__items _h4">Группы:<span class="_text-bold">2-8 человек</span></li>
-												<li class="subject__items _h4">Протяженность:<span class="_text-bold">883 км</span></li>
-												<li class="subject__items _h4">Физическая нагрузка:<span class="_text-bold">полный релакс</span></li>
-											</ul>
-											<div class="subject__button button-2">
-												<a href="#popup" class="popup-link _text-btn">Забронировать тур<span class="material-symbols-outlined"> arrow_forward </span></a>
-											</div>
-											<div class="subject-price">
-												<p class="_h4">Цена:<span class="_text-bold">от 40 000 ₽/чел</span></p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="cataloge-header__container catalog-header _container">
-								<div class="catalog__navigation">
-									<div class="catalog__prev"><span class="material-symbols-outlined"> arrow_right_alt </span></div>
-									<div class="catalog__bullets"></div>
-									<div class="catalog__next"><span class="material-symbols-outlined"> arrow_right_alt </span></div>
-								</div>
-								<div class="catalog-header__content">
-									<h3 class="catalog-header__title _h3">“Здравствуй, Алтай!”</h3>
-									<div class="catalog-header__subtitle _h4">село Ая, село Чаган-Узун, перевал Кату-Ярык, село Инегень</div>
-								</div>
-							</div>
-							<div class="cataloge__content">
-								<div class="cataloge__image">
-									<img src="/img/tours/tour2/MagicAltai-Marsianskiy-peyzazh.jpg" alt="Магия Алтая-Здравствуй Алтай">
-								</div>
-								<div class="cataloge__subject subject ">
-									<div class="subject__container _container">
-										<div class="subject__body">
-											<a href="/2nd-tour.html" class="subject__more _text-link">Подробнее<span class="material-symbols-outlined"> pending </span></a>
-											<ul class="subject-list">
-												<li class="subject__items _h4">Продолжительность:<span class="_text-bold">6 дней</span></li>
-												<li class="subject__items _h4">Группы:<span class="_text-bold">3-8 человек</span></li>
-												<li class="subject__items _h4">Протяженность:<span class="_text-bold">1265 км</span></li>
-												<li class="subject__items _h4">Физическая нагрузка:<span class="_text-bold">полный релакс</span></li>
-											</ul>
-											<div class="subject__button button-2">
-												<a href="#popup" class="popup-link _text-btn">Забронировать тур<span class="material-symbols-outlined"> arrow_forward </span></a>
-											</div>
-											<div class="subject-price">
-												<p class="_h4">Цена:<span class="_text-bold">от 48 000 ₽/чел</span></p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="cataloge-header__container catalog-header _container">
-								<div class="catalog__navigation">
-									<div class="catalog__prev"><span class="material-symbols-outlined"> arrow_right_alt </span></div>
-									<div class="catalog__bullets"></div>
-									<div class="catalog__next"><span class="material-symbols-outlined"> arrow_right_alt </span></div>
-								</div>
-								<div class="catalog-header__content">
-									<h3 class="catalog-header__title _h3">“Чемал - Ороктойский мост”</h3>
-									<div class="catalog-header__subtitle _h4">Однодневная автоэкскурсия</div>
-								</div>
-							</div>
-							<div class="cataloge__content">
-								<div class="cataloge__image">
-									<img src="/img/tours/tour3/MagicAltai-Oroktoyskiy-most.jpg" alt="Магия Алтая- Однодневная экскурсия">
-								</div>
-								<div class="cataloge__subject subject ">
-									<div class="subject__container _container">
-										<div class="subject__body">
-											<a href="/3nd-tour.html" class="subject__more _text-link">Подробнее<span class="material-symbols-outlined"> pending </span></a>
-											<ul class="subject-list">
-												<li class="subject__items _h4">Продолжительность:<span class="_text-bold">1 день</span></li>
-												<li class="subject__items _h4">Группы:<span class="_text-bold">2-8 человек</span></li>
-												<li class="subject__items _h4">Протяженность:<span class="_text-bold">260 км</span></li>
-												<li class="subject__items _h4">Физическая нагрузка:<span class="_text-bold">полный релакс</span></li>
-											</ul>
-											<div class="subject__button button-2">
-												<a href="#popup" class="popup-link _text-btn">Забронировать тур<span class="material-symbols-outlined"> arrow_forward </span></a>
-											</div>
-											<div class="subject-price">
-												<p class="_h4">Цена:<span class="_text-bold">от 3000 ₽/чел</span></p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="cataloge-header__container catalog-header _container">
-								<div class="catalog__navigation">
-									<div class="catalog__prev"><span class="material-symbols-outlined"> arrow_right_alt </span></div>
-									<div class="catalog__bullets"></div>
-									<div class="catalog__next"><span class="material-symbols-outlined"> arrow_right_alt </span></div>
-								</div>
-								<div class="catalog-header__content">
-									<h3 class="catalog-header__title _h3">“Free Trail”</h3>
-									<div class="catalog-header__subtitle _h4">Эксклюзивное предложение от нашей команды</div>
-								</div>
-							</div>
-							<div class="cataloge__content">
-								<div class="cataloge__image">
-									<img src="/img/tours/tour4/MagicAltai-Kanon-Chulyshmana.jpg" alt="Магия Алтая- Супер тур">
-								</div>
-								<div class="cataloge__subject subject ">
-									<div class="subject__container _container">
-										<div class="subject__body">
-											<a href="/4th-tour.html" class="subject__more _text-link">Подробнее<span class="material-symbols-outlined"> pending </span></a>
-											<ul class="subject-list">
-												<li class="subject__items _h4">Продолжительность:<span class="_text-bold">от 3 дней</span></li>
-												<li class="subject__items _h4">Группы:<span class="_text-bold">2-6 человек</span></li>
-												<li class="subject__items _h4">Протяженность:<span class="_text-bold">Решаете вы</span></li>
-												<li class="subject__items _h4">Физическая нагрузка:<span class="_text-bold">полный релакс</span></li>
-											</ul>
-											<div class="subject__button button-2">
-												<a href="#popup" class="popup-link _text-btn">Забронировать тур<span class="material-symbols-outlined"> arrow_forward </span></a>
-											</div>
-											<div class="subject-price">
-												<p class="_h4">Цена:<span class="_text-bold">индивидуальный расчет</span></p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="page__team team">
-				<h2 class="team__title _h2 _container">команда</h2>
-				<div class="team__bg">
-					<p>AČ<br>ÏG</p>
-					<div class="team__head _container">
-						<div class="team__column _h4">Мы - Сплоченная команда профессионалов. Более 15 лет путешествуем вместе по Алтаю и за это время приобрели большой опыт пеших, автомобильных, водных походов. Профессионально фотографируем, вкусно готовим, очень любим Алтай, и вообще замечательные ребята.<br><br>Наши преимущества – мы полностью автономны, не привязаны к туристической инфраструктуре. При этом располагаем необходимой материальной базой для создания достаточно высокого уровня комфорта.</div>
-						<div class="team__column">
-							<div class="team__avatar_bg">
-								<div class="team__avatar avatar">
-									<img class="avatar__img" src="/img/team/Аркадий Борисов.webp" alt="Магия Алтая Аркадий Борисов">
-									<div class="avatar__content">
-										<div class="avatar__content">
-											<div class="_h4">Аркадий Борисов</div>
-											<div class="_text">гид/повар/фотограф/знаток Алтая<br>100lvl</div>
-											<a href="https://ok.ru/profile/568907572916" target="_blank" class="avatar__link"><i class="fab fa-odnoklassniki"></i></a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="team__body _container">
-						<div class="team__column">
-							<div class="team__avatar avatar">
-								<img class="avatar__img" src="/img/team/Сергей Гордеев.webp" alt="Магия Алтая- Сергей Гордеев">
-								<div class="avatar__content">
-									<div class="avatar__content">
-										<div class="_h4">Сергей Гордеев</div>
-										<div class="_text">водитель от Бога<br>100lvl</div>
-										<a href="https://ok.ru/profile/161552861564" target="_blank" class="avatar__link"><i class="fab fa-odnoklassniki"></i></a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="team__column team__column_bg">
-							<div class="team__avatar avatar">
-								<img class="avatar__img" src="/img/team/Олег.webp" alt="Магия Алтая- Олег Коцюба">
-								<div class="avatar__content">
-									<div class="_h4">Олег Коцюба</div>
-									<div class="_text">травник, любитель дикой природы</div>
-									<a href="https://ok.ru/profile/78174298" target="_blank" class="avatar__link"><i class="fab fa-odnoklassniki"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="team__column">
-							<div class="team__avatar avatar">
-								<img class="avatar__img" src="/img/team/Роман Крец.webp" alt="Магия Алтая- Роман Крец">
-								<div class="avatar__content" <div class="avatar__content">
-									<div class="_h4">Роман Крец</div>
-									<div class="_text">IT/design/photo<br>обожатель алтайских гор</div>
-									<a href="https://vk.com/rkrets" target="_blank" class="avatar__link"><i class="fab fa-vk"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="team__bottom">
-					<img src="/img/team/mountain-bg.png" alt="Магия Алтая горы">
-				</div>
-				<div class="team__cta cta _container">
-					<div class="cta__content _h6">Свяжитесь с нами, и мы сделаем все возможное, чтобы исполнить вашу мечту.</div>
-					<div class="cta__contact-us">
-						<address class="cta__list contacts">
-							<ul class="contacts__list">
-								<li class="contacts__item"><a class="" href="https://t.me/+79619879854" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
-								<li class="contacts__item"><a class="" href="tel:+79831029180" target="_blank"><i class="fas fa-phone-alt"></i></a></li>
-								<li class="contacts__item"><a class="" href="https://wa.me/+79831029180" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-								<li class="contacts__item"><a class="" href="https://ok.ru/profile/568907572916" target="_blank"><i class="fab fa-odnoklassniki"></i></a></li>
-								<li class="contacts__item"><a class="" href="mailto:admin@magicaltai.su" target="_blank"><i class="fas fa-envelope"></i></a></li>
-							</ul>
-						</address>
-						<div class="cta__button button-2">
-							<a href="#popup" class="popup-link _text-btn">Задать вопрос<span class="material-symbols-outlined"> arrow_forward </span></a>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="page__base base">
-				<div class="base__container _container">
-					<h2 class="base__title _h2">Наше всё</h2>
-					<div class="base__avto-1 avto-1">
-						<div class="avto-1__title _h3">Транспорт</div>
-						<div class="avto-1__subtitle _h4">Автомобили повышенной проходимости</div>
-						<div class="avto-1__items">
-							<div class="avto-1__item avto-1__item_full">
-								<img src="/img/base/MagicAltai-2-700-metrov-nad-urovnem-morja.webp" alt="Магия Алтая- Наши автомобили повышенной проходимости" class="avto-1__img">
-								<div class="avto-1__content _h3">УАЗ - король в горах</div>
-							</div>
-							<div class="avto-1__item avto-1__item_norm">
-								<img src="/img/base/MagicAltai-uaz-korol-v-gorah.webp" alt="Магия Алтая- Наши автомобили повышенной проходимости" class="avto-1__img">
-								<div class="avto-1__content _h3">2700 метров над уровнем моря</div>
-							</div>
-							<div class="avto-1__item avto-1__item_long">
-								<img src="/img/base/MagicAltai-nachalo-ijulja.webp" alt="Магия Алтая- Наши автомобили повышенной проходимости" class="avto-1__img">
-								<div class="avto-1__content _h3">Начало июля</div>
-							</div>
-						</div>
-						<div class="avto-1__subtitle _h4">прочие авто</div>
-						<div class="avto-1__items">
-							<div class="avto-1__item avto-1__item_full">
-								<img src="/img/base/MagicAltai-dlja-grupp-do-3h-chelovek.webp" alt="Магия Алтая- Наши автомобили повышенной проходимости" class="avto-1__img">
-								<div class="avto-1__content">
-									<p class="_h3">Для групп до трех человек</p>
-									<p class="_text">Chery Tiggo</p>
-								</div>
-							</div>
-							<div class="avto-1__item avto-1__item_norm">
-								<img src="/img/base/MagicAltai-cherri-tigo.webp" alt="Магия Алтая- Наши автомобили повышенной проходимости" class="avto-1__img">
-								<div class="avto-1__content _h3">Chery Tiggo</div>
-							</div>
-							<div class="avto-1__item avto-1__item_long">
-								<img src="/img/base/MagicAltai-obrabotano.webp" alt="Магия Алтая- Наши автомобили повышенной проходимости" class="avto-1__img">
-								<div class="avto-1__content _h3">Для групп до восьми человек</div>
-							</div>
-							<div class="avto-1__item avto-1__item_long">
-								<img src="/img/base/MagicAltai-obrabotano.webp" alt="Магия Алтая- Наши автомобили повышенной проходимости" class="avto-1__img">
-								<div class="avto-1__content">
-									<p class="_h3">Полный привод и комфорт</p>
-									<p class="_text">Hyundai H-1</p>
-								</div>
-							</div>
-						</div>
-						<div class="avto-1__subtitle _text">Все автомобили в отличном техническом состоянии!!!</div>
-					</div>
-				</div>
-			</section>
-			<div class="page__form form">
-				<div class="form__container _container">
-					<div class="form__content">
-						<div class="form__title">
-							<p>Заполните форму и <span>забронируйте</span> поездку в места <span>магического Алтая</span></p>
-						</div>
-						<div class="form__subtitle _text-btn">или свяжитесь с нами любым удобным способом</div>
-						<address class="form__contacts contacts">
-							<ul class="contacts__list">
-								<li class="contacts__item"><a class="" href="https://t.me/+79619879854" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
-								<li class="contacts__item"><a class="" href="tel:+79831029180" target="_blank"><i class="fas fa-phone-alt"></i></a></li>
-								<li class="contacts__item"><a class="" href="https://wa.me/+79831029180" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-								<li class="contacts__item"><a class="" href="https://ok.ru/profile/568907572916" target="_blank"><i class="fab fa-odnoklassniki"></i></a></li>
-								<li class="contacts__item"><a class="" href="mailto:admin@magicaltai.su" target="_blank"><i class="fas fa-envelope"></i></a></li>
-							</ul>
-						</address>
-					</div>
-					<form action="/sendmail.php" method="post" id="form" class="form__body">
-						<div class="form__item">
-							<label for="formName" class="form__label"></label>
-							<input type="text" id="formName" name="name" placeholder="Ваше имя" class="form__input _req _text ">
-						</div>
-						<div class="form__item">
-							<label for="formPhone" class="form__label"></label>
-							<input type="text" id="formPhone" name="phone" placeholder="Телефон" class="form__input _req _text ">
-						</div>
-						<div class="form__item">
-							<label for="formEmail" class="form__label"></label>
-							<input type="text" id="formEmail" name="email" placeholder="Почта" class="form__input _req _text  _email">
-						</div>
-						<div class="form__item">
-							<label for="formMessage" class="form__label"></label>
-							<textarea id="formMessage" name="message" placeholder="Сообщение" class="form__input _text"></textarea>
-						</div>
-						<div class="form__item">
-							<div class="checkbox">
-								<input type="checkbox" checked id="formAgreement" class="checkbox__input _req" name="agreement">
-								<label for="formAgreement" class="form__label _text"><span>Я даю свое согласие на обработку персональных данных в соответствии с <a target="_blank" href="/soglashenie.htm">Условиями</a></span></label>
-							</div>
-						</div>
-						<button type="submit" class="form__button _text-btn">Отправить<span class="material-symbols-outlined"> arrow_forward </span></button>
-					</form>
-				</div>
-			</div>
-		</main>
-		<footer class="page-footer footer">
-			<div class="footer__container _container">
-				<div class="footer__body">
-					<div class="footer__logo">
-						<a href="https://magicaltai.su"><img src="/img/footer/footer-logo.png" alt="Магия Алтая- логотип"></a>
-						<p class="_text-bold">Магия Алтая</p>
-						<iframe src="https://yandex.ru/sprav/widget/rating-badge/58446094316" width="150" height="50" frameborder="0"></iframe>
-					</div>
-					<div class="footer__content">
-						<div class="footer__column">
-							<p class="_text">г. Горно-Алтайск</p>
-							<p class="_text"><a href="tel:+79831029180">+7 983 102-91-80</a></p>
-							<p class="_text"><a href="tel:+79139991307">+7 913 999-13-07</a></p>
-							<p class="_text"><a href="mailto:admin@magicaltai.su">admin@magicaltai.su</a></p>
-							<p class="_text">2022 год ©</p>
-						</div>
-						<div class="footer__column">
-							<div class="footer__block">
-								<address class="footer__contacts contacts">
-									<ul class="contacts__list">
-										<li class="contacts__item"><a class="" href="https://t.me/+79619879854" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
-										<li class="contacts__item"><a class="" href="tel:+79831029180" target="_blank"><i class="fas fa-phone-alt"></i></a></li>
-										<li class="contacts__item"><a class="" href="https://wa.me/+79831029180" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-										<li class="contacts__item"><a class="" href="https://ok.ru/profile/568907572916" target="_blank"><i class="fab fa-odnoklassniki"></i></a></li>
-										<li class="contacts__item"><a class="" href="mailto:admin@magicaltai.su" target="_blank"><i class="fas fa-envelope"></i></a></li>
-									</ul>
-								</address>
-								<ul class="footer__menu">
-									<li class="footer__item _text-nav"><a data-goto=".catalog" href="javascript://">Маршруты</a></li>
-									<li class="footer__item _text-nav"><a data-goto=".page__best" href="javascript://">Захватывающий Алтай</a></li>
-									<li class="footer__item _text-nav"><a data-goto=".gallary" href="javascript://">Фотоотчеты</a></li>
-									<li class="footer__item _text-nav"><a href="#popup" class="popup-link">Задать вопрос</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="footer__image">
-				<img src="/img/footer/footer-bg.png" alt="Магия Алтая- пейзажный рисунок">
-			</div>
-		</footer>
-	</div>
-	<div id="popup" class="popup__form popup">
-		<div class="popup__body">
-			<a href="#" class="popup__close close-popup"><span class="material-symbols-outlined"> cancel </span></a>
-			<div class="popups__form form">
-				<div class="popup__content">
-					<div class="form__container _container">
-						<div class="form__content">
-							<div class="form__title">
-								<p>Заполните форму и <span>забронируйте</span> поездку в места <span>магического Алтая</span></p>
-							</div>
-						</div>
-						<form action="/sendmail.php" method="post" id="form-p" class="form__body">
-							<div class="form__item">
-								<label for="formName" class="form__label"></label>
-								<input type="text" id="formName" name="name" placeholder="Ваше имя" class="form__input _req-p _text ">
-							</div>
-							<div class="form__item">
-								<label for="formPhone" class="form__label"></label>
-								<input type="text" id="formPhone" name="phone" placeholder="Телефон" class="form__input _req-p _text ">
-							</div>
-							<div class="form__item">
-								<label for="formEmail" class="form__label"></label>
-								<input type="text" id="formEmail" name="email" placeholder="Почта" class="form__input _req-p _text  _email">
-							</div>
-							<div class="form__item">
-								<label for="formMessage" class="form__label"></label>
-								<textarea id="formMessage" name="message" placeholder="Сообщение" class="form__input _text"></textarea>
-							</div>
-							<div class="form__item">
-								<div class="checkbox">
-									<input type="checkbox" checked id="formAgreement" class="checkbox__input _req-p" name="agreement">
-									<label for="formAgreement" class="form__label _text"><span>Я даю свое согласие на обработку персональных данных в соответствии с <a target="_blank" href="/soglashenie.htm">Условиями</a></span></label>
-								</div>
-							</div>
-							<button type="submit" class="form__button _text-btn">Отправить<span class="material-symbols-outlined"> arrow_forward </span></button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<script src="https://kit.fontawesome.com/ed24aaf06b.js" crossorigin="anonymous"></script>
-	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-	<script src="/script/script.js"></script>
-	<script src="/script/popups.js"></script>
-</body>
-
+        <section class="page__base base">
+          <div class="base__container _container">
+            <h2 class="base__title _h2">Наше всё</h2>
+            <div class="base__avto-1 avto-1">
+              <div class="avto-1__title _h3">Транспорт</div>
+              <div class="avto-1__subtitle _h4">
+                Автомобили повышенной проходимости
+              </div>
+              <div class="avto-1__items">
+                <div class="avto-1__item avto-1__item_full">
+                  <img
+                    src="img/base/MagicAltai-2-700-metrov-nad-urovnem-morja.webp"
+                    alt="Магия Алтая- Наши автомобили повышенной проходимости"
+                    class="avto-1__img"
+                  />
+                  <div class="avto-1__content _h3">УАЗ - король в горах</div>
+                </div>
+                <div class="avto-1__item avto-1__item_norm">
+                  <img
+                    src="img/base/MagicAltai-uaz-korol-v-gorah.webp"
+                    alt="Магия Алтая- Наши автомобили повышенной проходимости"
+                    class="avto-1__img"
+                  />
+                  <div class="avto-1__content _h3">
+                    2700 метров над уровнем моря
+                  </div>
+                </div>
+                <div class="avto-1__item avto-1__item_long">
+                  <img
+                    src="img/base/MagicAltai-nachalo-ijulja.webp"
+                    alt="Магия Алтая- Наши автомобили повышенной проходимости"
+                    class="avto-1__img"
+                  />
+                  <div class="avto-1__content _h3">Начало июля</div>
+                </div>
+              </div>
+              <div class="avto-1__subtitle _h4">прочие авто</div>
+              <div class="avto-1__items">
+                <div class="avto-1__item avto-1__item_full">
+                  <img
+                    src="img/base/MagicAltai-dlja-grupp-do-3h-chelovek.webp"
+                    alt="Магия Алтая- Наши автомобили повышенной проходимости"
+                    class="avto-1__img"
+                  />
+                  <div class="avto-1__content">
+                    <p class="_h3">Для групп до трех человек</p>
+                    <p class="_text">Chery Tiggo</p>
+                  </div>
+                </div>
+                <div class="avto-1__item avto-1__item_norm">
+                  <img
+                    src="img/base/MagicAltai-cherri-tigo.webp"
+                    alt="Магия Алтая- Наши автомобили повышенной проходимости"
+                    class="avto-1__img"
+                  />
+                  <div class="avto-1__content _h3">Chery Tiggo</div>
+                </div>
+                <div class="avto-1__item avto-1__item_long">
+                  <img
+                    src="img/base/MagicAltai-obrabotano.webp"
+                    alt="Магия Алтая- Наши автомобили повышенной проходимости"
+                    class="avto-1__img"
+                  />
+                  <div class="avto-1__content _h3">
+                    Для групп до восьми человек
+                  </div>
+                </div>
+                <div class="avto-1__item avto-1__item_long">
+                  <img
+                    src="img/base/MagicAltai-obrabotano.webp"
+                    alt="Магия Алтая- Наши автомобили повышенной проходимости"
+                    class="avto-1__img"
+                  />
+                  <div class="avto-1__content">
+                    <p class="_h3">Полный привод и комфорт</p>
+                    <p class="_text">Hyundai H-1</p>
+                  </div>
+                </div>
+              </div>
+              <div class="avto-1__subtitle _text">
+                Все автомобили в отличном техническом состоянии!!!
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="page__form form">
+          <div class="form__container _container">
+            <div class="form__content">
+              <div class="form__title">
+                <p>
+                  Заполните форму и <span>забронируйте</span> поездку в места
+                  <span>магического Алтая</span>
+                </p>
+              </div>
+              <div class="form__subtitle _text-btn">
+                или свяжитесь с нами любым удобным способом
+              </div>
+              <address class="form__contacts contacts">
+                <ul class="contacts__list">
+                  <li class="contacts__item">
+                    <a class="" href="https://t.me/+79619879854" target="_blank"
+                      ><i class="fab fa-telegram-plane"></i
+                    ></a>
+                  </li>
+                  <li class="contacts__item">
+                    <a class="" href="tel:+79831029180" target="_blank"
+                      ><i class="fas fa-phone-alt"></i
+                    ></a>
+                  </li>
+                  <li class="contacts__item">
+                    <a
+                      class=""
+                      href="https://wa.me/+79831029180"
+                      target="_blank"
+                      ><i class="fab fa-whatsapp"></i
+                    ></a>
+                  </li>
+                  <li class="contacts__item">
+                    <a
+                      class=""
+                      href="https://ok.ru/profile/568907572916"
+                      target="_blank"
+                      ><i class="fab fa-odnoklassniki"></i
+                    ></a>
+                  </li>
+                  <li class="contacts__item">
+                    <a
+                      class=""
+                      href="mailto:admin@magicaltai.su"
+                      target="_blank"
+                      ><i class="fas fa-envelope"></i
+                    ></a>
+                  </li>
+                </ul>
+              </address>
+            </div>
+            <form
+              action="/sendmail.php"
+              method="post"
+              id="form"
+              class="form__body"
+            >
+              <div class="form__item">
+                <label for="formName" class="form__label"></label>
+                <input
+                  type="text"
+                  id="formName"
+                  name="name"
+                  placeholder="Ваше имя"
+                  class="form__input _req _text"
+                />
+              </div>
+              <div class="form__item">
+                <label for="formPhone" class="form__label"></label>
+                <input
+                  type="text"
+                  id="formPhone"
+                  name="phone"
+                  placeholder="Телефон"
+                  class="form__input _req _text"
+                />
+              </div>
+              <div class="form__item">
+                <label for="formEmail" class="form__label"></label>
+                <input
+                  type="text"
+                  id="formEmail"
+                  name="email"
+                  placeholder="Почта"
+                  class="form__input _req _text _email"
+                />
+              </div>
+              <div class="form__item">
+                <label for="formMessage" class="form__label"></label>
+                <textarea
+                  id="formMessage"
+                  name="message"
+                  placeholder="Сообщение"
+                  class="form__input _text"
+                ></textarea>
+              </div>
+              <div class="form__item">
+                <div class="checkbox">
+                  <input
+                    type="checkbox"
+                    checked
+                    id="formAgreement"
+                    class="checkbox__input _req"
+                    name="agreement"
+                  />
+                  <label for="formAgreement" class="form__label _text"
+                    ><span
+                      >Я даю свое согласие на обработку персональных данных в
+                      соответствии с
+                      <a target="_blank" href="/soglashenie.htm"
+                        >Условиями</a
+                      ></span
+                    ></label
+                  >
+                </div>
+              </div>
+              <button type="submit" class="form__button _text-btn">
+                Отправить<span class="material-symbols-outlined">
+                  arrow_forward
+                </span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </main>
+      <footer class="page-footer footer">
+        <div class="footer__container _container">
+          <div class="footer__body">
+            <div class="footer__logo">
+              <a href="https://magicaltai.su"
+                ><img
+                  src="img/footer/footer-logo.png"
+                  alt="Магия Алтая- логотип"
+              /></a>
+              <p class="_text-bold">Магия Алтая</p>
+              <iframe
+                src="https://yandex.ru/sprav/widget/rating-badge/58446094316"
+                width="150"
+                height="50"
+                frameborder="0"
+              ></iframe>
+            </div>
+            <div class="footer__content">
+              <div class="footer__column">
+                <p class="_text">г. Горно-Алтайск</p>
+                <p class="_text">
+                  <a href="tel:+79831029180">+7 983 102-91-80</a>
+                </p>
+                <p class="_text">
+                  <a href="tel:+79139991307">+7 913 999-13-07</a>
+                </p>
+                <p class="_text">
+                  <a href="mailto:admin@magicaltai.su">admin@magicaltai.su</a>
+                </p>
+                <p class="_text">2022 год ©</p>
+              </div>
+              <div class="footer__column">
+                <div class="footer__block">
+                  <address class="footer__contacts contacts">
+                    <ul class="contacts__list">
+                      <li class="contacts__item">
+                        <a
+                          class=""
+                          href="https://t.me/+79619879854"
+                          target="_blank"
+                          ><i class="fab fa-telegram-plane"></i
+                        ></a>
+                      </li>
+                      <li class="contacts__item">
+                        <a class="" href="tel:+79831029180" target="_blank"
+                          ><i class="fas fa-phone-alt"></i
+                        ></a>
+                      </li>
+                      <li class="contacts__item">
+                        <a
+                          class=""
+                          href="https://wa.me/+79831029180"
+                          target="_blank"
+                          ><i class="fab fa-whatsapp"></i
+                        ></a>
+                      </li>
+                      <li class="contacts__item">
+                        <a
+                          class=""
+                          href="https://ok.ru/profile/568907572916"
+                          target="_blank"
+                          ><i class="fab fa-odnoklassniki"></i
+                        ></a>
+                      </li>
+                      <li class="contacts__item">
+                        <a
+                          class=""
+                          href="mailto:admin@magicaltai.su"
+                          target="_blank"
+                          ><i class="fas fa-envelope"></i
+                        ></a>
+                      </li>
+                    </ul>
+                  </address>
+                  <ul class="footer__menu">
+                    <li class="footer__item _text-nav">
+                      <a data-goto=".catalog" href="javascript://">Маршруты</a>
+                    </li>
+                    <li class="footer__item _text-nav">
+                      <a data-goto=".page__best" href="javascript://"
+                        >Захватывающий Алтай</a
+                      >
+                    </li>
+                    <li class="footer__item _text-nav">
+                      <a data-goto=".gallary" href="javascript://"
+                        >Фотоотчеты</a
+                      >
+                    </li>
+                    <li class="footer__item _text-nav">
+                      <a href="#popup" class="popup-link">Задать вопрос</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__image">
+          <img
+            src="img/footer/footer-bg.png"
+            alt="Магия Алтая- пейзажный рисунок"
+          />
+        </div>
+      </footer>
+    </div>
+    <div id="popup" class="popup__form popup">
+      <div class="popup__body">
+        <a href="#" class="popup__close close-popup"
+          ><span class="material-symbols-outlined"> cancel </span></a
+        >
+        <div class="popups__form form">
+          <div class="popup__content">
+            <div class="form__container _container">
+              <div class="form__content">
+                <div class="form__title">
+                  <p>
+                    Заполните форму и <span>забронируйте</span> поездку в места
+                    <span>магического Алтая</span>
+                  </p>
+                </div>
+              </div>
+              <form
+                action="/sendmail.php"
+                method="post"
+                id="form-p"
+                class="form__body"
+              >
+                <div class="form__item">
+                  <label for="formName" class="form__label"></label>
+                  <input
+                    type="text"
+                    id="formName"
+                    name="name"
+                    placeholder="Ваше имя"
+                    class="form__input _req-p _text"
+                  />
+                </div>
+                <div class="form__item">
+                  <label for="formPhone" class="form__label"></label>
+                  <input
+                    type="text"
+                    id="formPhone"
+                    name="phone"
+                    placeholder="Телефон"
+                    class="form__input _req-p _text"
+                  />
+                </div>
+                <div class="form__item">
+                  <label for="formEmail" class="form__label"></label>
+                  <input
+                    type="text"
+                    id="formEmail"
+                    name="email"
+                    placeholder="Почта"
+                    class="form__input _req-p _text _email"
+                  />
+                </div>
+                <div class="form__item">
+                  <label for="formMessage" class="form__label"></label>
+                  <textarea
+                    id="formMessage"
+                    name="message"
+                    placeholder="Сообщение"
+                    class="form__input _text"
+                  ></textarea>
+                </div>
+                <div class="form__item">
+                  <div class="checkbox">
+                    <input
+                      type="checkbox"
+                      checked
+                      id="formAgreement"
+                      class="checkbox__input _req-p"
+                      name="agreement"
+                    />
+                    <label for="formAgreement" class="form__label _text"
+                      ><span
+                        >Я даю свое согласие на обработку персональных данных в
+                        соответствии с
+                        <a target="_blank" href="/soglashenie.htm"
+                          >Условиями</a
+                        ></span
+                      ></label
+                    >
+                  </div>
+                </div>
+                <button type="submit" class="form__button _text-btn">
+                  Отправить<span class="material-symbols-outlined">
+                    arrow_forward
+                  </span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/ed24aaf06b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="/script/script.js"></script>
+    <script src="/script/popups.js"></script>
+  </body>
 </html>
